@@ -124,10 +124,12 @@
 .c24 .qsafter p{margin:0;font-size:15px;line-height:1.62;color:#55617A}
 
 /* voorwaarden */
-.c24 .qscond{padding:28px 30px;border-radius:16px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E3E8F0}
-.c24 .qscond ul{margin:0;padding:0;list-style:none;display:grid;gap:13px}
-.c24 .qscond li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;font-size:15px;line-height:1.6;color:#55617A}
-.c24 .qscond li b{font-weight:600;color:#0B1F3B}
+.c24 .qscond{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:36px 0 0;padding:0;list-style:none}
+.c24 .qsc{display:flex;flex-direction:column;padding:26px 26px 28px;border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(11,31,59,.06),0 10px 24px rgba(11,31,59,.05);transition:transform .22s cubic-bezier(.22,.8,.3,1),box-shadow .22s ease}
+.c24 .qsc:hover{transform:translateY(-3px) !important;box-shadow:0 0 0 1px rgba(11,31,59,.08),0 18px 36px rgba(11,31,59,.1)}
+.c24 .qsc-ic{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:#FBF1DC;margin-bottom:18px}
+.c24 .qsc-t{display:block;font-size:17px;font-weight:700;letter-spacing:-.015em;line-height:1.3;color:#0B1F3B}
+.c24 .qsc-p{margin:8px 0 0;font-size:15px;line-height:1.6;color:#55617A}
 
 /* faq */
 .c24 .qfaq{margin:30px 0 0;max-width:900px;border-radius:16px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E3E8F0;overflow:hidden}
@@ -150,6 +152,7 @@
 .c24 .qt-i:nth-child(2n) .qt-d{right:0;background:linear-gradient(90deg,#DDBE74,rgba(221,190,116,0))}
 }
 @container page (max-width:860px){
+.c24 .qscond{grid-template-columns:repeat(2,minmax(0,1fr))}
 .c24 .qsfacts{grid-template-columns:repeat(2,minmax(0,1fr))}
 .c24 .qsask{grid-template-columns:minmax(0,1fr)}
 .c24 .qsafter{grid-template-columns:minmax(0,1fr)}
@@ -166,7 +169,8 @@
 .c24 .qsfacts{grid-template-columns:minmax(0,1fr)}
 .c24 .qsb-b .btn{flex:1 1 100%;justify-content:center}
 .c24 .qchain{padding:20px 18px 22px}
-.c24 .qscond{padding:24px 20px}
+.c24 .qscond{grid-template-columns:minmax(0,1fr)}
+.c24 .qsc{padding:22px 20px 24px}
 .c24 .qfaq-i summary{padding:18px 18px;font-size:15.5px}
 .c24 .qfaq-a{padding:0 18px 20px}
 }
@@ -957,16 +961,15 @@
 <div class="wrap">
 <div class="ey rv" style="--rd: 0s">Voorwaarden en prijs</div>
 <h2 class="h2 rv" style="--rd: .06s; max-width: 880px">Wat de scope precies is.</h2>
-<div class="qscond rv" style="--rd: .12s">
-<ul>
-<li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span><b>Één wet</b> die in het platform is opgenomen. U noemt de wet bij de aanvraag; binnen één werkdag bevestigen wij of hij beschikbaar is.</span></li>
-<li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span><b>Maximaal drie documenten</b> van samen maximaal 150 pagina’s.</span></li>
-<li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span><b>Één review per instelling</b></span></li>
-<li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span><b>Vaste prijs</b> € 4.900 exclusief btw. Bij een opdracht binnen zes maanden verrekend met de implementatie.</span></li>
-<li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span><b>Vooraf geregeld</b> een geheimhoudingsverklaring, en een verwerkersovereenkomst voor de documenten die u aanlevert.</span></li>
-<li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span><b>Scopegebonden</b> de uitkomst geldt voor de beoordeelde wet en documenten, op de datum van oplevering. Het is geen uitspraak over uw hele organisatie en geen goedkeuring door een toezichthouder.</span></li>
+<p class="lead rv" style="--rd: .1s; max-width: 58ch">Zes afspraken die vooraf vastliggen, zodat u weet wat u krijgt en wat niet.</p>
+<ul class="qscond">
+<li class="qsc rv" style="--rd: .08s"><span class="qsc-ic" aria-hidden="true"><svg class="ic" aria-hidden="true" style="width: 20px; height: 20px; stroke-width: 2.2; color: #A07E24;"><use href="#i-law"></use></svg></span><b class="qsc-t">Één wet</b><p class="qsc-p">Die in het platform is opgenomen. U noemt de wet bij de aanvraag; binnen één werkdag bevestigen wij of hij beschikbaar is.</p></li>
+<li class="qsc rv" style="--rd: .14s"><span class="qsc-ic" aria-hidden="true"><svg class="ic" aria-hidden="true" style="width: 20px; height: 20px; stroke-width: 2.2; color: #A07E24;"><use href="#i-doc"></use></svg></span><b class="qsc-t">Maximaal drie documenten</b><p class="qsc-p">Van samen maximaal 150 pagina’s.</p></li>
+<li class="qsc rv" style="--rd: .20s"><span class="qsc-ic" aria-hidden="true"><svg class="ic" aria-hidden="true" style="width: 20px; height: 20px; stroke-width: 2.2; color: #A07E24;"><use href="#i-user"></use></svg></span><b class="qsc-t">Één review per instelling</b><p class="qsc-p">Eén beoordeling per organisatie, tegen deze voorwaarden.</p></li>
+<li class="qsc rv" style="--rd: .26s"><span class="qsc-ic" aria-hidden="true"><svg class="ic" aria-hidden="true" style="width: 20px; height: 20px; stroke-width: 2.2; color: #A07E24;"><use href="#i-table"></use></svg></span><b class="qsc-t">Vaste prijs</b><p class="qsc-p">€ 4.900 exclusief btw. Bij een opdracht binnen zes maanden verrekend met de implementatie.</p></li>
+<li class="qsc rv" style="--rd: .32s"><span class="qsc-ic" aria-hidden="true"><svg class="ic" aria-hidden="true" style="width: 20px; height: 20px; stroke-width: 2.2; color: #A07E24;"><use href="#i-shield"></use></svg></span><b class="qsc-t">Vooraf geregeld</b><p class="qsc-p">Een geheimhoudingsverklaring, en een verwerkersovereenkomst voor de documenten die u aanlevert.</p></li>
+<li class="qsc rv" style="--rd: .38s"><span class="qsc-ic" aria-hidden="true"><svg class="ic" aria-hidden="true" style="width: 20px; height: 20px; stroke-width: 2.2; color: #A07E24;"><use href="#i-alert"></use></svg></span><b class="qsc-t">Scopegebonden</b><p class="qsc-p">De uitkomst geldt voor de beoordeelde wet en documenten, op de datum van oplevering. Het is geen uitspraak over uw hele organisatie en geen goedkeuring door een toezichthouder.</p></li>
 </ul>
-</div>
 </div>
 </section>
 

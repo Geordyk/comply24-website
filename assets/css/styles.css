@@ -1150,10 +1150,12 @@ html{scroll-behavior:auto}
 .c24 .qsafter p{margin:0;font-size:15px;line-height:1.62;color:#55617A}
 
 /* voorwaarden */
-.c24 .qscond{padding:28px 30px;border-radius:16px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E3E8F0}
-.c24 .qscond ul{margin:0;padding:0;list-style:none;display:grid;gap:13px}
-.c24 .qscond li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;font-size:15px;line-height:1.6;color:#55617A}
-.c24 .qscond li b{font-weight:600;color:#0B1F3B}
+.c24 .qscond{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:36px 0 0;padding:0;list-style:none}
+.c24 .qsc{display:flex;flex-direction:column;padding:26px 26px 28px;border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(11,31,59,.06),0 10px 24px rgba(11,31,59,.05);transition:transform .22s cubic-bezier(.22,.8,.3,1),box-shadow .22s ease}
+.c24 .qsc:hover{transform:translateY(-3px) !important;box-shadow:0 0 0 1px rgba(11,31,59,.08),0 18px 36px rgba(11,31,59,.1)}
+.c24 .qsc-ic{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:#FBF1DC;margin-bottom:18px}
+.c24 .qsc-t{display:block;font-size:17px;font-weight:700;letter-spacing:-.015em;line-height:1.3;color:#0B1F3B}
+.c24 .qsc-p{margin:8px 0 0;font-size:15px;line-height:1.6;color:#55617A}
 
 /* faq */
 .c24 .qfaq{margin:30px 0 0;max-width:900px;border-radius:16px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E3E8F0;overflow:hidden}
@@ -1176,6 +1178,7 @@ html{scroll-behavior:auto}
 .c24 .qt-i:nth-child(2n) .qt-d{right:0;background:linear-gradient(90deg,#DDBE74,rgba(221,190,116,0))}
 }
 @container page (max-width:860px){
+.c24 .qscond{grid-template-columns:repeat(2,minmax(0,1fr))}
 .c24 .qsfacts{grid-template-columns:repeat(2,minmax(0,1fr))}
 .c24 .qsask{grid-template-columns:minmax(0,1fr)}
 .c24 .qsafter{grid-template-columns:minmax(0,1fr)}
@@ -1192,7 +1195,8 @@ html{scroll-behavior:auto}
 .c24 .qsfacts{grid-template-columns:minmax(0,1fr)}
 .c24 .qsb-b .btn{flex:1 1 100%;justify-content:center}
 .c24 .qchain{padding:20px 18px 22px}
-.c24 .qscond{padding:24px 20px}
+.c24 .qscond{grid-template-columns:minmax(0,1fr)}
+.c24 .qsc{padding:22px 20px 24px}
 .c24 .qfaq-i summary{padding:18px 18px;font-size:15.5px}
 .c24 .qfaq-a{padding:0 18px 20px}
 }
