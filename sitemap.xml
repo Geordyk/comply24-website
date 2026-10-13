@@ -180,4 +180,16 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://comply24.nl/use-case-pensioenfonds.html"/>
 <lastmod>2026-10-13</lastmod>
 <changefreq>monthly</changefreq></url>
+<url><loc>https://comply24.nl/privacy.html</loc>
+<xhtml:link rel="alternate" hreflang="nl" href="https://comply24.nl/privacy.html"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://comply24.nl/en/privacy.html"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://comply24.nl/privacy.html"/>
+<lastmod>2026-10-13</lastmod>
+<changefreq>monthly</changefreq></url>
+<url><loc>https://comply24.nl/en/privacy.html</loc>
+<xhtml:link rel="alternate" hreflang="nl" href="https://comply24.nl/privacy.html"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://comply24.nl/en/privacy.html"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://comply24.nl/privacy.html"/>
+<lastmod>2026-10-13</lastmod>
+<changefreq>monthly</changefreq></url>
 </urlset>
