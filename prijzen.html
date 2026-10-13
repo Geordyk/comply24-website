@@ -26,7 +26,437 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/styles.css?v=202610132140">
+<style>
+/* Compliance QuickScan — band op de homepage en de eigen pagina.
+   Staat ook in de pagina zelf, zodat die klopt ongeacht de stylesheet op de
+   server. Beweging: alleen opacity en transform, eenmalig, en volledig uit bij
+   prefers-reduced-motion. */
+
+/* ── de band op de homepage ─────────────────────────────────────────── */
+.c24 .qsb{position:relative;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(30px,5cqw,66px);align-items:center}
+.c24 .qsb-ey{display:inline-flex;align-items:center;gap:10px;margin:0 0 14px;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#E2BE6A}
+.c24 .qsb-ey::before{content:"";width:26px;height:2px;border-radius:2px;background:#C8A24A}
+.c24 .qsb h2{margin:0;color:#FFFFFF}
+.c24 .qsb-p{margin:16px 0 0;max-width:580px;font-size:17px;line-height:1.6;color:#C3CCDB}
+.c24 .qsb-pp{display:flex;flex-wrap:wrap;gap:10px 22px;margin:22px 0 0;padding:0;list-style:none}
+.c24 .qsb-pp li{display:inline-flex;align-items:center;font-size:14px;color:#D7DEE9}
+.c24 .qsb-b{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:28px}
+
+/* ── de bewijsketen ─────────────────────────────────────────────────── */
+.c24 .qchain{position:relative;margin:34px 0 0;padding:22px 24px 24px;border-radius:18px;background:#FFFFFF;box-shadow:0 0 0 1px #E8EAEE,0 18px 44px rgba(11,31,59,.07)}
+.c24 .sec.dark .qchain{background:rgba(255,255,255,.055);box-shadow:inset 0 0 0 1px rgba(226,190,106,.24)}
+.c24 .qchain.qchain-c{margin:0}
+.c24 .qc-cap{display:flex;align-items:center;margin:0 0 18px;font-size:11.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#8B96A8}
+.c24 .sec.dark .qc-cap{color:#A9B4C6}
+.c24 .qc-l-ul{position:relative;margin:0;padding:0;list-style:none;display:grid;gap:0}
+
+/* de gouden lijn, getekend met transform */
+.c24 .qc-line{position:absolute;left:31px;top:60px;bottom:38px;width:2px;border-radius:2px;background:linear-gradient(180deg,#C8A24A,rgba(200,162,74,.25));transform-origin:top center}
+.c24.armed .qc-line{transform:scaleY(0)}
+.c24 .sec.in .qc-line{animation:qcdraw .95s cubic-bezier(.25,.8,.3,1) .15s both}
+@keyframes qcdraw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+
+.c24 .qc-i{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;gap:16px;padding:12px 0}
+.c24.armed .qc-i{opacity:0;transform:translateY(10px)}
+.c24 .sec.in .qc-i{animation:qcin .5s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.45s + var(--i) * .11s)}
+@keyframes qcin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.c24 .qc-d{position:relative;z-index:1;width:16px;height:16px;margin-left:8px;margin-top:4px;border-radius:50%;background:#FFFFFF;box-shadow:inset 0 0 0 2px #C8A24A}
+.c24 .sec.dark .qc-d{background:#102A4C}
+.c24 .qc-c{min-width:0}
+.c24 .qc-l{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#A07E24}
+.c24 .sec.dark .qc-l{color:#E2BE6A}
+.c24 .qc-v{display:block;margin-top:4px;font-size:15.5px;line-height:1.5;font-weight:600;color:#0B1F3B}
+.c24 .sec.dark .qc-v{color:#FFFFFF}
+.c24 .qc-v.qc-q{font-weight:400;font-style:italic;color:#3B4A63}
+.c24 .sec.dark .qc-v.qc-q{color:#D7DEE9}
+.c24 .qc-s{display:block;margin-top:3px;font-size:13px;line-height:1.5;color:#8B96A8}
+.c24 .sec.dark .qc-s{color:#A9B4C6}
+.c24 .qc-badge{display:inline-flex;align-items:center;margin-top:5px;padding:4px 11px;border-radius:999px;background:#FBF1DC;box-shadow:inset 0 0 0 1px #E3CE96;font-size:12.5px;font-weight:700;letter-spacing:.04em;color:#86691F}
+
+/* ── de pagina ──────────────────────────────────────────────────────── */
+.c24 .qsfacts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:38px 0 0;padding:0;list-style:none}
+.c24 .qsfacts li{padding:22px 22px 20px;border-radius:16px;background:#FBF7EE;box-shadow:inset 0 0 0 1px #EBDFC2}
+.c24 .qsfacts.dk{margin-top:32px}
+.c24 .qsfacts.dk li{background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(226,190,106,.24)}
+.c24 .qsf-v{display:block;font-size:25px;font-weight:800;letter-spacing:-.015em;color:#0B1F3B}
+.c24 .qsfacts.dk .qsf-v{color:#FFFFFF}
+.c24 .qsf-k{display:block;margin-top:6px;font-size:13.5px;line-height:1.5;color:#55617A}
+.c24 .qsfacts.dk .qsf-k{color:#A9B4C6}
+
+.c24 .qsget{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin:34px 0 0;padding:0;list-style:none}
+.c24 .qsget li{padding:26px 24px 24px;border-radius:18px;background:#FFFFFF;box-shadow:0 0 0 1px #E8EAEE,0 14px 34px rgba(11,31,59,.05);transition:transform .22s ease,box-shadow .22s ease}
+.c24 .qsget li:hover{transform:translateY(-4px);box-shadow:0 0 0 1px #E0E4EA,0 20px 44px rgba(11,31,59,.1)}
+.c24 .qsg-n{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;margin-bottom:16px;border-radius:9px;background:#FBF1DC;font-size:13px;font-weight:800;color:#86691F}
+.c24 .qsget h3{margin:0 0 8px;font-size:16.5px;font-weight:700;letter-spacing:-.01em;color:#0B1F3B}
+.c24 .qsget p{margin:0;font-size:14.5px;line-height:1.62;color:#55617A}
+
+/* tijdlijn */
+.c24 .qtime{position:relative;margin:34px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px}
+.c24 .qt-i{position:relative;padding:0 0 0 0}
+.c24.armed .qt-i{opacity:0;transform:translateY(12px)}
+.c24 .sec.in .qt-i{animation:qcin .52s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.1s + var(--i) * .13s)}
+.c24 .qt-d{position:absolute;left:0;top:15px;right:-26px;height:2px;background:linear-gradient(90deg,#DDBE74,rgba(221,190,116,.28))}
+.c24 .qt-i:last-child .qt-d{right:0;background:linear-gradient(90deg,#DDBE74,rgba(221,190,116,0))}
+.c24 .qt-n{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#FFFFFF;box-shadow:inset 0 0 0 2px #DDBE74;font-size:14px;font-weight:700;color:#86691F}
+.c24 .qtime h3{margin:16px 0 7px;font-size:17px;font-weight:700;letter-spacing:-.01em;color:#0B1F3B}
+.c24 .qtime p{margin:0;font-size:14.5px;line-height:1.62;color:#55617A}
+
+/* wat wij van u vragen */
+.c24 .qsask{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:32px 0 0;padding:0;list-style:none}
+.c24 .qsask li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:24px 24px 22px;border-radius:16px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .qsask h3{margin:0 0 6px;font-size:16px;font-weight:700;color:#0B1F3B}
+.c24 .qsask p{margin:0;font-size:14.5px;line-height:1.6;color:#55617A}
+
+/* en daarna */
+.c24 .qsaphoto{background:#EEF4F9;min-height:clamp(420px,46cqw,620px);display:flex;align-items:center}
+.c24 .qsa-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 50%}
+.c24 .qsa-wash{position:absolute;inset:0;background:linear-gradient(95deg,rgba(240,245,250,.92) 0,rgba(240,245,250,.8) 30%,rgba(240,245,250,.35) 52%,rgba(240,245,250,0) 68%)}
+.c24 .qsaphoto > .wrap{position:relative;z-index:1;width:100%}
+.c24 .qsa-in{max-width:66%}
+.c24 .qsafter{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:30px 0 0;padding:0;list-style:none}
+.c24 .qsafter li{display:flex;gap:16px;align-items:flex-start;padding:24px 24px 22px;border-radius:16px;background:rgba(255,255,255,.9);backdrop-filter:blur(6px);box-shadow:0 0 0 1px rgba(11,31,59,.06),0 16px 36px rgba(11,31,59,.08)}
+.c24 .qsafter li:first-child{background:rgba(251,246,236,.94);box-shadow:0 0 0 1px #EBDFC2,0 16px 36px rgba(11,31,59,.06)}
+.c24 .qsa-ic{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:52px;height:52px;border-radius:50%;background:#FBF1DC;color:#A07E24}
+.c24 .qsafter li:last-child .qsa-ic{background:#E6EFF8;color:#0B1F3B}
+.c24 .qsa-b{min-width:0}
+.c24 .qsafter h3{margin:0 0 9px;font-size:18px;font-weight:700;letter-spacing:-.01em;color:#0B1F3B}
+.c24 .qsafter p{margin:0;font-size:15px;line-height:1.62;color:#55617A}
+
+/* voorwaarden */
+.c24 .qscond{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:36px 0 0;padding:0;list-style:none}
+.c24 .qsc{display:flex;flex-direction:column;padding:26px 26px 28px;border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(11,31,59,.06),0 10px 24px rgba(11,31,59,.05);transition:transform .22s cubic-bezier(.22,.8,.3,1),box-shadow .22s ease}
+.c24 .qsc:hover{transform:translateY(-3px) !important;box-shadow:0 0 0 1px rgba(11,31,59,.08),0 18px 36px rgba(11,31,59,.1)}
+.c24 .qsc-ic{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:#FBF1DC;margin-bottom:18px}
+.c24 .qsc-t{display:block;font-size:17px;font-weight:700;letter-spacing:-.015em;line-height:1.3;color:#0B1F3B}
+.c24 .qsc-p{margin:8px 0 0;font-size:15px;line-height:1.6;color:#55617A}
+
+/* faq */
+.c24 .qfaq{margin:30px 0 0;max-width:900px;border-radius:16px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E3E8F0;overflow:hidden}
+.c24 .qfaq-i + .qfaq-i{border-top:1px solid #EDF0F5}
+.c24 .qfaq-i summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 24px;font-size:16.5px;font-weight:600;color:#0B1F3B;cursor:pointer;list-style:none}
+.c24 .qfaq-i summary::-webkit-details-marker{display:none}
+.c24 .qfaq-i summary:hover{background:#FBFCFD}
+.c24 .qfaq-i summary:focus-visible{outline:2px solid #C8A24A;outline-offset:-2px}
+.c24 .qfaq-c{position:relative;flex:none;width:16px;height:16px}
+.c24 .qfaq-c::before,.c24 .qfaq-c::after{content:"";position:absolute;left:50%;top:50%;width:13px;height:2px;border-radius:2px;background:#A07E24;transform:translate(-50%,-50%);transition:transform .22s ease}
+.c24 .qfaq-c::after{transform:translate(-50%,-50%) rotate(90deg)}
+.c24 .qfaq-i[open] .qfaq-c::after{transform:translate(-50%,-50%) rotate(0deg)}
+.c24 .qfaq-a{padding:0 24px 22px}
+.c24 .qfaq-a p{margin:0;max-width:760px;font-size:15px;line-height:1.66;color:#55617A}
+
+@container page (max-width:1099px){
+.c24 .qsb{grid-template-columns:minmax(0,1fr)}
+.c24 .qsget{grid-template-columns:repeat(2,minmax(0,1fr))}
+.c24 .qtime{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 26px}
+.c24 .qt-i:nth-child(2n) .qt-d{right:0;background:linear-gradient(90deg,#DDBE74,rgba(221,190,116,0))}
+}
+@container page (max-width:860px){
+.c24 .qscond{grid-template-columns:repeat(2,minmax(0,1fr))}
+.c24 .qsfacts{grid-template-columns:repeat(2,minmax(0,1fr))}
+.c24 .qsask{grid-template-columns:minmax(0,1fr)}
+.c24 .qsafter{grid-template-columns:minmax(0,1fr)}
+.c24 .qsa-in{max-width:none}
+.c24 .qsa-wash{background:linear-gradient(180deg,rgba(240,245,250,.94) 0,rgba(240,245,250,.86) 60%,rgba(240,245,250,.7) 100%)}
+.c24 .qsa-bg{object-position:80% 50%}
+}
+@container page (max-width:640px){
+.c24 .qtime{grid-template-columns:minmax(0,1fr);gap:24px}
+.c24 .qt-d{display:none}
+}
+@container page (max-width:560px){
+.c24 .qsget{grid-template-columns:minmax(0,1fr)}
+.c24 .qsfacts{grid-template-columns:minmax(0,1fr)}
+.c24 .qsb-b .btn{flex:1 1 100%;justify-content:center}
+.c24 .qchain{padding:20px 18px 22px}
+.c24 .qscond{grid-template-columns:minmax(0,1fr)}
+.c24 .qsc{padding:22px 20px 24px}
+.c24 .qfaq-i summary{padding:18px 18px;font-size:15.5px}
+.c24 .qfaq-a{padding:0 18px 20px}
+}
+
+@media (prefers-reduced-motion: reduce){
+.c24 .qc-line,.c24 .qc-i,.c24 .qt-i{animation:none !important;opacity:1 !important;transform:none !important}
+.c24 .qsget li{transition:none}
+.c24 .qsget li:hover{transform:none}
+}
+
+/* ── voorbeeldrapport, inzienbaar op de pagina ───────────────────────── */
+.c24 .rp-wrap{margin:34px 0 0;border-radius:20px;background:#FFFFFF;box-shadow:0 0 0 1px #E3E8F0,0 22px 54px rgba(11,31,59,.08);overflow:hidden}
+.c24 .rp-bar-top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 22px;background:#0B1F3B;color:#D7DEE9}
+.c24 .rp-brand{display:inline-flex;align-items:center;font-size:13px;font-weight:600;letter-spacing:.02em;color:#FFFFFF}
+.c24 .rp-tag{padding:4px 11px;border-radius:999px;background:rgba(226,190,106,.16);font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#E2BE6A}
+.c24 .rp-body{display:grid;grid-template-columns:minmax(0,246px) minmax(0,1fr)}
+.c24 .rp-rail{display:flex;flex-direction:column;padding:14px 12px;background:#F7F8FA;border-right:1px solid #E8EAEE}
+.c24 .rp-tab{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:11px;padding:11px 12px;border:0;border-radius:11px;background:transparent;font:inherit;font-size:14px;font-weight:600;text-align:left;color:#55617A;cursor:pointer}
+.c24 .rp-tab:hover{background:#EEF1F6}
+.c24 .rp-tab:focus-visible{outline:2px solid #C8A24A;outline-offset:-2px}
+.c24 .rp-tab.on{background:#FFFFFF;color:#0B1F3B;box-shadow:0 0 0 1px #E8DCBD,0 6px 16px rgba(11,31,59,.07)}
+.c24 .rp-no{font-size:11px;font-weight:700;letter-spacing:.06em;color:#A07E24}
+.c24 .rp-panes{position:relative;min-width:0;padding:26px 30px 20px}
+.c24 .rp-pane[hidden]{display:none}
+.c24 .rp-ph{margin:0 0 20px;padding-bottom:16px;border-bottom:1px solid #EDF0F5}
+.c24 .rp-ph h3{margin:6px 0 0;font-size:24px;font-weight:800;letter-spacing:-.025em;color:#0B1F3B}
+.c24 .rp-k{display:block;font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#A07E24}
+.c24 .rp-h4{margin:26px 0 12px;font-size:15px;font-weight:700;color:#0B1F3B}
+.c24 .rp-panes p{margin:0 0 12px;font-size:14.5px;line-height:1.62;color:#55617A}
+.c24 .rp-lead{font-size:16px !important;font-weight:600;color:#0B1F3B !important}
+
+.c24 .rp-concl{padding:22px 24px;border-radius:14px;background:#0B1F3B;color:#C3CCDB}
+.c24 .rp-concl .rp-k{color:#E2BE6A}
+.c24 .rp-ch{margin:9px 0 0 !important;font-size:21px;font-weight:800;letter-spacing:-.02em;line-height:1.26;color:#FFFFFF !important}
+.c24 .rp-cp{margin:12px 0 0 !important;font-size:14.5px;color:#C3CCDB !important}
+.c24 .rp-concl-s{margin-top:22px;background:#102A4C}
+
+.c24 .rp-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0 0;padding:0;list-style:none}
+.c24 .rp-tiles li{padding:16px 16px 14px;border-radius:13px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .rp-tv{display:block;font-size:27px;font-weight:800;letter-spacing:-.03em}
+.c24 .rp-tk{display:block;margin-top:3px;font-size:12.5px;line-height:1.4;color:#55617A}
+
+.c24 .rp-bul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.c24 .rp-bul li{position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#55617A}
+.c24 .rp-bul li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:#C8A24A}
+.c24 .rp-bul b{color:#0B1F3B}
+.c24 .rp-note{margin:20px 0 0;padding:18px 20px;border-radius:13px;background:#FBF7EE;box-shadow:inset 0 0 0 1px #EBDFC2}
+.c24 .rp-note p{margin:7px 0 0 !important;font-weight:600;color:#3B4A63 !important}
+.c24 .rp-warn{display:grid;grid-template-columns:auto minmax(0,1fr);gap:11px;margin:20px 0 0;padding:16px 18px;border-radius:13px;background:#FBF7EE;box-shadow:inset 0 0 0 1px #EBDFC2;font-size:13.5px;line-height:1.6;color:#55617A}
+.c24 .rp-warn b{color:#0B1F3B}
+
+.c24 .rp-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:0 0 18px}
+.c24 .rp-meta{padding:16px 18px;border-radius:13px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .rp-meta p{margin:7px 0 0 !important;font-size:14px !important}
+.c24 .rp-chk{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.c24 .rp-chk li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;font-size:14px;line-height:1.58;color:#55617A}
+.c24 .rp-quest{margin:18px 0 0;padding:20px 22px;border-radius:13px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E3E8F0}
+.c24 .rp-qh{margin:9px 0 0 !important;font-size:16px !important;font-weight:700;line-height:1.5;color:#0B1F3B !important}
+.c24 .rp-qs{margin:12px 0 0 !important;padding-top:12px;border-top:1px solid #EDF0F5;font-size:13px !important;color:#8B96A8 !important}
+
+.c24 .rp-docs{margin:0;padding:0;list-style:none;display:grid;gap:11px}
+.c24 .rp-docs li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;padding:14px 16px;border-radius:13px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .rp-dc{display:inline-flex;align-items:center;justify-content:center;width:40px;height:34px;border-radius:9px;background:#0B1F3B;font-size:12px;font-weight:700;letter-spacing:.04em;color:#E2BE6A}
+.c24 .rp-docs b{display:block;font-size:15px;color:#0B1F3B}
+.c24 .rp-docs div span{display:block;margin-top:2px;font-size:13px;color:#8B96A8}
+.c24 .rp-dv{font-size:12.5px;color:#9AA4B4;white-space:nowrap}
+
+.c24 .rp-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.c24 .rp-steps li{padding:14px 16px;border-radius:12px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .rp-sn{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;color:#A07E24}
+.c24 .rp-steps b{display:block;margin-top:4px;font-size:14.5px;color:#0B1F3B}
+.c24 .rp-steps li span:last-child{display:block;margin-top:2px;font-size:13px;color:#8B96A8}
+
+.c24 .rp-scale{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.c24 .rp-scale li{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:14px;font-size:14px;line-height:1.55;color:#55617A}
+.c24 .rp-st{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.05em;white-space:nowrap}
+.c24 .rp-ged{background:#E4F4EA;color:#145C3E}
+.c24 .rp-dls{background:#FBF1DC;color:#7A5C10}
+.c24 .rp-gap{background:#FBE7EB;color:#8E2A40}
+.c24 .rp-ged-b{background:#1B6B4A}
+.c24 .rp-dls-b{background:#A77C14}
+.c24 .rp-gap-b{background:#9E2F46}
+
+.c24 .rp-pct{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:24px;padding:22px 24px;border-radius:14px;background:#0B1F3B}
+.c24 .rp-pv{font-size:44px;font-weight:800;letter-spacing:-.04em;color:#FFFFFF}
+.c24 .rp-pct p{margin:0 !important;font-size:14.5px;color:#C3CCDB !important}
+.c24 .rp-leg{display:flex;flex-wrap:wrap;gap:10px 26px;margin:16px 0 0;padding:0;list-style:none;font-size:13.5px;color:#55617A}
+.c24 .rp-leg li{display:inline-flex;align-items:center;gap:8px}
+.c24 .rp-leg b{color:#0B1F3B}
+.c24 .rp-dot{width:9px;height:9px;border-radius:50%}
+.c24 .rp-bars{margin:0;padding:0;list-style:none;display:grid;gap:16px}
+.c24 .rp-bh{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:7px;font-size:14px}
+.c24 .rp-bh b{color:#0B1F3B}
+.c24 .rp-bh span{font-size:12.5px;color:#9AA4B4}
+.c24 .rp-bar{display:flex;gap:2px;height:10px;border-radius:999px;overflow:hidden;background:#EDF0F5}
+.c24 .rp-seg{display:block}
+
+.c24 .rp-tw{overflow-x:auto;border-radius:13px;box-shadow:inset 0 0 0 1px #E3E8F0}
+.c24 .rp-tbl{width:100%;min-width:640px;border-collapse:collapse;font-size:13.5px}
+.c24 .rp-tbl th{padding:12px 14px;background:#0B1F3B;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-align:left;color:#D7DEE9;white-space:nowrap}
+.c24 .rp-tbl td{padding:12px 14px;border-top:1px solid #EDF0F5;color:#3B4A63;vertical-align:middle}
+.c24 .rp-tbl tbody tr:nth-child(even){background:#FBFCFD}
+.c24 .rp-id{font-weight:700;color:#0B1F3B !important;white-space:nowrap}
+.c24 .rp-art{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12.5px;color:#86691F !important;white-space:nowrap}
+.c24 .rp-ev{font-size:12.5px;color:#8B96A8 !important;white-space:nowrap}
+.c24 .rp-pr{font-weight:700;color:#0B1F3B !important}
+
+.c24 .rp-risk{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin:0 0 18px;padding:18px 22px;border-radius:13px;background:#0B1F3B}
+.c24 .rp-risk .rp-k{color:#E2BE6A}
+.c24 .rp-risk b{display:block;margin-top:4px;font-size:21px;font-weight:800;letter-spacing:-.01em;color:#FFFFFF}
+.c24 .rp-ra{font-size:15px;font-weight:600;color:#E2BE6A}
+.c24 .rp-quote{margin:9px 0 0;padding:14px 18px;border-left:3px solid #C8A24A;border-radius:0 10px 10px 0;background:#F7F8FA;font-size:14.5px;font-style:italic;line-height:1.6;color:#3B4A63}
+
+.c24 .rp-90{margin:0;padding:0;list-style:none;display:grid;gap:11px}
+.c24 .rp-90 li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start;padding:15px 18px;border-radius:13px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .rp-per{display:inline-flex;align-items:center;justify-content:center;min-width:66px;padding:5px 10px;border-radius:999px;background:#0B1F3B;font-size:11.5px;font-weight:700;letter-spacing:.04em;color:#E2BE6A}
+.c24 .rp-90 b{display:block;font-size:15px;color:#0B1F3B}
+.c24 .rp-90 div span{display:block;margin-top:3px;font-size:13.5px;line-height:1.55;color:#55617A}
+.c24 .rp-own{margin-top:6px !important;font-size:12px !important;font-weight:600;letter-spacing:.02em;color:#A07E24 !important}
+
+.c24 .rp-trace{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.c24 .rp-trace li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:center;padding:13px 18px;border-radius:12px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .rp-trace b{display:block;margin-top:2px;font-size:14.5px;color:#0B1F3B}
+.c24 .rp-keep{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.c24 .rp-keep li{padding:16px 18px;border-radius:13px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .rp-keep b{display:block;margin-top:5px;font-size:14.5px;color:#0B1F3B}
+.c24 .rp-keep li span:last-child{display:block;margin-top:4px;font-size:13px;line-height:1.55;color:#55617A}
+.c24 .rp-src{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.c24 .rp-src a{display:block;padding:12px 16px;border-radius:11px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E8EAEE;text-decoration:none}
+.c24 .rp-src a:hover{background:#EEF1F6}
+.c24 .rp-src a:focus-visible{outline:2px solid #C8A24A;outline-offset:2px}
+.c24 .rp-src b{display:block;font-size:14px;color:#0B1F3B}
+.c24 .rp-src span{display:block;margin-top:2px;font-size:12.5px;color:#8B96A8}
+
+.c24 .rp-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:24px 0 0;padding-top:18px;border-top:1px solid #EDF0F5}
+.c24 .rp-nav button{display:inline-flex;align-items:center;padding:10px 18px;border:0;border-radius:999px;background:#F2F4F8;font:inherit;font-size:14px;font-weight:600;color:#0B1F3B;cursor:pointer}
+.c24 .rp-nav button:hover{background:#E7EBF1}
+.c24 .rp-nav button:focus-visible{outline:2px solid #C8A24A;outline-offset:2px}
+.c24 .rp-nav button[disabled]{opacity:.42;cursor:default}
+.c24 .rp-count{font-size:13px;font-weight:600;letter-spacing:.04em;color:#8B96A8}
+
+@container page (max-width:1099px){
+.c24 .rp-body{grid-template-columns:minmax(0,1fr)}
+.c24 .rp-rail{flex-direction:row;overflow-x:auto;gap:8px;border-right:0;border-bottom:1px solid #E8EAEE}
+.c24 .rp-tab{flex:none;grid-template-columns:auto;gap:2px;padding:10px 14px;white-space:nowrap}
+.c24 .rp-keep{grid-template-columns:minmax(0,1fr)}
+.c24 .rp-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@container page (max-width:760px){
+.c24 .rp-panes{padding:22px 20px 18px}
+.c24 .rp-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+.c24 .rp-two{grid-template-columns:minmax(0,1fr)}
+.c24 .rp-pct{grid-template-columns:minmax(0,1fr);gap:12px}
+.c24 .rp-ph h3{font-size:21px}
+}
+@container page (max-width:560px){
+.c24 .rp-steps{grid-template-columns:minmax(0,1fr)}
+.c24 .rp-docs li{grid-template-columns:auto minmax(0,1fr)}
+.c24 .rp-dv{grid-column:2;white-space:normal}
+.c24 .rp-nav{flex-wrap:wrap;justify-content:center}
+.c24 .rp-count{order:3;width:100%;text-align:center}
+}
+
+/* ── downloadkaart bij het voorbeeldrapport ─────────────────────────── */
+.c24 .rp-dl{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:clamp(24px,4cqw,46px);margin:26px 0 0;padding:28px 32px;border-radius:18px;background:#FFFFFF;box-shadow:0 0 0 1px #E3E8F0,0 16px 40px rgba(11,31,59,.06)}
+.c24 .rp-cover{display:block;width:154px;height:auto;border-radius:10px;box-shadow:0 2px 0 rgba(11,31,59,.04),0 14px 30px rgba(11,31,59,.18),0 0 0 1px rgba(11,31,59,.08);transition:transform .24s ease,box-shadow .24s ease}
+.c24 .rp-dl:hover .rp-cover{transform:translateY(-4px);box-shadow:0 2px 0 rgba(11,31,59,.04),0 22px 44px rgba(11,31,59,.24),0 0 0 1px rgba(11,31,59,.08)}
+.c24 .rp-dl h3{margin:0;font-size:21px;font-weight:800;letter-spacing:-.02em;color:#0B1F3B}
+.c24 .rp-dl p{margin:10px 0 0;max-width:560px;font-size:15px;line-height:1.62;color:#55617A}
+.c24 .rp-meta2{display:flex;flex-wrap:wrap;gap:8px 20px;margin:16px 0 0;padding:0;list-style:none;font-size:13px;color:#8B96A8}
+.c24 .rp-meta2 li{display:inline-flex;align-items:center;gap:7px}
+.c24 .rp-dlb{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;margin-top:22px}
+@container page (max-width:760px){
+.c24 .rp-dl{grid-template-columns:minmax(0,1fr);justify-items:start;padding:24px 22px}
+.c24 .rp-cover{width:128px}
+}
+@container page (max-width:560px){
+.c24 .rp-dlb .btn{flex:1 1 100%;justify-content:center}
+}
+
+/* ── bevinding-verkenner ────────────────────────────────────────────── */
+.c24 .fx{position:relative;margin:34px 0 0;padding:24px 28px 22px;border-radius:20px;background:#FFFFFF;box-shadow:0 0 0 1px #E3E8F0,0 20px 48px rgba(11,31,59,.07)}
+.c24 .sec.dark .fx{padding:20px 22px;background:rgba(255,255,255,.055);box-shadow:inset 0 0 0 1px rgba(226,190,106,.24)}
+.c24 .fx-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px;margin:0 0 20px;padding-bottom:16px;border-bottom:1px solid #EDF0F5}
+.c24 .sec.dark .fx-top{border-bottom-color:rgba(255,255,255,.12)}
+.c24 .fx-tag{display:inline-flex;align-items:center;font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#8B96A8}
+.c24 .sec.dark .fx-tag{color:#A9B4C6}
+.c24 .fx-count{font-size:12.5px;font-weight:600;letter-spacing:.05em;color:#9AA4B4}
+.c24 .fx-count b{color:#0B1F3B}
+
+.c24 .fx-grid{display:grid;grid-template-columns:minmax(0,40fr) minmax(0,60fr);gap:clamp(22px,3cqw,38px);align-items:start}
+.c24 .fx-pane[hidden]{display:none}
+
+/* links: de keten */
+.c24 .fx-chain{position:relative;margin:0;padding:0;list-style:none;display:grid}
+.c24 .fx-i{position:relative}
+.c24 .fx-s{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);gap:15px;width:100%;padding:11px 12px 11px 0;border:0;border-radius:11px;background:transparent;font:inherit;text-align:left;cursor:pointer}
+.c24 .fx-s:hover,.c24 .fx-s:focus-visible{background:#F7F8FA}
+.c24 .sec.dark .fx-s:hover,.c24 .sec.dark .fx-s:focus-visible{background:rgba(255,255,255,.05)}
+.c24 .fx-s:focus-visible{outline:2px solid #C8A24A;outline-offset:-2px}
+.c24 .fx-i:not(:last-child) .fx-s::before{content:"";position:absolute;left:19px;top:34px;bottom:-11px;width:2px;border-radius:2px;background:linear-gradient(180deg,#C8A24A,rgba(200,162,74,.3));transform-origin:top center}
+.c24.armed .fx-i:not(:last-child) .fx-s::before{transform:scaleY(0)}
+.c24 .sec.in .fx-i:not(:last-child) .fx-s::before{animation:fxdraw .22s ease both;animation-delay:calc(.2s + var(--i) * .16s)}
+@keyframes fxdraw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.c24 .fx-d{position:relative;z-index:1;width:16px;height:16px;margin-left:12px;margin-top:5px;border-radius:50%;background:#FFFFFF;box-shadow:inset 0 0 0 2px #C8A24A}
+.c24 .sec.dark .fx-d{background:#122E51}
+.c24 .fx-s[data-on] .fx-d,.c24 .fx-s:hover .fx-d{box-shadow:inset 0 0 0 5px #C8A24A}
+.c24 .fx-c{min-width:0}
+.c24 .fx-l{display:block;font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#A07E24}
+.c24 .sec.dark .fx-l{color:#E2BE6A}
+.c24 .fx-v{display:block;margin-top:4px;font-size:15.5px;line-height:1.48;font-weight:600;color:#0B1F3B}
+.c24 .sec.dark .fx-v{color:#FFFFFF}
+.c24 .fx-sub{display:block;margin-top:3px;font-size:12.5px;line-height:1.5;color:#8B96A8}
+.c24 .sec.dark .fx-sub{color:#A9B4C6}
+
+/* rechts: het oordeel */
+.c24 .fx-detail{padding:24px 26px 22px;border-radius:16px;background:#0B1F3B;color:#C3CCDB}
+.c24 .fx-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:0 0 18px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.13)}
+.c24 .fx-prio{font-size:13px;font-weight:600;color:#FFFFFF}
+.c24 .fx-art{flex:1 1 100%;font-size:13px;color:#A9B4C6}
+.c24 .fx-badge{display:inline-flex;align-items:center;padding:4px 11px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.05em;white-space:nowrap}
+.c24 .fx-badge.fx-lg{padding:6px 14px;font-size:12.5px}
+.c24 .fx-gap{background:#FBE7EB;color:#8E2A40}
+.c24 .fx-dls{background:#FBF1DC;color:#7A5C10}
+.c24 .fx-ged{background:#E4F4EA;color:#145C3E}
+.c24 .fx-b{padding:13px 0;border-top:1px solid rgba(255,255,255,.09);transition:background .2s ease,box-shadow .2s ease}
+.c24 .fx-b:first-of-type{border-top:0;padding-top:0}
+.c24 .fx-b[data-hot]{background:rgba(226,190,106,.09);box-shadow:inset 3px 0 0 #C8A24A;border-radius:0 8px 8px 0;padding-left:14px;margin-left:-14px}
+.c24 .fx-bk{display:block;font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#E2BE6A}
+.c24 .fx-b p{margin:6px 0 0;font-size:14.5px;line-height:1.62;color:#D7DEE9}
+.c24 .fx-q{display:block;font-size:14.5px;font-style:italic;line-height:1.6;color:#FFFFFF}
+.c24 .fx-bm{display:block;margin-top:6px;font-size:12.5px;color:#9AA4B4}
+
+/* navigatie */
+.c24 .fx-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 20px;margin:22px 0 0;padding-top:18px;border-top:1px solid #EDF0F5}
+.c24 .fx-dots{display:flex;gap:9px}
+.c24 .fx-dot{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:#D5DBE4;cursor:pointer}
+.c24 .fx-dot.on{background:#C8A24A;transform:scale(1.25)}
+.c24 .fx-dot:focus-visible{outline:2px solid #C8A24A;outline-offset:3px}
+.c24 .fx-arrows{display:flex;gap:10px}
+.c24 .fx-arrows button{display:inline-flex;align-items:center;padding:9px 17px;border:0;border-radius:999px;background:#F2F4F8;font:inherit;font-size:13.5px;font-weight:600;color:#0B1F3B;cursor:pointer;transition:background .18s ease}
+.c24 .fx-arrows button:hover{background:#E7EBF1}
+.c24 .fx-arrows button:focus-visible{outline:2px solid #C8A24A;outline-offset:2px}
+.c24 .fx-arrows button[disabled]{opacity:.42;cursor:default}
+
+/* compacte variant op de homepage */
+.c24 .fx-sm{margin:0}
+.c24 .fx-sm .fx-top{margin-bottom:14px;padding-bottom:12px}
+.c24 .fx-sm .fx-s{cursor:default;padding:9px 10px 9px 0}
+.c24 .fx-sm .fx-s:hover{background:transparent}
+.c24 .fx-sm .fx-s:hover .fx-d{box-shadow:inset 0 0 0 2px #C8A24A}
+.c24 .fx-sm .fx-v{font-size:14.5px}
+
+@container page (max-width:1099px){
+.c24 .fx-grid{grid-template-columns:minmax(0,1fr);gap:22px}
+}
+@container page (max-width:560px){
+.c24 .fx{padding:20px 18px 18px}
+.c24 .fx-detail{padding:20px 18px 18px}
+.c24 .fx-nav{justify-content:center}
+.c24 .fx-arrows{flex:1 1 100%;justify-content:space-between}
+}
+@media (prefers-reduced-motion: reduce){
+.c24 .fx-i .fx-s::before{animation:none !important;transform:none !important}
+.c24 .fx-b,.c24 .fx-arrows button{transition:none}
+}
+
+/* ── sectie met de rapportfoto erachter ─────────────────────────────── */
+.c24 .qsphoto{position:relative;overflow:hidden;background:#F2F4F7}
+.c24 .qsp-bg{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%;will-change:transform}
+.c24 .qsp-wash{position:absolute;inset:0;background:linear-gradient(97deg,rgba(247,248,250,.82) 0,rgba(247,248,250,.6) 30%,rgba(247,248,250,.2) 54%,rgba(247,248,250,0) 74%)}
+.c24 .qsphoto > .wrap{position:relative;z-index:1}
+.c24 .qsphoto .lead{max-width:620px}
+.c24 .qsphoto .qsget li{background:rgba(255,255,255,.96);backdrop-filter:saturate(1.1) blur(2px);box-shadow:0 0 0 1px rgba(11,31,59,.07),0 18px 42px rgba(11,31,59,.12)}
+.c24 .qsphoto .qsget li:hover{box-shadow:0 0 0 1px rgba(11,31,59,.09),0 26px 54px rgba(11,31,59,.18)}
+@container page (max-width:860px){
+.c24 .qsp-bg{object-position:46% 44%}
+.c24 .qsp-wash{background:linear-gradient(176deg,rgba(247,248,250,.9) 0,rgba(247,248,250,.74) 36%,rgba(247,248,250,.3) 100%)}
+}
+@media (prefers-reduced-motion: reduce){
+.c24 .qsp-bg{height:100% !important;transform:none !important}
+}
+
+.c24 .qsrv{margin-top:8px}
+.c24 .qsrv-b{display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px;margin-top:28px}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -152,20 +582,23 @@
 
 <section id="pricing" class="sec pad" aria-label="Prijzen" style="position: relative; background: #FFFFFF">
 <div class="wrap">
-<div class="ey rv" style="--rd: 0s">Tarieven</div>
-<h2 class="h2 rv" style="--rd: .08s">Per maand of per jaar. <span class="gold blk">Beide modules inbegrepen.</span></h2>
-<p class="lead rv" style="--rd: .14s; max-width: 760px">U betaalt per gebruiker; beide modules zijn inbegrepen. U kiest voor maandelijkse of jaarlijkse betaling.</p>
-<div class="pr-plans">
-<div class="pr-plan rv" style="--rd: .1s"><span class="pr-k">Maandabonnement</span><div class="pr-fig">€ 300</div><p class="pr-unit">per gebruiker per maand, exclusief btw</p><p class="pr-note">Maandelijks opzegbaar of aan te passen.</p></div>
-<div class="pr-plan mid rv" style="--rd: .18s"><span class="tier-tag">Circa 17% voordeliger</span><span class="pr-k">Jaarabonnement</span><div class="pr-fig">€ 3.000</div><p class="pr-unit">per gebruiker per jaar, exclusief btw</p><p class="pr-note">Vooraf betaald; op factuur mogelijk.</p></div>
-<div class="pr-incl rv" style="--rd: .26s"><span class="pr-k">In beide inbegrepen</span><ul><li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2"><use href="#i-check"></use></svg><span>Volledige toegang tot het platform: Regulatory Intelligence en Control Testing</span></li><li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2"><use href="#i-check"></use></svg><span>Alle wetgeving in uw scope, inclusief nieuwe versies en wijzigingen</span></li><li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2"><use href="#i-check"></use></svg><span>Eigen omgeving, hosting in de EU, audittrail en vier-ogen</span></li><li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2"><use href="#i-check"></use></svg><span>Export van uw gegevens op elk moment</span></li></ul></div>
-</div>
-<h3 class="ph3 rv" style="--rd: .1s">Staffel</h3>
-<div class="pr-staf rv" style="--rd: .12s"><table class="pr-tbl"><thead><tr><th scope="col">Gebruikers</th><th scope="col">Per gebruiker per maand</th><th scope="col">Per gebruiker per jaar</th><th scope="col"></th></tr></thead><tbody><tr><th scope="row">1 – 10</th><td>€ 300</td><td>€ 3.000</td><td class="pr-tnote">Standaardtarief</td></tr>
-<tr><th scope="row">11 – 20</th><td>€ 270</td><td>€ 2.700</td><td class="pr-tnote">10% korting op elke gebruiker boven de tien</td></tr>
-<tr><th scope="row">21+</th><td>Maatwerk</td><td>Maatwerk</td><td class="pr-tnote">Eigen afspraken, begeleide onboarding en een vast aanspreekpunt</td></tr>
-</tbody></table><p class="pr-ex"><b>Rekenvoorbeeld.</b> Vijftien gebruikers op het maandabonnement: 10 × € 300 + 5 × € 270 = € 4.350 per maand.</p></div>
+<div class="ey rv" style="--rd: 0s">Bereken uw prijs</div>
+<h2 class="h2 rv" style="--rd: .08s">Kies de betalingstermijn <span class="gold blk">en schuif naar uw teamomvang.</span></h2>
+<p class="lead rv" style="--rd: .14s; max-width: 760px">Eén tarief per gebruiker, beide modules inbegrepen. Volumekorting vanaf de elfde gebruiker; maatwerk vanaf 21.</p>
+<div class="pc rv" style="--rd: .1s" data-pc><div class="pc-top"><div class="pc-bill" role="group" aria-label="Betalingstermijn"><button class="pc-bb on" type="button" data-bill="m" aria-pressed="true">Maandelijks</button><button class="pc-bb" type="button" data-bill="y" aria-pressed="false">Jaarlijks<span class="pc-save">−17%</span></button></div></div><div class="pc-g"><div class="pc-l"><span class="pc-k">Aantal gebruikers</span><div class="pc-n"><b data-pc-n>1</b><span data-pc-nl>gebruiker</span></div><input class="pc-sl" type="range" min="1" max="25" step="1" value="1" aria-label="Aantal gebruikers" data-pc-sl><div class="pc-ticks" aria-hidden="true"><span>1</span><span>5</span><span>10</span><span>15</span><span>20</span><span>25+</span></div></div><div class="pc-r" aria-live="polite"><div class="pc-res" data-pc-res><span class="pc-rk" data-pc-per>Per maand</span><div class="pc-fig" data-pc-tot>€ 300</div><span class="pc-ru" data-pc-unit>totaal per maand</span><div class="pc-avg"><span>Gemiddeld per gebruiker</span><b data-pc-avg>€ 300</b></div><div class="pc-avg pc-sv" data-pc-svrow hidden><span>U bespaart</span><b data-pc-sv>€ 0</b></div><span class="pc-vat">Alle prijzen exclusief btw</span></div><div class="pc-cust" data-pc-cust hidden><span class="pc-rk">Maatwerk</span><div class="pc-fig pc-fig-s">Vanaf 21 gebruikers</div><p>Voor teams van 21 gebruikers en meer stellen wij een passende overeenkomst op: aangepaste voorwaarden, begeleide onboarding en een vast aanspreekpunt.</p><a class="btn-gold" href="demo.html?s=prijslijst#contact-fm">Neem contact op<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a></div></div></div><div class="pc-bd"><span class="pc-k">Berekening per volumetier</span><ul class="pc-lines" data-pc-lines></ul></div><div class="pc-incl"><span class="pc-k">Bij elke licentie inbegrepen</span><ul><li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2"><use href="#i-check"></use></svg><span>Volledige toegang tot het platform: Regulatory Intelligence en Control Testing</span></li><li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2"><use href="#i-check"></use></svg><span>Alle wetgeving in uw scope, inclusief nieuwe versies en wijzigingen</span></li><li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2"><use href="#i-check"></use></svg><span>Eigen omgeving, hosting in de EU, audittrail en vier-ogen</span></li><li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2"><use href="#i-check"></use></svg><span>Export van uw gegevens op elk moment</span></li></ul></div></div>
 
+</div>
+</section>
+
+<section id="pricing-tiers" class="sec pad" aria-label="Volumekorting" style="position: relative; background: #FBF6EC; border-top: 1px solid #F0E8D6">
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">Volumekorting</div>
+<h2 class="h2 rv" style="--rd: .08s">Korting die meegroeit <span class="gold">met uw team.</span></h2>
+<div class="g3" style="margin-top: 40px; gap: 24px; align-items: stretch">
+<div class="card pr-tier rv" style="--rd: .10s"><span class="pr-k">Gebruiker 1: 10</span><div class="pr-tfig">€ 300</div><p class="pr-tunit">per gebruiker per maand · standaardtarief</p><p class="bd">Geen minimum. Jaarlijks vooraf: € 3.000 per gebruiker (circa 17% voordeliger).</p></div>
+<div class="card pr-tier rv" style="--rd: .18s"><span class="pr-k">Gebruiker 11: 20</span><div class="pr-tfig">€ 270</div><p class="pr-tunit">per gebruiker per maand · 10% volumekorting</p><p class="bd">Vanaf de elfde gebruiker krijgt elke volgende gebruiker 10% korting. Jaarlijks: € 2.700 per gebruiker.</p></div>
+<div class="card pr-tier rv" style="--rd: .26s"><span class="pr-k">21 gebruikers en meer</span><div class="pr-tfig">Maatwerk</div><p class="pr-tunit">op aanvraag</p><p class="bd">Een passende overeenkomst met aangepaste voorwaarden, begeleide onboarding en een vast aanspreekpunt.</p></div>
+</div>
 </div>
 </section>
 
@@ -194,16 +627,19 @@
 </div>
 </section>
 
-<section id="pricing-terms" class="sec pad" aria-label="Voorwaarden" style="position: relative; background: #FBF6EC; border-top: 1px solid #F0E8D6">
+<section id="pricing-faq" class="sec pad" aria-label="Veelgestelde vragen" style="position: relative; background: #FFFFFF; border-top: 1px solid #E5E7EB">
 <div class="wrap">
-<div class="ey rv" style="--rd: 0s">Goed om te weten</div>
-<h2 class="h2 rv" style="--rd: .08s">Facturatie, schaal en looptijd.</h2>
-<div class="pr-terms">
-<div class="pr-term rv" style="--rd: .08s"><h3>Btw</h3><p>Alle prijzen zijn exclusief 21% btw. Voor instellingen buiten Nederland binnen de EU geldt de btw-regeling via uw btw-nummer.</p></div>
-<div class="pr-term rv" style="--rd: .14s"><h3>Betaling</h3><p>Maandabonnement: automatische incasso of creditcard. Jaarabonnement: ook op factuur, vooraf per bankoverschrijving. Bij maatwerk eigen facturatieafspraken.</p></div>
-<div class="pr-term rv" style="--rd: .20s"><h3>Op- en afschalen</h3><p>Maandabonnement: het aantal gebruikers wijzigt u per maand. Jaarabonnement: gebruikers bijboeken kan tussentijds, naar rato; verlagen gaat in bij verlenging.</p></div>
-<div class="pr-term rv" style="--rd: .26s"><h3>Looptijd</h3><p>Geen meerjarenverplichting. Een maandabonnement loopt per maand, een jaarabonnement per jaar.</p></div>
-</div>
+<div class="ey rv" style="--rd: 0s">Veelgestelde vragen</div>
+<h2 class="h2 rv" style="--rd: .08s">Kosten en voorwaarden.</h2>
+<div class="qfaq rv" style="--rd: .12s">
+<details class="qfaq-i"><summary>Wat is het verschil tussen maandelijks en jaarlijks betalen?<span class="qfaq-c" aria-hidden="true"></span></summary><div class="qfaq-a"><p>Bij maandelijkse facturatie betaalt u € 300 per gebruiker per maand. Bij jaarlijkse vooruitbetaling € 3.000 per gebruiker per jaar: dat scheelt € 600 per gebruiker per jaar, circa 17%. Beide varianten geven dezelfde toegang tot alle functionaliteit.</p></div></details>
+<details class="qfaq-i"><summary>Hoe werkt de volumekorting?<span class="qfaq-c" aria-hidden="true"></span></summary><div class="qfaq-a"><p>Progressief. De eerste tien gebruikers kosten € 300 per maand. Van de elfde tot en met de twintigste gebruiker geldt 10% korting: € 270 per maand. Bij vijftien gebruikers betaalt u dus 10 × € 300 + 5 × € 270 = € 4.350 per maand. Vanaf 21 gebruikers stellen wij een maatwerkovereenkomst op.</p></div></details>
+<details class="qfaq-i"><summary>Geldt de volumekorting ook op jaarabonnementen?<span class="qfaq-c" aria-hidden="true"></span></summary><div class="qfaq-a"><p>Ja. Op jaarbasis is dat € 3.000 per gebruiker (1–10) en € 2.700 per gebruiker (11–20). Vanaf 21 gebruikers geldt maatwerk.</p></div></details>
+<details class="qfaq-i"><summary>Zijn beide modules inbegrepen?<span class="qfaq-c" aria-hidden="true"></span></summary><div class="qfaq-a"><p>Ja. Elke licentie geeft toegang tot Regulatory Intelligence en Control Testing. U bepaalt zelf welke module u als eerste in gebruik neemt.</p></div></details>
+<details class="qfaq-i"><summary>Wat kost de implementatie?<span class="qfaq-c" aria-hidden="true"></span></summary><div class="qfaq-a"><p>Implementatie gaat tegen een vaste prijs met acceptatiecriteria: vooraf is afgesproken wat “klaar” is en u betaalt bij acceptatie. De omvang hangt af van uw scope, kaders en beleidshuis; u ontvangt een offerte. Een Compliance QuickScan wordt bij een opdracht binnen zes maanden met de implementatie verrekend.</p></div></details>
+<details class="qfaq-i"><summary>Kan ik mijn abonnement op- of afschalen?<span class="qfaq-c" aria-hidden="true"></span></summary><div class="qfaq-a"><p>Ja. Bij maandelijkse facturatie past u het aantal gebruikers maandelijks aan. Bij een jaarabonnement voegt u tussentijds gebruikers toe (naar rato gefactureerd); afschalen gaat in bij verlenging. Er is geen meerjarenverplichting.</p></div></details>
+<details class="qfaq-i"><summary>Zijn de prijzen exclusief of inclusief btw?<span class="qfaq-c" aria-hidden="true"></span></summary><div class="qfaq-a"><p>Alle prijzen zijn exclusief 21% btw. Voor instellingen buiten Nederland binnen de EU geldt de btw-regeling via uw btw-nummer.</p></div></details>
+<details class="qfaq-i"><summary>Welke betaalmethoden accepteren jullie?<span class="qfaq-c" aria-hidden="true"></span></summary><div class="qfaq-a"><p>Maandabonnement: automatische incasso of creditcard. Jaarabonnement: ook op factuur, vooraf per bankoverschrijving. Bij maatwerk maken wij eigen facturatieafspraken.</p></div></details>
 </div>
 </section>
 
@@ -269,7 +705,7 @@
 </div>
 </footer>
 </div>
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/main.js?v=202610132140" defer></script>
 <noscript><style>.c24 .rv{opacity:1 !important;transform:none !important}</style></noscript>
 </body>
 </html>

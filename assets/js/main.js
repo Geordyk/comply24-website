@@ -508,3 +508,56 @@ class Component extends DCLogic {
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go); else go();
 })();
+
+/* prijzen: calculator (maand/jaar, 1-25 gebruikers, staffel 11-20 -10%, 21+ maatwerk) */
+(function () {
+  'use strict';
+  var box = document.querySelector('[data-pc]');
+  if (!box) return;
+  var en = document.querySelector('.c24.l-en') !== null;
+  var sl = box.querySelector('[data-pc-sl]'), nEl = box.querySelector('[data-pc-n]'), nl = box.querySelector('[data-pc-nl]');
+  var tot = box.querySelector('[data-pc-tot]'), avg = box.querySelector('[data-pc-avg]'), sv = box.querySelector('[data-pc-sv]');
+  var svrow = box.querySelector('[data-pc-svrow]'), per = box.querySelector('[data-pc-per]'), unit = box.querySelector('[data-pc-unit]');
+  var res = box.querySelector('[data-pc-res]'), cust = box.querySelector('[data-pc-cust]'), lines = box.querySelector('[data-pc-lines]');
+  var bills = [].slice.call(box.querySelectorAll('[data-bill]'));
+  var bill = 'm';
+  var fmt = function (v) { return '€ ' + Math.round(v).toLocaleString(en ? 'en-GB' : 'nl-NL'); };
+  var T = en
+    ? { user: 'user', users: 'users', pm: 'Per month', py: 'Per year', tm: 'total per month', ty: 'total per year', m: '/ month', y: '/ year',
+        a: 'at', disc: '−10%', note: 'More than 20 users? We draw up a tailored agreement for larger teams.' }
+    : { user: 'gebruiker', users: 'gebruikers', pm: 'Per maand', py: 'Per jaar', tm: 'totaal per maand', ty: 'totaal per jaar', m: '/ mnd', y: '/ jaar',
+        a: 'à', disc: '−10%', note: 'Meer dan 20 gebruikers? Voor grotere teams stellen wij een maatwerkovereenkomst op.' };
+  function calc() {
+    var n = parseInt(sl.value, 10);
+    sl.style.setProperty('--p', ((n - 1) / 24 * 100) + '%');
+    nEl.textContent = n;
+    nl.textContent = n === 1 ? T.user : T.users;
+    var base = bill === 'm' ? 300 : 3000, disc = bill === 'm' ? 270 : 2700, suf = bill === 'm' ? T.m : T.y;
+    per.textContent = bill === 'm' ? T.pm : T.py;
+    unit.textContent = bill === 'm' ? T.tm : T.ty;
+    lines.innerHTML = '';
+    if (n > 20) {
+      res.hidden = true; cust.hidden = false;
+      lines.innerHTML = '<li class="note">' + T.note + '</li>';
+      return;
+    }
+    res.hidden = false; cust.hidden = true;
+    var a = Math.min(n, 10), b = Math.max(0, n - 10);
+    var total = a * base + b * disc, saving = b * (base - disc);
+    tot.textContent = fmt(total);
+    avg.textContent = fmt(total / n);
+    svrow.hidden = saving === 0;
+    sv.textContent = fmt(saving);
+    lines.innerHTML = '<li><span>' + a + ' × ' + (a === 1 ? T.user : T.users) + ' ' + T.a + ' ' + fmt(base) + ' ' + suf + '</span><b>' + fmt(a * base) + '</b></li>'
+      + (b ? '<li class="disc"><span>' + b + ' × ' + (b === 1 ? T.user : T.users) + ' ' + T.a + ' ' + fmt(disc) + ' ' + suf + ' ' + T.disc + '</span><b>' + fmt(b * disc) + '</b></li>' : '');
+  }
+  sl.addEventListener('input', calc);
+  bills.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      bill = btn.getAttribute('data-bill');
+      bills.forEach(function (x) { var on = x === btn; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      calc();
+    });
+  });
+  calc();
+})();
