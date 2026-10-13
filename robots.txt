@@ -1,0 +1,3 @@
+# Testomgeving. Niet indexeren.
+User-agent: *
+Disallow: /

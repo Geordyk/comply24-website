@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voor compliance, risk, audit en CISO — Comply24</title>
+<meta name="description" content="Voor compliance officers, risk managers, internal auditors, CISO’s en bestuurders bij instellingen onder toezicht van DNB, de AFM en de ECB.">
+<link rel="canonical" href="https://comply24.nl/voor-wie.html">
+<link rel="alternate" hreflang="nl" href="https://comply24.nl/voor-wie.html">
+<link rel="alternate" hreflang="en" href="https://comply24.nl/en/voor-wie.html">
+<link rel="alternate" hreflang="x-default" href="https://comply24.nl/voor-wie.html">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:url" content="https://comply24.nl/voor-wie.html">
+<meta property="og:site_name" content="Comply24">
+<meta property="og:locale" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Voor compliance, risk, audit en CISO — Comply24">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Voor compliance, risk, audit en CISO — Comply24">
+<meta property="og:description" content="Voor compliance officers, risk managers, internal auditors, CISO’s en bestuurders bij instellingen onder toezicht van DNB, de AFM en de ECB.">
+<meta property="og:image" content="https://comply24.nl/assets/images/comply24-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://comply24.nl/assets/images/comply24-og.jpg">
+<link rel="icon" href="assets/images/comply24-logo-navy.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+/* Comply24 — opmaak die alleen voor-wie.html nodig heeft.
+   Staat ook inline in die pagina, zodat hij klopt ook als styles.css
+   nog niet ververst is. */
+
+/* ── voor wie: rolkiezer met paneel ────────────────────────────────────── */
+.c24 #roles > .wrap{position:relative;z-index:1;max-width:1560px;padding-left:clamp(24px,3.4cqw,64px);padding-right:clamp(24px,3.4cqw,64px)}
+.c24 #roles .ey,.c24 #roles .lead{max-width:min(100%,600px)}
+.c24 #roles .h2{max-width:min(100%,520px)}
+.c24 .rolebox{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:clamp(20px,2.2cqw,34px);margin-top:42px;max-width:58%}
+
+.c24 .rolerail{display:flex;flex-direction:column;gap:0;align-self:start;padding:10px;border-radius:20px;background:#FFFFFF;
+  box-shadow:0 1px 0 rgba(11,31,59,.05),0 26px 52px rgba(11,31,59,.11)}
+.c24 .rolebtn{position:relative;display:flex;align-items:center;gap:14px;width:100%;min-height:62px;padding:0 15px;border:0;border-radius:14px;background:transparent;font:inherit;font-size:15.5px;font-weight:600;text-align:left;color:#3B4A63;cursor:pointer;transition:background .22s ease,color .22s ease}
+.c24 .rolebtn + .rolebtn::before{content:"";position:absolute;left:14px;right:14px;top:0;height:1px;background:#F2EDE3}
+.c24 .rolebtn:hover{background:#FCFAF6;color:#0B1F3B}
+.c24 .rolebtn.on{background:linear-gradient(95deg,#FBF1DC 0,#FDF9F1 72%);color:#0B1F3B;box-shadow:inset 3px 0 0 #C8A24A}
+.c24 .rolebtn.on + .rolebtn::before,.c24 .rolebtn.on::before{opacity:0}
+.c24 .rolebtn-ic{display:inline-flex;align-items:center;justify-content:center;flex:none;width:38px;height:38px;border-radius:12px;color:#A07E24;
+  background:linear-gradient(145deg,#FEFAF1 0,#F1E2C2 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(168,135,53,.18),0 2px 5px rgba(11,31,59,.08)}
+.c24 .rolebtn.on .rolebtn-ic{background:linear-gradient(145deg,#FFFFFF 0,#EFDFBB 100%)}
+.c24 .rolebtn-t{flex:1 1 auto;min-width:0;padding-right:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.c24 .rolebtn-c{position:absolute;right:14px;top:50%;margin-top:-8px;color:#C3B288;opacity:0;transform:translateX(-4px);transition:opacity .22s ease,transform .22s ease}
+.c24 .rolebtn.on .rolebtn-c{opacity:1;transform:none}
+
+.c24 .rolep{display:none}
+.c24 .rolep.on{display:block;animation:c24fade .45s ease both}
+.c24 .rolep .ey{margin-bottom:14px}
+.c24 .rolep-h{margin:0;font-size:clamp(27px,2.8cqw,40px);line-height:1.12;letter-spacing:-.035em;font-weight:800;color:#0B1F3B;text-wrap:balance}
+.c24 .rolep-i{margin:18px 0 0;max-width:640px;font-size:17px;line-height:1.62;color:#55617A}
+.c24 .rolepanes{container-type:inline-size;container-name:pane}
+.c24 .rolep-g{display:grid;grid-template-columns:minmax(0,1fr);gap:26px;margin-top:34px}
+.c24 .rolep-b{padding:0;background:none;box-shadow:none}
+.c24 .rolep-ic{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:16px;color:#A07E24;
+  background:linear-gradient(145deg,#FEFAF1 0,#EFDFBB 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -2px 0 rgba(168,135,53,.16),0 7px 16px rgba(11,31,59,.10)}
+.c24 .rolep-ic.gold{color:#8F7026}
+.c24 .rolep-b h4{margin:17px 0 0;font-size:17px;font-weight:700;letter-spacing:-.01em;color:#0B1F3B}
+.c24 .rolep-b p{margin:9px 0 0;font-size:15.5px;line-height:1.62;color:#55617A}
+.c24 .rolep-cta{height:56px;margin-top:34px;padding:0 32px;font-size:15.5px}
+
+@container pane (min-width:430px){
+.c24 .rolep-g{grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+.c24 .rolep-b{padding-right:30px}
+.c24 .rolep-b + .rolep-b{padding-right:0;padding-left:32px;border-left:1px solid #EDE6D8}
+}
+
+@container page (max-width:1099px){
+.c24 .rolebox{max-width:100%}
+}
+@container page (max-width:960px){
+.c24 .rolebox{grid-template-columns:minmax(0,1fr)}
+.c24 .rolerail{flex-direction:row;flex-wrap:wrap;gap:6px;padding:8px}
+.c24 .rolebtn{width:auto;flex:1 1 180px;min-height:52px}
+.c24 .rolebtn + .rolebtn::before{display:none}
+.c24 .rolebtn-c{display:none}
+}
+@container page (max-width:640px){
+.c24 .rolebtn{flex:1 1 100%}
+.c24 .rolep-cta{width:100%;justify-content:center;height:auto;min-height:52px;padding:12px 20px;text-align:center}
+.c24 .rolep-cta span{white-space:normal}
+}
+
+/* ── de visual: achtergrondfoto, zwevend dashboard, losse meldingen ───── */
+.c24 #roles{overflow:hidden}
+.c24 .rolevis{position:absolute;right:0;top:0;bottom:0;width:44%;pointer-events:none}
+.c24 .rvis-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:58% 38%}
+.c24 .rvis-wash{position:absolute;inset:0;background:linear-gradient(90deg,#FFFFFF 0,rgba(255,255,255,.97) 14%,rgba(255,255,255,.62) 34%,rgba(255,255,255,.16) 56%,rgba(255,255,255,0) 76%)}
+.c24 .rvis-dash{--pf:.06;position:absolute;left:6%;top:50%;width:min(86%,430px);margin-top:-9%;border-radius:16px;overflow:hidden;
+  background:#FFFFFF;box-shadow:0 2px 0 rgba(11,31,59,.04),0 30px 62px rgba(11,31,59,.24),0 0 0 1px rgba(11,31,59,.07)}
+.c24 .rvd-top{display:flex;align-items:center;gap:10px;padding:11px 14px;background:#0B1F3B;color:#D7DEE9}
+.c24 .rvd-logo{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:7px;background:#C8A24A;font-size:10.5px;font-weight:800;letter-spacing:-.02em;color:#0B1F3B}
+.c24 .rvd-t{flex:1 1 auto;font-size:12.5px;font-weight:600;color:#FFFFFF}
+.c24 .rvd-ex{padding:3px 9px;border-radius:999px;background:rgba(226,190,106,.16);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#E2BE6A}
+.c24 .rvd-tabs{display:flex;align-items:center;gap:8px;padding:12px 14px 10px}
+.c24 .rvd-tabs b,.c24 .rvd-tabs span{padding:5px 11px;border-radius:999px;font-size:11.5px;font-weight:600}
+.c24 .rvd-tabs b{background:#FBF1DC;color:#86691F;box-shadow:inset 0 0 0 1px #EBD9AE}
+.c24 .rvd-tabs span{color:#8B96A8}
+.c24 .rvd-list{margin:0;padding:0 8px 6px;list-style:none}
+.c24 .rvd-r{display:grid;grid-template-columns:28px minmax(0,1fr) auto 44px;align-items:center;gap:10px;min-height:52px;padding:9px 8px;border-radius:10px;border-top:1px solid #F1F3F7}
+.c24 .rvd-r:first-child{border-top:0}
+.c24 .rvd-ic{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:9px;background:#F5F7FA;font-size:14px;font-weight:700;color:#55617A}
+.c24 .rvd-n{min-width:0;font-size:10.5px;line-height:1.35;color:#8B96A8}
+.c24 .rvd-n b{display:block;font-size:12.5px;font-weight:700;white-space:nowrap;color:#0B1F3B}
+.c24 .rvd-n span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.c24 .rvd-s{justify-self:end;padding:3px 9px;border-radius:999px;font-size:10px;font-weight:700}
+.c24 .rvd-s.rvd-new{background:#E4F4EA;color:#1B6B4A}
+.c24 .rvd-s.rvd-chg{background:#FBF1DC;color:#86691F}
+.c24 .rvd-s.rvd-upd{background:#EDF1F7;color:#46536B}
+.c24 .rvd-d{text-align:right;font-size:10.5px;color:#9AA4B4}
+.c24 .rvd-foot{display:flex;align-items:center;gap:9px;padding:10px 16px 12px;border-top:1px solid #F1F3F7;font-size:11px;color:#8B96A8}
+.c24 .rvd-pulse{flex:none;width:7px;height:7px;border-radius:50%;background:#2E9E6B}
+
+/* de regels komen \u00e9\u00e9n voor \u00e9\u00e9n binnen zodra de sectie in beeld is */
+.c24.armed .rvd-r{opacity:0;transform:translateY(8px)}
+.c24 .sec.in .rvd-r{animation:c24rowin .5s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.35s + var(--i) * .12s)}
+.c24 .sec.in .rvd-r:first-child{animation-name:c24rowhi}
+.c24 .sec.in .rvd-pulse{animation:c24pulse 2.6s ease-in-out 3}
+@keyframes c24rowin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes c24rowhi{0%{opacity:0;transform:translateY(8px);background:#FFFFFF}
+  55%{opacity:1;transform:none;background:#FBF6EC}
+  100%{opacity:1;transform:none;background:#FFFFFF}}
+@keyframes c24pulse{0%,100%{box-shadow:0 0 0 0 rgba(46,158,107,.45)}50%{box-shadow:0 0 0 6px rgba(46,158,107,0)}}
+
+.c24 .rvis-n{position:absolute;display:flex;align-items:center;gap:11px;max-width:300px;padding:12px 14px;border-radius:14px;background:#FFFFFF;
+  box-shadow:0 1px 0 rgba(11,31,59,.05),0 18px 36px rgba(11,31,59,.16)}
+.c24 .rvis-n-ic{display:inline-flex;align-items:center;justify-content:center;flex:none;width:34px;height:34px;border-radius:10px;background:#FBF2DF;color:#A07E24}
+.c24 .rvis-n-b{display:block;min-width:0;font-size:12.5px;line-height:1.4;color:#55617A}
+.c24 .rvis-n-b b{display:block;font-size:13.5px;font-weight:700;color:#0B1F3B}
+.c24 .rvis-n-c{flex:none;color:#C3B288}
+.c24 .rvis-n.n1{right:4%;top:20%}
+.c24 .rvis-n.n2{right:9%;bottom:12%;max-width:230px}
+
+@container page (max-width:1240px){
+.c24 .rolevis{width:40%}
+.c24 .rvis-n{max-width:240px;padding:10px 12px}
+.c24 .rvis-n.n1{right:2%}
+}
+@container page (max-width:1099px){
+.c24 .rolevis{position:relative;width:auto;margin:0 0 36px;padding:108px 0 56px;border-radius:18px;overflow:hidden}
+.c24 .rvis-wash{background:linear-gradient(90deg,rgba(255,255,255,.72) 0,rgba(255,255,255,.1) 46%,rgba(255,255,255,0) 72%)}
+.c24 .rvis-dash{position:relative;left:auto;top:auto;margin:0 0 0 6%;width:min(76%,380px);--pf:0}
+.c24 .rvis-n.n1{right:3%;top:18px}
+.c24 .rvis-n.n2{right:3%;bottom:16px}
+}
+@container page (max-width:760px){
+.c24 .rolevis{padding:96px 0 48px}
+.c24 .rvis-dash{margin-left:5%;width:min(88%,340px)}
+.c24 .rvis-n{max-width:200px;font-size:11px}
+.c24 .rvis-n-b{font-size:11px}
+.c24 .rvis-n-b b{font-size:12px}
+}
+@container page (max-width:600px){
+.c24 .rolevis{padding-top:152px}
+.c24 .rvis-n.n2{display:none}
+}
+
+/* ── minivisual per sector in de doelgroepkiezer ─────────────────────── */
+.c24 .wmc{grid-column:1 / -1;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:16px 22px;border-radius:12px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #F0E8D6}
+.c24 .wmc-k{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#A07E24}
+.c24 .wmc ul{display:flex;flex-wrap:wrap;align-items:center;gap:8px 4px;margin:0;padding:0;list-style:none}
+.c24 .wmc li{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:#0B1F3B}
+.c24 .wmc li + li::before{content:"";width:16px;height:1px;margin-right:4px;background:rgba(200,162,74,.55)}
+.c24 .wmc-d{width:9px;height:9px;border-radius:50%;background:#FBF1DC;box-shadow:inset 0 0 0 1.5px #C8A24A}
+/* zacht wisselen zonder sprong */
+.c24 .who-p{animation:whofade .22s ease}
+@keyframes whofade{from{opacity:0}to{opacity:1}}
+@container page (max-width:640px){
+.c24 .wmc{flex-direction:column;align-items:flex-start}
+}
+@media (prefers-reduced-motion: reduce){
+.c24 .who-p{animation:none}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://comply24.nl/#organization",
+      "name": "Comply24",
+      "legalName": "Comply24 B.V.",
+      "url": "https://comply24.nl/",
+      "logo": "https://comply24.nl/assets/images/comply24-logo-navy.png",
+      "email": "info@comply24.nl",
+      "areaServed": "NL",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gansstraat 170",
+        "addressLocality": "Utrecht",
+        "addressCountry": "NL"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "KVK",
+        "value": "42175762"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/comply24/"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Comply24",
+          "item": "https://comply24.nl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Voor wie",
+          "item": "https://comply24.nl/voor-wie.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="c24 l-nl" data-page="who" data-h-ref="root" style="container-type: inline-size; container-name: page; font-family: Inter, 'Helvetica Neue', Arial, sans-serif; color: #0B1F3B; background: #FFFFFF; -webkit-font-smoothing: antialiased">
+<svg width="0" height="0" aria-hidden="true" style="position: absolute">
+<defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4.500 20c1.400-3.800 4.200-5.600 7.500-5.600s6.100 1.800 7.500 5.600"></path></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.500 2.800v5.400c0 4.600-3.100 8.200-7.500 9.800-4.400-1.600-7.500-5.200-7.500-9.800V5.800L12 3z"></path></symbol>
+<symbol id="i-shieldok" viewBox="0 0 24 24"><path d="M12 3l7.500 2.800v5.400c0 4.600-3.100 8.200-7.500 9.800-4.400-1.600-7.500-5.200-7.500-9.800V5.800L12 3z"></path><path d="M9 12l2.200 2.200L15.200 10"></path></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"></path><path d="M14 3v4h4"></path><path d="M9.500 12.500h5"></path><path d="M9.500 16.500h5"></path></symbol>
+<symbol id="i-table" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.500"></rect><path d="M4 9h16"></path><path d="M9 4v16"></path></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.500 9.500a2.500 2.500 0 1 1 3.500 2.300c-.800.400-1 1-1 1.700"></path><path d="M12 17h.010"></path></symbol>
+<symbol id="i-checkc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.500l2.800 2.800L16 9.800"></path></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.500l4.500 4.500L19 7.500"></path></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4l9 15.500H3L12 4z"></path><path d="M12 10v4.500"></path><path d="M12 17h.010"></path></symbol>
+<symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></symbol>
+<symbol id="i-test" viewBox="0 0 24 24"><path d="M9 3h6"></path><path d="M10 3v6l-5 9a2 2 0 0 0 1.800 3h10.400a2 2 0 0 0 1.800-3l-5-9V3"></path><path d="M7.500 15h9"></path></symbol>
+<symbol id="i-env" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18"></path><path d="M8 4v6"></path></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M4 17V7l8-4 8 4v10l-8 4z"></path><path d="M4 7l8 4 8-4"></path><path d="M12 11v10"></path></symbol>
+<symbol id="i-replay" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 6"></path><path d="M20 5v6h-6"></path></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></symbol><symbol id="i-law" viewBox="0 0 24 24"><path d="M12 6v14"></path><path d="M7 20h10"></path><path d="M5 8h14"></path><path d="M5 8l-2.2 5.2a2.4 2.4 0 0 0 4.4 0z"></path><path d="M19 8l-2.2 5.2a2.4 2.4 0 0 0 4.4 0z"></path><circle cx="12" cy="4" r="1.4"></circle></symbol><symbol id="i-spark" viewBox="0 0 24 24"><path d="M11 3l1.7 4.6L17 9l-4.3 1.4L11 15l-1.7-4.6L5 9l4.3-1.4z"></path><path d="M17.5 14l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"></path></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10.2 13.4a3.8 3.8 0 0 0 5.4.4l2.5-2.5a3.8 3.8 0 0 0-5.4-5.4l-1.3 1.3"></path><path d="M13.8 10.6a3.8 3.8 0 0 0-5.4-.4l-2.5 2.5a3.8 3.8 0 0 0 5.4 5.4l1.3-1.3"></path></symbol><symbol id="i-radar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4.6"></circle><path d="M12 12l6.2-4.2"></path></symbol><symbol id="i-stack" viewBox="0 0 24 24"><path d="M12 3l8.5 4.6L12 12.2 3.5 7.6z"></path><path d="M3.5 12.4L12 17l8.5-4.6"></path></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 21h18"></path><path d="M5 21V8l7-5 7 5v13"></path><path d="M9 21v-6h6v6"></path></symbol>
+</defs>
+</svg>
+
+<a class="skip" href="#main">Naar de inhoud</a>
+<header class="nav">
+<div class="wrap nav-in">
+<a class="nav-logo" href="index.html" aria-label="Comply24"><img src="assets/images/comply24-logo-navy.png" alt="Comply24" style="display: block; height: 30px; width: auto" width="320" height="90"></a>
+<nav class="nav-links" aria-label="Hoofdmenu">
+<div class="navitem has-dd"><a class="navlink" href="platform.html" aria-haspopup="true" aria-expanded="false">Platform<svg class="ic dd-c" aria-hidden="true" style="width: 15px; height: 15px; stroke-width: 2.2"><use href="#i-chev"></use></svg></a><div class="dd"><ul>
+<li><a href="platform.html"><span class="dd-t">Platformoverzicht</span><span class="dd-d">Twee modules, één keten</span></a></li>
+<li><a href="regulatory-intelligence.html"><span class="dd-t">Regulatory Intelligence</span><span class="dd-d">De wet vertaald naar uw verplichtingen</span></a></li>
+<li><a href="control-testing.html"><span class="dd-t">Control Testing</span><span class="dd-d">Van control naar getoetst bewijs</span></a></li>
+<li><a href="wetswijzigingen.html"><span class="dd-t">Wetswijzigingen</span><span class="dd-d">Het changeproces, stap voor stap</span></a></li>
+</ul></div></div>
+<div class="navitem"><a class="navlink" href="hoe-het-werkt.html">Hoe het werkt</a></div>
+<div class="navitem"><a class="navlink on" href="voor-wie.html" aria-current="page">Voor wie</a></div>
+<div class="navitem"><a class="navlink" href="quickscan.html">QuickScan</a></div>
+<div class="navitem"><a class="navlink" href="prijzen.html">Prijzen</a></div>
+</nav>
+<a class="lang nav-lang-d" href="en/voor-wie.html" hreflang="en" lang="en" aria-label="In English" style="text-decoration: none"><b class="l1">NL</b>/<b class="l2">EN</b></a>
+<a class="btn btn-gold nav-cta" href="demo.html">Plan een demo<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a>
+<button class="nav-burger" type="button" data-on-click="toggleMenu" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="nav-panel" id="nav-panel">
+<div class="wrap" style="padding-top: 18px; padding-bottom: 26px">
+<ul class="np-list">
+<li><a class="np-a" href="platform.html">Platform</a><ul class="np-sub"><li><a href="platform.html">Platformoverzicht</a></li><li><a href="regulatory-intelligence.html">Regulatory Intelligence</a></li><li><a href="control-testing.html">Control Testing</a></li><li><a href="wetswijzigingen.html">Wetswijzigingen</a></li></ul></li>
+<li><a class="np-a" href="hoe-het-werkt.html">Hoe het werkt</a></li>
+<li><a class="np-a" href="voor-wie.html">Voor wie</a></li>
+<li><a class="np-a" href="quickscan.html">QuickScan</a></li>
+<li><a class="np-a" href="prijzen.html">Prijzen</a></li>
+<li><a class="np-a" href="beveiliging.html">Beveiliging en vertrouwen</a></li>
+</ul>
+<div style="display: flex; align-items: center; gap: 18px; margin-top: 22px">
+<a class="btn btn-gold" href="demo.html" style="height: 48px">Plan een demo</a>
+<a class="lang" href="en/voor-wie.html" hreflang="en" lang="en" aria-label="In English" style="text-decoration: none; padding: 0; font-size: 15px"><b class="l1">NL</b>/<b class="l2">EN</b></a>
+</div>
+</div>
+</div>
+</header>
+
+<main id="main">
+
+<section id="who-hd" class="sec dark" style="position: relative; overflow: hidden; background: radial-gradient(120% 140% at 85% 0%, #14305A 0%, #0B1F3B 46%, #081730 100%)">
+<svg class="plx" aria-hidden="true" viewBox="0 0 900 900" style="--pf: -.08; position: absolute; right: -300px; top: -420px; width: 900px; height: 900px; overflow: visible"><circle cx="450" cy="450" r="430" fill="none" stroke="#C8A24A" stroke-width="1.200" stroke-dasharray="3 7" opacity=".5"></circle><circle cx="450" cy="450" r="350" fill="none" stroke="#FFFFFF" stroke-width="1" opacity=".09"></circle><circle cx="146" cy="754" r="6" fill="#E2BE6A"></circle></svg>
+<div class="wrap" style="padding-top: clamp(44px, 4cqw, 64px); padding-bottom: clamp(52px, 5cqw, 80px)">
+<div class="ey rv" style="--rd: 0s">Voor wie</div>
+<h1 class="rv" style="--rd: .08s; margin: 20px 0 0; max-width: 1000px; font-size: clamp(30px, 3.3cqw, 48px); line-height: 1.08; letter-spacing: -.04em; font-weight: 800; color: #FFFFFF; text-wrap: balance">Voor de mensen aan wie de toezichthouder <span class="gold">“laat maar zien” vraagt.</span></h1>
+<p class="lead rv" style="--rd: .16s; max-width: 820px">Compliance officers, risk managers, internal auditors, CISO’s en bestuurders bij instellingen onder toezicht van DNB, de AFM en de ECB. Hieronder per type instelling wat er speelt, en daaronder wat het per rol oplevert.</p>
+</div>
+</section>
+<section id="who" class="sec haspic pad" aria-label="Voor wie" style="position: relative; background: #FBF6EC; border-top: 1px solid #F0E8D6">
+<img class="whobg" src="assets/images/comply24-who-eu.jpg" alt="" aria-hidden="true" width="1300" height="867" loading="lazy" decoding="async">
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">Voor welke instellingen?</div>
+<h2 class="h2 rv" style="--rd: .08s; max-width: 900px">Voor financiële instellingen die <span class="gold">aantoonbaar grip willen op regelgeving.</span></h2>
+<p class="lead rv" style="--rd: .12s; max-width: 760px">Onder toezicht van DNB of de AFM en, voor significante banken, via het SSM van de ECB.</p>
+<div class="seg rv" role="tablist" aria-label="Sector" style="--rd: .16s; margin-top: 34px; background: #F1E9D8">
+<button class="on" type="button" role="tab" id="tab-banks" aria-controls="panel-banks" aria-selected="true" tabindex="0" data-tab="banks" data-on-click="tabSet" data-on-keydown="tabKey">Banken</button>
+<button type="button" role="tab" id="tab-ins" aria-controls="panel-ins" aria-selected="false" tabindex="-1" data-tab="ins" data-on-click="tabSet" data-on-keydown="tabKey">Verzekeraars</button>
+<button type="button" role="tab" id="tab-inv" aria-controls="panel-inv" aria-selected="false" tabindex="-1" data-tab="inv" data-on-click="tabSet" data-on-keydown="tabKey">Beleggingsondernemingen en beheerders</button>
+<button type="button" role="tab" id="tab-pen" aria-controls="panel-pen" aria-selected="false" tabindex="-1" data-tab="pen" data-on-click="tabSet" data-on-keydown="tabKey">Pensioenfondsen en uitvoerders</button>
+</div>
+
+<div class="rv" style="--rd: .22s; margin-top: 26px">
+<div class="who-p on" id="panel-banks" role="tabpanel" aria-labelledby="tab-banks" data-panel="banks">
+<div class="card" style="padding: 30px 30px 32px"><h3 class="h3">Typische scope</h3><p class="bd">Prudentieel toezicht, gedrag, integriteit en operationele weerbaarheid, geprioriteerd volgens de SREP.</p><div class="inst"><span>Wft</span><span>Wwft</span><span>Sanctiewet</span><span>CRR / CRD</span><span>DORA</span><span>AMLR</span><span>EBA-richtsnoeren</span><span>DNB Good Practices</span><span>MiCAR</span></div></div>
+<div class="card" style="padding: 30px 30px 32px"><h3 class="h3">Wat als eerste verandert</h3><p class="bd">Het DORA- en het AML-pakket raken incidentbeheer, uitbesteding en cliëntenonderzoek. Comply24 toont per artikel welke control en welke beleidsbepaling het vandaag afdekken, en geeft een alert zodra de RTS of het richtsnoer wijzigt.</p></div>
+<div class="wmc"><span class="wmc-k">In dit scenario</span><ul><li><span class="wmc-d" aria-hidden="true"></span>Verplichting</li><li><span class="wmc-d" aria-hidden="true"></span>Beleid</li><li><span class="wmc-d" aria-hidden="true"></span>Control</li><li><span class="wmc-d" aria-hidden="true"></span>Test</li><li><span class="wmc-d" aria-hidden="true"></span>Bewijs</li><li><span class="wmc-d" aria-hidden="true"></span>Wijziging</li></ul></div>
+<a class="card ucstrip" href="use-case-bank.html"><span class="ucstrip-l"><span class="ey" style="margin-bottom: 12px">Herken uw situatie</span><span class="ucstrip-t">De hele keten: van wetsartikel tot geteste control en bewijs.</span><span class="ucstrip-m">Regulatory Intelligence en Control Testing</span></span><span class="ucstrip-r"><span class="mds" aria-hidden="true"><i class="md ri on">Module 1</i><i class="md ct on">Module 2</i><i class="md sv">Consultants</i></span><span class="more" style="font-size: 15px">Bekijk de bank-use-case<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></span></span></a>
+</div>
+<div class="who-p" id="panel-ins" role="tabpanel" aria-labelledby="tab-ins" hidden data-panel="ins">
+<div class="card" style="padding: 30px 30px 32px"><h3 class="h3">Typische scope</h3><p class="bd">Solvabiliteit, zorgplicht, productgovernance, uitbesteding en ICT, en daarnaast de integriteitsverplichtingen.</p><div class="inst"><span>Wft</span><span>Solvency II</span><span>IDD</span><span>DORA</span><span>Wwft</span><span>EIOPA-richtsnoeren</span><span>DNB Good Practices</span><span>CSRD</span></div></div>
+<div class="card" style="padding: 30px 30px 32px"><h3 class="h3">Wat als eerste verandert</h3><p class="bd">Richtsnoeren voor productgovernance en uitbesteding wijzigen vaak en raken veel beleid tegelijk. De impact alert landt op de beleidsbepalingen en controls die naar de gewijzigde bepaling verwijzen, niet op het hele beleidshuis.</p></div>
+<div class="wmc"><span class="wmc-k">In dit scenario</span><ul><li><span class="wmc-d" aria-hidden="true"></span>Wijziging</li><li><span class="wmc-d" aria-hidden="true"></span>Verplichting</li><li><span class="wmc-d" aria-hidden="true"></span>Beleidsbepaling</li><li><span class="wmc-d" aria-hidden="true"></span>Eigenaar</li><li><span class="wmc-d" aria-hidden="true"></span>Verantwoording</li></ul></div>
+<a class="card ucstrip" href="use-case-verzekeraar.html"><span class="ucstrip-l"><span class="ey" style="margin-bottom: 12px">Herken uw situatie</span><span class="ucstrip-t">Grip op het wettelijk kader, zonder de bestaande GRC-tooling te vervangen.</span><span class="ucstrip-m">Alleen Regulatory Intelligence</span></span><span class="ucstrip-r"><span class="mds" aria-hidden="true"><i class="md ri on">Module 1</i><i class="md ct">Module 2</i><i class="md sv">Consultants</i></span><span class="more" style="font-size: 15px">Bekijk de verzekeraar-use-case<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></span></span></a>
+</div>
+<div class="who-p" id="panel-inv" role="tabpanel" aria-labelledby="tab-inv" hidden data-panel="inv">
+<div class="card" style="padding: 30px 30px 32px"><h3 class="h3">Typische scope</h3><p class="bd">Beleggersbescherming, marktintegriteit, duurzaamheidsinformatie en operationele weerbaarheid.</p><div class="inst"><span>Wft</span><span>MiFID II</span><span>AIFMD / UCITS</span><span>SFDR</span><span>MAR</span><span>DORA</span><span>Wwft</span><span>AFM-leidraden</span></div></div>
+<div class="card" style="padding: 30px 30px 32px"><h3 class="h3">Wat als eerste verandert</h3><p class="bd">Niveau 2-maatregelen en Q&amp;A’s veranderen sneller dan de richtlijnen zelf. Comply24 volgt de versies, koppelt ze aan uw verplichtingen en houdt de testopzetten in de pas.</p></div>
+<div class="wmc"><span class="wmc-k">In dit scenario</span><ul><li><span class="wmc-d" aria-hidden="true"></span>Bepaling</li><li><span class="wmc-d" aria-hidden="true"></span>Control</li><li><span class="wmc-d" aria-hidden="true"></span>Beleidsclausule</li><li><span class="wmc-d" aria-hidden="true"></span>Gap</li><li><span class="wmc-d" aria-hidden="true"></span>Actie en review</li></ul></div>
+<a class="card ucstrip" href="use-case-beleggingsonderneming.html"><span class="ucstrip-l"><span class="ey" style="margin-bottom: 12px">Herken uw situatie</span><span class="ucstrip-t">Controlkader en beleidshuis opgebouwd vanuit de wet. Gaps gedicht en actueel gehouden.</span><span class="ucstrip-m">Regulatory Intelligence, inclusief opbouw van kader en beleidshuis</span></span><span class="ucstrip-r"><span class="mds" aria-hidden="true"><i class="md ri on">Module 1</i><i class="md ct">Module 2</i><i class="md sv">Consultants</i></span><span class="more" style="font-size: 15px">Bekijk de use-case beleggingsonderneming<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></span></span></a>
+</div>
+<div class="who-p" id="panel-pen" role="tabpanel" aria-labelledby="tab-pen" hidden data-panel="pen">
+<div class="card" style="padding: 30px 30px 32px"><h3 class="h3">Typische scope</h3><p class="bd">De pensioentransitie, governance en uitbesteding, operationele weerbaarheid en de gedragsverplichtingen van uitvoerders.</p><div class="inst"><span>Pw</span><span>Wtp</span><span>IORP II</span><span>DORA</span><span>Wwft</span><span>DNB Good Practices</span><span>AFM-leidraden</span></div></div>
+<div class="card" style="padding: 30px 30px 32px"><h3 class="h3">Wat als eerste verandert</h3><p class="bd">Transitietermijnen en leidraden komen in fasen. De radar toont elke fase met datum. De alert laat de eigenaar zien welke controls en welk beleid moeten meebewegen.</p></div>
+<div class="wmc"><span class="wmc-k">In dit scenario</span><ul><li><span class="wmc-d" aria-hidden="true"></span>Scope</li><li><span class="wmc-d" aria-hidden="true"></span>Bron</li><li><span class="wmc-d" aria-hidden="true"></span>Document</li><li><span class="wmc-d" aria-hidden="true"></span>Bevinding</li><li><span class="wmc-d" aria-hidden="true"></span>Rapport</li></ul></div>
+<a class="card ucstrip" href="use-case-pensioenfonds.html"><span class="ucstrip-l"><span class="ey" style="margin-bottom: 12px">Herken uw situatie</span><span class="ucstrip-t">De volledige compliancescope beoordeeld, kaders en beleidshuis, zonder software in te voeren.</span><span class="ucstrip-m">Quick scan en volledige review door consultants van Comply24</span></span><span class="ucstrip-r"><span class="mds" aria-hidden="true"><i class="md ri">Module 1</i><i class="md ct">Module 2</i><i class="md sv on">Consultants</i></span><span class="more" style="font-size: 15px">Bekijk de pensioenfonds-use-case<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></span></span></a>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="roles" class="sec pad" style="position: relative; background: #FFFFFF; border-top: 1px solid #E5E7EB">
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">Voor welke professionals?</div>
+<h2 class="h2 rv" style="--rd: .06s; max-width: 530px">Wat betekent Comply24 <span class="goldtxt">voor uw rol?</span></h2>
+<p class="lead rv" style="--rd: .12s; max-width: 600px">Iedere professional loopt anders tegen wet- en regelgeving aan. Kies een rol en zie wat er verandert in het dagelijkse werk.</p>
+<div class="rolevis" aria-hidden="true">
+<img class="rvis-bg" src="assets/images/comply24-rol-kantoor.jpg" alt="" width="1300" height="867" loading="lazy" decoding="async">
+<span class="rvis-wash"></span>
+<div class="rvis-dash plx">
+<div class="rvd-top"><span class="rvd-logo">C24</span><span class="rvd-t">Comply24 · Wijzigingen</span><span class="rvd-ex">voorbeeld</span></div>
+<div class="rvd-tabs"><b>Relevant voor mij</b><span>Alle</span><span>Te beoordelen</span></div>
+<ul class="rvd-list">
+<li class="rvd-r" style="--i: 0"><span class="rvd-ic" aria-hidden="true">§</span><span class="rvd-n"><b>DORA</b><span>Verordening (EU) 2022/2554</span></span><span class="rvd-s rvd-new">Nieuw</span><span class="rvd-d">12 apr</span></li>
+<li class="rvd-r" style="--i: 1"><span class="rvd-ic" aria-hidden="true">§</span><span class="rvd-n"><b>CRR III</b><span>Kapitaalvereisten · herziening</span></span><span class="rvd-s rvd-chg">Gewijzigd</span><span class="rvd-d">5 apr</span></li>
+<li class="rvd-r" style="--i: 2"><span class="rvd-ic" aria-hidden="true">§</span><span class="rvd-n"><b>Wwft</b><span>Wet ter voorkoming van witwassen</span></span><span class="rvd-s rvd-upd">Update</span><span class="rvd-d">28 mrt</span></li>
+<li class="rvd-r" style="--i: 3"><span class="rvd-ic" aria-hidden="true">§</span><span class="rvd-n"><b>NIS2</b><span>Richtlijn (EU) 2022/2555</span></span><span class="rvd-s rvd-new">Nieuw</span><span class="rvd-d">18 mrt</span></li>
+</ul>
+<div class="rvd-foot"><span class="rvd-pulse" aria-hidden="true"></span>Scope doorlopend gecontroleerd</div>
+</div>
+<div class="rvis-n n1 rv" style="--rd: .5s"><span class="rvis-n-ic" aria-hidden="true"><svg class="ic" style="width: 18px; height: 18px"><use href="#i-alert"></use></svg></span><span class="rvis-n-b"><b>Nieuwe relevante wijziging</b><span>De RTS onder DORA is bijgewerkt en raakt 3 verplichtingen.</span></span><svg class="ic rvis-n-c" aria-hidden="true" style="width: 15px; height: 15px; stroke-width: 2.2"><use href="#i-arrow"></use></svg></div>
+<div class="rvis-n n2 rv" style="--rd: .9s"><span class="rvis-n-ic" aria-hidden="true"><svg class="ic" style="width: 18px; height: 18px"><use href="#i-checkc"></use></svg></span><span class="rvis-n-b"><b>3 verplichtingen</b><span>vereisen actie</span></span><svg class="ic rvis-n-c" aria-hidden="true" style="width: 15px; height: 15px; stroke-width: 2.2"><use href="#i-arrow"></use></svg></div>
+</div>
+<div class="rolebox rv" style="--rd: .18s">
+<div class="rolerail" role="tablist" aria-label="Rol">
+<button class="rolebtn on" type="button" role="tab" id="rtab-co" aria-controls="rpan-co" aria-selected="true" tabindex="0" data-roletab="co"><span class="rolebtn-ic" aria-hidden="true"><svg class="ic" style="width: 19px; height: 19px"><use href="#i-user"></use></svg></span><span class="rolebtn-t">Compliance officer</span><svg class="ic rolebtn-c" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2"><use href="#i-arrow"></use></svg></button>
+<button class="rolebtn" type="button" role="tab" id="rtab-rm" aria-controls="rpan-rm" aria-selected="false" tabindex="-1" data-roletab="rm"><span class="rolebtn-ic" aria-hidden="true"><svg class="ic" style="width: 19px; height: 19px"><use href="#i-alert"></use></svg></span><span class="rolebtn-t">Risk manager</span><svg class="ic rolebtn-c" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2"><use href="#i-arrow"></use></svg></button>
+<button class="rolebtn" type="button" role="tab" id="rtab-ia" aria-controls="rpan-ia" aria-selected="false" tabindex="-1" data-roletab="ia"><span class="rolebtn-ic" aria-hidden="true"><svg class="ic" style="width: 19px; height: 19px"><use href="#i-check"></use></svg></span><span class="rolebtn-t">Internal auditor</span><svg class="ic rolebtn-c" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2"><use href="#i-arrow"></use></svg></button>
+<button class="rolebtn" type="button" role="tab" id="rtab-ciso" aria-controls="rpan-ciso" aria-selected="false" tabindex="-1" data-roletab="ciso"><span class="rolebtn-ic" aria-hidden="true"><svg class="ic" style="width: 19px; height: 19px"><use href="#i-shield"></use></svg></span><span class="rolebtn-t">CISO en security</span><svg class="ic rolebtn-c" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2"><use href="#i-arrow"></use></svg></button>
+<button class="rolebtn" type="button" role="tab" id="rtab-bm" aria-controls="rpan-bm" aria-selected="false" tabindex="-1" data-roletab="bm"><span class="rolebtn-ic" aria-hidden="true"><svg class="ic" style="width: 19px; height: 19px"><use href="#i-home"></use></svg></span><span class="rolebtn-t">Bestuur &amp; management</span><svg class="ic rolebtn-c" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2"><use href="#i-arrow"></use></svg></button>
+</div>
+<div class="rolepanes">
+<div class="rolep on" id="rpan-co" role="tabpanel" aria-labelledby="rtab-co" data-panel="r-co">
+<div class="ey">Compliance officer</div>
+<h3 class="rolep-h">Van uitzoekwerk naar <span class="goldtxt">direct inzicht.</span></h3>
+<p class="rolep-i">U weet welke wetgeving voor uw instelling geldt, wat die van u vraagt en welke beleidsdocumenten eraan hangen. Zonder dat u het elke keer opnieuw uitzoekt.</p>
+<div class="rolep-g">
+<div class="rolep-b"><span class="rolep-ic" aria-hidden="true"><svg class="ic" style="width: 20px; height: 20px"><use href="#i-doc"></use></svg></span><h4>Uw uitdaging</h4><p>U houdt bij welke wetgeving van toepassing is en of het beleid daar nog op aansluit, vaak in spreadsheets naast de documenten zelf.</p></div>
+<div class="rolep-b"><span class="rolep-ic gold" aria-hidden="true"><svg class="ic" style="width: 20px; height: 20px"><use href="#i-spark"></use></svg></span><h4>Wat Comply24 doet</h4><p>De verplichtingen staan als data vast, gekoppeld aan beleidsbepalingen. Een wijziging laat zien welke documenten geraakt worden en wat er open staat.</p></div>
+</div>
+<a class="btn btn-gold rolep-cta" href="regulatory-intelligence.html">Ontdek hoe Comply24 u hierin ondersteunt<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a>
+</div>
+<div class="rolep" id="rpan-rm" role="tabpanel" aria-labelledby="rtab-rm" hidden data-panel="r-rm">
+<div class="ey">Risk manager</div>
+<h3 class="rolep-h">Van losse inschatting naar <span class="goldtxt">herleidbaar restrisico.</span></h3>
+<p class="rolep-i">Elk risico hangt aan de verplichting waaruit het komt en aan de control die het afdekt. Het restrisico volgt uit de uitkomst van de toets.</p>
+<div class="rolep-g">
+<div class="rolep-b"><span class="rolep-ic" aria-hidden="true"><svg class="ic" style="width: 20px; height: 20px"><use href="#i-doc"></use></svg></span><h4>Uw uitdaging</h4><p>U moet risico’s kunnen herleiden tot de verplichting waaruit ze komen en tot de control die ze afdekt.</p></div>
+<div class="rolep-b"><span class="rolep-ic gold" aria-hidden="true"><svg class="ic" style="width: 20px; height: 20px"><use href="#i-spark"></use></svg></span><h4>Wat Comply24 doet</h4><p>Risico’s hangen aan dezelfde keten als de verplichting en de control. Het scoringsgrondslag staat uitgeschreven, zodat een oordeel navolgbaar is.</p></div>
+</div>
+<a class="btn btn-gold rolep-cta" href="platform.html#lineage">Ontdek hoe Comply24 u hierin ondersteunt<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a>
+</div>
+<div class="rolep" id="rpan-ia" role="tabpanel" aria-labelledby="rtab-ia" hidden data-panel="r-ia">
+<div class="ey">Internal auditor</div>
+<h3 class="rolep-h">Van dossier opbouwen naar <span class="goldtxt">dossier ophalen.</span></h3>
+<p class="rolep-i">Wat is vastgesteld, door wie, wanneer en waarop het oordeel rust: dat staat er al. U haalt het op in plaats van het te reconstrueren.</p>
+<div class="rolep-g">
+<div class="rolep-b"><span class="rolep-ic" aria-hidden="true"><svg class="ic" style="width: 20px; height: 20px"><use href="#i-doc"></use></svg></span><h4>Uw uitdaging</h4><p>U wilt zien wat is vastgesteld, door wie, wanneer en waarop het oordeel rust, zonder het dossier opnieuw op te bouwen.</p></div>
+<div class="rolep-b"><span class="rolep-ic gold" aria-hidden="true"><svg class="ic" style="width: 20px; height: 20px"><use href="#i-spark"></use></svg></span><h4>Wat Comply24 doet</h4><p>Elk oordeel staat met onderbouwing, citaat, naam en tijdstip in een audittrail die alleen aangevuld kan worden. De export per artikel is het dossier.</p></div>
+</div>
+<a class="btn btn-gold rolep-cta" href="control-testing.html">Ontdek hoe Comply24 u hierin ondersteunt<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a>
+</div>
+<div class="rolep" id="rpan-ciso" role="tabpanel" aria-labelledby="rtab-ciso" hidden data-panel="r-ciso">
+<div class="ey">CISO en security</div>
+<h3 class="rolep-h">Van actiepunt in een verslag naar <span class="goldtxt">een change met een eigenaar.</span></h3>
+<p class="rolep-i">Een gefaalde test blijft niet hangen in een rapportage. Hij opent een change, met een eigenaar, een datum en bewijs dat erbij hoort.</p>
+<div class="rolep-g">
+<div class="rolep-b"><span class="rolep-ic" aria-hidden="true"><svg class="ic" style="width: 20px; height: 20px"><use href="#i-doc"></use></svg></span><h4>Uw uitdaging</h4><p>DORA raakt uw technische maatregelen, uw leveranciers en uw incidentproces tegelijk.</p></div>
+<div class="rolep-b"><span class="rolep-ic gold" aria-hidden="true"><svg class="ic" style="width: 20px; height: 20px"><use href="#i-spark"></use></svg></span><h4>Wat Comply24 doet</h4><p>Key controls krijgen een testopzet en bewijs met versieketen en hash. Een gefaalde test opent een change in plaats van een actiepunt in een verslag.</p></div>
+</div>
+<a class="btn btn-gold rolep-cta" href="beveiliging.html">Ontdek hoe Comply24 u hierin ondersteunt<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a>
+</div>
+<div class="rolep" id="rpan-bm" role="tabpanel" aria-labelledby="rtab-bm" hidden data-panel="r-bm">
+<div class="ey">Bestuur &amp; management</div>
+<h3 class="rolep-h">Van samenvatting naar <span class="goldtxt">doorklikbaar bewijs.</span></h3>
+<p class="rolep-i">U ziet niet alleen dat iets groen staat, maar ook waarop dat rust: de verplichting, de test en de bewijsregel eronder.</p>
+<div class="rolep-g">
+<div class="rolep-b"><span class="rolep-ic" aria-hidden="true"><svg class="ic" style="width: 20px; height: 20px"><use href="#i-doc"></use></svg></span><h4>Uw uitdaging</h4><p>U bent aanspreekbaar op de beheersing, maar ziet vooral samenvattingen die niet tot de bron te herleiden zijn.</p></div>
+<div class="rolep-b"><span class="rolep-ic gold" aria-hidden="true"><svg class="ic" style="width: 20px; height: 20px"><use href="#i-spark"></use></svg></span><h4>Wat Comply24 doet</h4><p>Een dashboard dat doorklikt naar de onderliggende verplichting, test en bewijsregel. Wat open staat, staat open met een datum en een eigenaar.</p></div>
+</div>
+<a class="btn btn-gold rolep-cta" href="hoe-het-werkt.html">Ontdek hoe Comply24 u hierin ondersteunt<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a>
+</div>
+</div>
+</div>
+</div>
+<script>
+/* Rolkiezer: staat los van assets/js/main.js, zodat deze sectie ook werkt
+   als dat bestand nog niet ververst is. */
+(function () {
+  var rail = document.querySelector('.rolerail');
+  if (!rail) return;
+  var tabs = [].slice.call(rail.querySelectorAll('[data-roletab]'));
+  function pick(btn) {
+    var key = btn.getAttribute('data-roletab');
+    tabs.forEach(function (b) {
+      var on = b === btn;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+      b.setAttribute('tabindex', on ? '0' : '-1');
+    });
+    [].forEach.call(document.querySelectorAll('.rolep'), function (p) {
+      var on = p.getAttribute('data-panel') === 'r-' + key;
+      p.classList.toggle('on', on);
+      if (on) p.removeAttribute('hidden'); else p.setAttribute('hidden', '');
+    });
+  }
+  tabs.forEach(function (btn) {
+    btn.addEventListener('click', function () { pick(btn); });
+    btn.addEventListener('keydown', function (e) {
+      var d = (e.key === 'ArrowDown' || e.key === 'ArrowRight') ? 1
+        : (e.key === 'ArrowUp' || e.key === 'ArrowLeft') ? -1 : 0;
+      if (!d) return;
+      e.preventDefault();
+      var next = tabs[(tabs.indexOf(btn) + d + tabs.length) % tabs.length];
+      next.focus();
+      pick(next);
+    });
+  });
+})();
+
+/* De sectorkiezer eroverheen, met dezelfde zekerheid: ook als main.js nog de
+   oude versie is, verschijnt het gekozen paneel. */
+(function () {
+  var seg = document.querySelector('#who .seg');
+  if (!seg) return;
+  var tabs = [].slice.call(seg.querySelectorAll('[data-tab]'));
+  tabs.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var key = btn.getAttribute('data-tab');
+      tabs.forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle('on', on);
+        b.setAttribute('aria-selected', on ? 'true' : 'false');
+        b.setAttribute('tabindex', on ? '0' : '-1');
+      });
+      [].forEach.call(document.querySelectorAll('#who .who-p'), function (p) {
+        var on = p.getAttribute('data-panel') === key;
+        p.classList.toggle('on', on);
+        if (on) p.removeAttribute('hidden'); else p.setAttribute('hidden', '');
+      });
+    });
+  });
+})();
+</script>
+</section>
+
+<section class="sec dark pad" style="position: relative; overflow: hidden; background: radial-gradient(120% 140% at 85% 0%, #14305A 0%, #0B1F3B 46%, #081730 100%)">
+<svg class="plx" aria-hidden="true" viewBox="0 0 900 900" style="--pf: -.08; position: absolute; right: -300px; top: -420px; width: 900px; height: 900px; overflow: visible"><circle cx="450" cy="450" r="430" fill="none" stroke="#C8A24A" stroke-width="1.200" stroke-dasharray="3 7" opacity=".5"></circle><circle cx="450" cy="450" r="350" fill="none" stroke="#FFFFFF" stroke-width="1" opacity=".09"></circle><circle cx="146" cy="754" r="6" fill="#E2BE6A"></circle></svg>
+<div class="wrap" style="position: relative">
+<div class="ctaband">
+<div style="flex: 1 1 460px; min-width: 0">
+<h2 class="h2 rv" style="--rd: 0s; color: #FFFFFF">Herkent u uw eigen situatie?</h2>
+<p class="lead rv" style="--rd: .08s; max-width: 620px; color: #C3CCDB">Neem uw scope mee naar de demo; wij laten zien hoe die in de keten komt te staan.</p>
+</div>
+<div class="ctab-b rv" style="--rd: .16s">
+<a class="btn btn-gold" href="demo.html">Plan een demo<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a>
+<a class="btn btn-ghost-d" href="prijzen.html">Bekijk de prijzen</a></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="dark" style="position: relative; background: #0B1F3B; color: #C3CCDB">
+<div class="wrap" style="padding-top: 72px; padding-bottom: 34px">
+<div class="split" style="gap: clamp(30px, 5cqw, 72px)">
+<div style="flex: 0 0 300px; min-width: 0">
+<img src="assets/images/comply24-logo-wit.png" alt="Comply24" style="display: block; height: 38px; width: auto" width="320" height="90">
+<p style="margin: 20px 0 0; max-width: 320px; font-size: 14.5px; line-height: 1.55; color: #C3CCDB">Eén platform van wet naar bewijs, voor instellingen onder toezicht van DNB, de AFM en de ECB.</p>
+<p style="margin: 14px 0 0; font-size: 14px; line-height: 1.55; color: #A9B4C6">Comply24 B.V. · Gansstraat 170, Utrecht<br>KvK 42175762 · <a class="flink" href="mailto:info@comply24.nl" style="font-size: 14px; text-decoration: underline">info@comply24.nl</a></p>
+</div>
+<div class="fcols" style="flex: 1 1 0; min-width: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 36px 22px">
+<nav aria-label="Platform" style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0 0 4px; font-size: 14.5px; font-weight: 600; color: #FFFFFF">Platform</h3>
+<a class="flink" href="platform.html#modules">Twee modules</a>
+<a class="flink" href="platform.html#lineage">Lineage</a>
+<a class="flink" href="wetswijzigingen.html">Wetswijzigingen</a>
+<a class="flink" href="control-testing.html#testing">Control testing</a>
+</nav>
+<nav aria-label="Use cases" style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0 0 4px; font-size: 14.5px; font-weight: 600; color: #FFFFFF">Use cases</h3>
+<a class="flink" href="use-case-bank.html">Bank</a>
+<a class="flink" href="use-case-verzekeraar.html">Verzekeraar</a>
+<a class="flink" href="use-case-beleggingsonderneming.html">Beleggingsonderneming</a>
+<a class="flink" href="use-case-pensioenfonds.html">Pensioenfonds</a>
+</nav>
+<nav aria-label="Company" style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0 0 4px; font-size: 14.5px; font-weight: 600; color: #FFFFFF">Bedrijf</h3>
+<a class="flink" href="quickscan.html">Compliance QuickScan</a>
+<a class="flink" href="beveiliging.html">Beveiliging en vertrouwen</a>
+<a class="flink" href="prijzen.html#pricing">Prijzen</a>
+<a class="flink" href="demo.html">Contact</a>
+</nav>
+<nav aria-label="Documentation" style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0 0 4px; font-size: 14.5px; font-weight: 600; color: #FFFFFF">Documentatie</h3>
+<a class="flink" href="beveiliging.html#security-doc">Beveiligingsdocumentatie</a>
+<a class="flink" href="demo.html#review">QuickScan aanvragen</a>
+<a class="flink" href="demo.html">Prijslijst</a>
+</nav>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 30px; margin-top: 64px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.12); font-size: 13px">
+<span class="mono" style="letter-spacing: .04em; color: #E2BE6A">Van wet naar bewijs. Eén platform.</span>
+<span style="display: inline-flex; align-items: center; gap: 14px; color: #A9B4C6">© 2026 Comply24 B.V.<a class="lang" href="en/voor-wie.html" hreflang="en" lang="en" aria-label="In English" style="text-decoration: none; color: #A9B4C6"><b class="l1">NL</b>/<b class="l2">EN</b></a></span>
+</div>
+</div>
+</footer>
+</div>
+<script src="assets/js/main.js" defer></script>
+<noscript><style>.c24 .rv{opacity:1 !important;transform:none !important}</style></noscript>
+</body>
+</html>

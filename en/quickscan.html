@@ -1,0 +1,1254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compliance QuickScan: one law in ten working days — Comply24</title>
+<meta name="description" content="In ten working days you know what one law asks of you and where you stand. Fixed price, fixed lead time, every finding with its source.">
+<link rel="canonical" href="https://comply24.nl/en/quickscan.html">
+<link rel="alternate" hreflang="nl" href="https://comply24.nl/quickscan.html">
+<link rel="alternate" hreflang="en" href="https://comply24.nl/en/quickscan.html">
+<link rel="alternate" hreflang="x-default" href="https://comply24.nl/quickscan.html">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:url" content="https://comply24.nl/en/quickscan.html">
+<meta property="og:site_name" content="Comply24">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compliance QuickScan: one law in ten working days — Comply24">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Compliance QuickScan: one law in ten working days — Comply24">
+<meta property="og:description" content="In ten working days you know what one law asks of you and where you stand. Fixed price, fixed lead time, every finding with its source.">
+<meta property="og:image" content="https://comply24.nl/assets/images/comply24-og-en.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://comply24.nl/assets/images/comply24-og-en.jpg">
+<link rel="icon" href="../assets/images/comply24-logo-navy.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<style>
+/* Compliance QuickScan — band op de homepage en de eigen pagina.
+   Staat ook in de pagina zelf, zodat die klopt ongeacht de stylesheet op de
+   server. Beweging: alleen opacity en transform, eenmalig, en volledig uit bij
+   prefers-reduced-motion. */
+
+/* ── de band op de homepage ─────────────────────────────────────────── */
+.c24 .qsb{position:relative;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(30px,5cqw,66px);align-items:center}
+.c24 .qsb-ey{display:inline-flex;align-items:center;gap:10px;margin:0 0 14px;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#E2BE6A}
+.c24 .qsb-ey::before{content:"";width:26px;height:2px;border-radius:2px;background:#C8A24A}
+.c24 .qsb h2{margin:0;color:#FFFFFF}
+.c24 .qsb-p{margin:16px 0 0;max-width:580px;font-size:17px;line-height:1.6;color:#C3CCDB}
+.c24 .qsb-pp{display:flex;flex-wrap:wrap;gap:10px 22px;margin:22px 0 0;padding:0;list-style:none}
+.c24 .qsb-pp li{display:inline-flex;align-items:center;font-size:14px;color:#D7DEE9}
+.c24 .qsb-b{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:28px}
+
+/* ── de bewijsketen ─────────────────────────────────────────────────── */
+.c24 .qchain{position:relative;margin:34px 0 0;padding:22px 24px 24px;border-radius:18px;background:#FFFFFF;box-shadow:0 0 0 1px #E8EAEE,0 18px 44px rgba(11,31,59,.07)}
+.c24 .sec.dark .qchain{background:rgba(255,255,255,.055);box-shadow:inset 0 0 0 1px rgba(226,190,106,.24)}
+.c24 .qchain.qchain-c{margin:0}
+.c24 .qc-cap{display:flex;align-items:center;margin:0 0 18px;font-size:11.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#8B96A8}
+.c24 .sec.dark .qc-cap{color:#A9B4C6}
+.c24 .qc-l-ul{position:relative;margin:0;padding:0;list-style:none;display:grid;gap:0}
+
+/* de gouden lijn, getekend met transform */
+.c24 .qc-line{position:absolute;left:31px;top:60px;bottom:38px;width:2px;border-radius:2px;background:linear-gradient(180deg,#C8A24A,rgba(200,162,74,.25));transform-origin:top center}
+.c24.armed .qc-line{transform:scaleY(0)}
+.c24 .sec.in .qc-line{animation:qcdraw .95s cubic-bezier(.25,.8,.3,1) .15s both}
+@keyframes qcdraw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+
+.c24 .qc-i{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;gap:16px;padding:12px 0}
+.c24.armed .qc-i{opacity:0;transform:translateY(10px)}
+.c24 .sec.in .qc-i{animation:qcin .5s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.45s + var(--i) * .11s)}
+@keyframes qcin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.c24 .qc-d{position:relative;z-index:1;width:16px;height:16px;margin-left:8px;margin-top:4px;border-radius:50%;background:#FFFFFF;box-shadow:inset 0 0 0 2px #C8A24A}
+.c24 .sec.dark .qc-d{background:#102A4C}
+.c24 .qc-c{min-width:0}
+.c24 .qc-l{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#A07E24}
+.c24 .sec.dark .qc-l{color:#E2BE6A}
+.c24 .qc-v{display:block;margin-top:4px;font-size:15.5px;line-height:1.5;font-weight:600;color:#0B1F3B}
+.c24 .sec.dark .qc-v{color:#FFFFFF}
+.c24 .qc-v.qc-q{font-weight:400;font-style:italic;color:#3B4A63}
+.c24 .sec.dark .qc-v.qc-q{color:#D7DEE9}
+.c24 .qc-s{display:block;margin-top:3px;font-size:13px;line-height:1.5;color:#8B96A8}
+.c24 .sec.dark .qc-s{color:#A9B4C6}
+.c24 .qc-badge{display:inline-flex;align-items:center;margin-top:5px;padding:4px 11px;border-radius:999px;background:#FBF1DC;box-shadow:inset 0 0 0 1px #E3CE96;font-size:12.5px;font-weight:700;letter-spacing:.04em;color:#86691F}
+
+/* ── de pagina ──────────────────────────────────────────────────────── */
+.c24 .qsfacts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:38px 0 0;padding:0;list-style:none}
+.c24 .qsfacts li{padding:22px 22px 20px;border-radius:16px;background:#FBF7EE;box-shadow:inset 0 0 0 1px #EBDFC2}
+.c24 .qsfacts.dk{margin-top:32px}
+.c24 .qsfacts.dk li{background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(226,190,106,.24)}
+.c24 .qsf-v{display:block;font-size:25px;font-weight:800;letter-spacing:-.015em;color:#0B1F3B}
+.c24 .qsfacts.dk .qsf-v{color:#FFFFFF}
+.c24 .qsf-k{display:block;margin-top:6px;font-size:13.5px;line-height:1.5;color:#55617A}
+.c24 .qsfacts.dk .qsf-k{color:#A9B4C6}
+
+.c24 .qsget{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin:34px 0 0;padding:0;list-style:none}
+.c24 .qsget li{padding:26px 24px 24px;border-radius:18px;background:#FFFFFF;box-shadow:0 0 0 1px #E8EAEE,0 14px 34px rgba(11,31,59,.05);transition:transform .22s ease,box-shadow .22s ease}
+.c24 .qsget li:hover{transform:translateY(-4px);box-shadow:0 0 0 1px #E0E4EA,0 20px 44px rgba(11,31,59,.1)}
+.c24 .qsg-n{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;margin-bottom:16px;border-radius:9px;background:#FBF1DC;font-size:13px;font-weight:800;color:#86691F}
+.c24 .qsget h3{margin:0 0 8px;font-size:16.5px;font-weight:700;letter-spacing:-.01em;color:#0B1F3B}
+.c24 .qsget p{margin:0;font-size:14.5px;line-height:1.62;color:#55617A}
+
+/* tijdlijn */
+.c24 .qtime{position:relative;margin:34px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px}
+.c24 .qt-i{position:relative;padding:0 0 0 0}
+.c24.armed .qt-i{opacity:0;transform:translateY(12px)}
+.c24 .sec.in .qt-i{animation:qcin .52s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.1s + var(--i) * .13s)}
+.c24 .qt-d{position:absolute;left:0;top:15px;right:-26px;height:2px;background:linear-gradient(90deg,#DDBE74,rgba(221,190,116,.28))}
+.c24 .qt-i:last-child .qt-d{right:0;background:linear-gradient(90deg,#DDBE74,rgba(221,190,116,0))}
+.c24 .qt-n{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#FFFFFF;box-shadow:inset 0 0 0 2px #DDBE74;font-size:14px;font-weight:700;color:#86691F}
+.c24 .qtime h3{margin:16px 0 7px;font-size:17px;font-weight:700;letter-spacing:-.01em;color:#0B1F3B}
+.c24 .qtime p{margin:0;font-size:14.5px;line-height:1.62;color:#55617A}
+
+/* wat wij van u vragen */
+.c24 .qsask{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:32px 0 0;padding:0;list-style:none}
+.c24 .qsask li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:24px 24px 22px;border-radius:16px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .qsask h3{margin:0 0 6px;font-size:16px;font-weight:700;color:#0B1F3B}
+.c24 .qsask p{margin:0;font-size:14.5px;line-height:1.6;color:#55617A}
+
+/* en daarna */
+.c24 .qsaphoto{background:#EEF4F9;min-height:clamp(420px,46cqw,620px);display:flex;align-items:center}
+.c24 .qsa-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 50%}
+.c24 .qsa-wash{position:absolute;inset:0;background:linear-gradient(95deg,rgba(240,245,250,.92) 0,rgba(240,245,250,.8) 30%,rgba(240,245,250,.35) 52%,rgba(240,245,250,0) 68%)}
+.c24 .qsaphoto > .wrap{position:relative;z-index:1;width:100%}
+.c24 .qsa-in{max-width:66%}
+.c24 .qsafter{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:30px 0 0;padding:0;list-style:none}
+.c24 .qsafter li{display:flex;gap:16px;align-items:flex-start;padding:24px 24px 22px;border-radius:16px;background:rgba(255,255,255,.9);backdrop-filter:blur(6px);box-shadow:0 0 0 1px rgba(11,31,59,.06),0 16px 36px rgba(11,31,59,.08)}
+.c24 .qsafter li:first-child{background:rgba(251,246,236,.94);box-shadow:0 0 0 1px #EBDFC2,0 16px 36px rgba(11,31,59,.06)}
+.c24 .qsa-ic{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:52px;height:52px;border-radius:50%;background:#FBF1DC;color:#A07E24}
+.c24 .qsafter li:last-child .qsa-ic{background:#E6EFF8;color:#0B1F3B}
+.c24 .qsa-b{min-width:0}
+.c24 .qsafter h3{margin:0 0 9px;font-size:18px;font-weight:700;letter-spacing:-.01em;color:#0B1F3B}
+.c24 .qsafter p{margin:0;font-size:15px;line-height:1.62;color:#55617A}
+
+/* voorwaarden */
+.c24 .qscond{padding:28px 30px;border-radius:16px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E3E8F0}
+.c24 .qscond ul{margin:0;padding:0;list-style:none;display:grid;gap:13px}
+.c24 .qscond li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;font-size:15px;line-height:1.6;color:#55617A}
+.c24 .qscond li b{font-weight:600;color:#0B1F3B}
+
+/* faq */
+.c24 .qfaq{margin:30px 0 0;max-width:900px;border-radius:16px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E3E8F0;overflow:hidden}
+.c24 .qfaq-i + .qfaq-i{border-top:1px solid #EDF0F5}
+.c24 .qfaq-i summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 24px;font-size:16.5px;font-weight:600;color:#0B1F3B;cursor:pointer;list-style:none}
+.c24 .qfaq-i summary::-webkit-details-marker{display:none}
+.c24 .qfaq-i summary:hover{background:#FBFCFD}
+.c24 .qfaq-i summary:focus-visible{outline:2px solid #C8A24A;outline-offset:-2px}
+.c24 .qfaq-c{position:relative;flex:none;width:16px;height:16px}
+.c24 .qfaq-c::before,.c24 .qfaq-c::after{content:"";position:absolute;left:50%;top:50%;width:13px;height:2px;border-radius:2px;background:#A07E24;transform:translate(-50%,-50%);transition:transform .22s ease}
+.c24 .qfaq-c::after{transform:translate(-50%,-50%) rotate(90deg)}
+.c24 .qfaq-i[open] .qfaq-c::after{transform:translate(-50%,-50%) rotate(0deg)}
+.c24 .qfaq-a{padding:0 24px 22px}
+.c24 .qfaq-a p{margin:0;max-width:760px;font-size:15px;line-height:1.66;color:#55617A}
+
+@container page (max-width:1099px){
+.c24 .qsb{grid-template-columns:minmax(0,1fr)}
+.c24 .qsget{grid-template-columns:repeat(2,minmax(0,1fr))}
+.c24 .qtime{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 26px}
+.c24 .qt-i:nth-child(2n) .qt-d{right:0;background:linear-gradient(90deg,#DDBE74,rgba(221,190,116,0))}
+}
+@container page (max-width:860px){
+.c24 .qsfacts{grid-template-columns:repeat(2,minmax(0,1fr))}
+.c24 .qsask{grid-template-columns:minmax(0,1fr)}
+.c24 .qsafter{grid-template-columns:minmax(0,1fr)}
+.c24 .qsa-in{max-width:none}
+.c24 .qsa-wash{background:linear-gradient(180deg,rgba(240,245,250,.94) 0,rgba(240,245,250,.86) 60%,rgba(240,245,250,.7) 100%)}
+.c24 .qsa-bg{object-position:80% 50%}
+}
+@container page (max-width:640px){
+.c24 .qtime{grid-template-columns:minmax(0,1fr);gap:24px}
+.c24 .qt-d{display:none}
+}
+@container page (max-width:560px){
+.c24 .qsget{grid-template-columns:minmax(0,1fr)}
+.c24 .qsfacts{grid-template-columns:minmax(0,1fr)}
+.c24 .qsb-b .btn{flex:1 1 100%;justify-content:center}
+.c24 .qchain{padding:20px 18px 22px}
+.c24 .qscond{padding:24px 20px}
+.c24 .qfaq-i summary{padding:18px 18px;font-size:15.5px}
+.c24 .qfaq-a{padding:0 18px 20px}
+}
+
+@media (prefers-reduced-motion: reduce){
+.c24 .qc-line,.c24 .qc-i,.c24 .qt-i{animation:none !important;opacity:1 !important;transform:none !important}
+.c24 .qsget li{transition:none}
+.c24 .qsget li:hover{transform:none}
+}
+
+/* ── voorbeeldrapport, inzienbaar op de pagina ───────────────────────── */
+.c24 .rp-wrap{margin:34px 0 0;border-radius:20px;background:#FFFFFF;box-shadow:0 0 0 1px #E3E8F0,0 22px 54px rgba(11,31,59,.08);overflow:hidden}
+.c24 .rp-bar-top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 22px;background:#0B1F3B;color:#D7DEE9}
+.c24 .rp-brand{display:inline-flex;align-items:center;font-size:13px;font-weight:600;letter-spacing:.02em;color:#FFFFFF}
+.c24 .rp-tag{padding:4px 11px;border-radius:999px;background:rgba(226,190,106,.16);font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#E2BE6A}
+.c24 .rp-body{display:grid;grid-template-columns:minmax(0,246px) minmax(0,1fr)}
+.c24 .rp-rail{display:flex;flex-direction:column;padding:14px 12px;background:#F7F8FA;border-right:1px solid #E8EAEE}
+.c24 .rp-tab{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:11px;padding:11px 12px;border:0;border-radius:11px;background:transparent;font:inherit;font-size:14px;font-weight:600;text-align:left;color:#55617A;cursor:pointer}
+.c24 .rp-tab:hover{background:#EEF1F6}
+.c24 .rp-tab:focus-visible{outline:2px solid #C8A24A;outline-offset:-2px}
+.c24 .rp-tab.on{background:#FFFFFF;color:#0B1F3B;box-shadow:0 0 0 1px #E8DCBD,0 6px 16px rgba(11,31,59,.07)}
+.c24 .rp-no{font-size:11px;font-weight:700;letter-spacing:.06em;color:#A07E24}
+.c24 .rp-panes{position:relative;min-width:0;padding:26px 30px 20px}
+.c24 .rp-pane[hidden]{display:none}
+.c24 .rp-ph{margin:0 0 20px;padding-bottom:16px;border-bottom:1px solid #EDF0F5}
+.c24 .rp-ph h3{margin:6px 0 0;font-size:24px;font-weight:800;letter-spacing:-.025em;color:#0B1F3B}
+.c24 .rp-k{display:block;font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#A07E24}
+.c24 .rp-h4{margin:26px 0 12px;font-size:15px;font-weight:700;color:#0B1F3B}
+.c24 .rp-panes p{margin:0 0 12px;font-size:14.5px;line-height:1.62;color:#55617A}
+.c24 .rp-lead{font-size:16px !important;font-weight:600;color:#0B1F3B !important}
+
+.c24 .rp-concl{padding:22px 24px;border-radius:14px;background:#0B1F3B;color:#C3CCDB}
+.c24 .rp-concl .rp-k{color:#E2BE6A}
+.c24 .rp-ch{margin:9px 0 0 !important;font-size:21px;font-weight:800;letter-spacing:-.02em;line-height:1.26;color:#FFFFFF !important}
+.c24 .rp-cp{margin:12px 0 0 !important;font-size:14.5px;color:#C3CCDB !important}
+.c24 .rp-concl-s{margin-top:22px;background:#102A4C}
+
+.c24 .rp-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0 0;padding:0;list-style:none}
+.c24 .rp-tiles li{padding:16px 16px 14px;border-radius:13px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .rp-tv{display:block;font-size:27px;font-weight:800;letter-spacing:-.03em}
+.c24 .rp-tk{display:block;margin-top:3px;font-size:12.5px;line-height:1.4;color:#55617A}
+
+.c24 .rp-bul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.c24 .rp-bul li{position:relative;padding-left:18px;font-size:14.5px;line-height:1.6;color:#55617A}
+.c24 .rp-bul li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:#C8A24A}
+.c24 .rp-bul b{color:#0B1F3B}
+.c24 .rp-note{margin:20px 0 0;padding:18px 20px;border-radius:13px;background:#FBF7EE;box-shadow:inset 0 0 0 1px #EBDFC2}
+.c24 .rp-note p{margin:7px 0 0 !important;font-weight:600;color:#3B4A63 !important}
+.c24 .rp-warn{display:grid;grid-template-columns:auto minmax(0,1fr);gap:11px;margin:20px 0 0;padding:16px 18px;border-radius:13px;background:#FBF7EE;box-shadow:inset 0 0 0 1px #EBDFC2;font-size:13.5px;line-height:1.6;color:#55617A}
+.c24 .rp-warn b{color:#0B1F3B}
+
+.c24 .rp-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:0 0 18px}
+.c24 .rp-meta{padding:16px 18px;border-radius:13px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .rp-meta p{margin:7px 0 0 !important;font-size:14px !important}
+.c24 .rp-chk{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.c24 .rp-chk li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;font-size:14px;line-height:1.58;color:#55617A}
+.c24 .rp-quest{margin:18px 0 0;padding:20px 22px;border-radius:13px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E3E8F0}
+.c24 .rp-qh{margin:9px 0 0 !important;font-size:16px !important;font-weight:700;line-height:1.5;color:#0B1F3B !important}
+.c24 .rp-qs{margin:12px 0 0 !important;padding-top:12px;border-top:1px solid #EDF0F5;font-size:13px !important;color:#8B96A8 !important}
+
+.c24 .rp-docs{margin:0;padding:0;list-style:none;display:grid;gap:11px}
+.c24 .rp-docs li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;padding:14px 16px;border-radius:13px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .rp-dc{display:inline-flex;align-items:center;justify-content:center;width:40px;height:34px;border-radius:9px;background:#0B1F3B;font-size:12px;font-weight:700;letter-spacing:.04em;color:#E2BE6A}
+.c24 .rp-docs b{display:block;font-size:15px;color:#0B1F3B}
+.c24 .rp-docs div span{display:block;margin-top:2px;font-size:13px;color:#8B96A8}
+.c24 .rp-dv{font-size:12.5px;color:#9AA4B4;white-space:nowrap}
+
+.c24 .rp-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.c24 .rp-steps li{padding:14px 16px;border-radius:12px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .rp-sn{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;color:#A07E24}
+.c24 .rp-steps b{display:block;margin-top:4px;font-size:14.5px;color:#0B1F3B}
+.c24 .rp-steps li span:last-child{display:block;margin-top:2px;font-size:13px;color:#8B96A8}
+
+.c24 .rp-scale{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.c24 .rp-scale li{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:14px;font-size:14px;line-height:1.55;color:#55617A}
+.c24 .rp-st{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.05em;white-space:nowrap}
+.c24 .rp-ged{background:#E4F4EA;color:#145C3E}
+.c24 .rp-dls{background:#FBF1DC;color:#7A5C10}
+.c24 .rp-gap{background:#FBE7EB;color:#8E2A40}
+.c24 .rp-ged-b{background:#1B6B4A}
+.c24 .rp-dls-b{background:#A77C14}
+.c24 .rp-gap-b{background:#9E2F46}
+
+.c24 .rp-pct{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:24px;padding:22px 24px;border-radius:14px;background:#0B1F3B}
+.c24 .rp-pv{font-size:44px;font-weight:800;letter-spacing:-.04em;color:#FFFFFF}
+.c24 .rp-pct p{margin:0 !important;font-size:14.5px;color:#C3CCDB !important}
+.c24 .rp-leg{display:flex;flex-wrap:wrap;gap:10px 26px;margin:16px 0 0;padding:0;list-style:none;font-size:13.5px;color:#55617A}
+.c24 .rp-leg li{display:inline-flex;align-items:center;gap:8px}
+.c24 .rp-leg b{color:#0B1F3B}
+.c24 .rp-dot{width:9px;height:9px;border-radius:50%}
+.c24 .rp-bars{margin:0;padding:0;list-style:none;display:grid;gap:16px}
+.c24 .rp-bh{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:7px;font-size:14px}
+.c24 .rp-bh b{color:#0B1F3B}
+.c24 .rp-bh span{font-size:12.5px;color:#9AA4B4}
+.c24 .rp-bar{display:flex;gap:2px;height:10px;border-radius:999px;overflow:hidden;background:#EDF0F5}
+.c24 .rp-seg{display:block}
+
+.c24 .rp-tw{overflow-x:auto;border-radius:13px;box-shadow:inset 0 0 0 1px #E3E8F0}
+.c24 .rp-tbl{width:100%;min-width:640px;border-collapse:collapse;font-size:13.5px}
+.c24 .rp-tbl th{padding:12px 14px;background:#0B1F3B;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-align:left;color:#D7DEE9;white-space:nowrap}
+.c24 .rp-tbl td{padding:12px 14px;border-top:1px solid #EDF0F5;color:#3B4A63;vertical-align:middle}
+.c24 .rp-tbl tbody tr:nth-child(even){background:#FBFCFD}
+.c24 .rp-id{font-weight:700;color:#0B1F3B !important;white-space:nowrap}
+.c24 .rp-art{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12.5px;color:#86691F !important;white-space:nowrap}
+.c24 .rp-ev{font-size:12.5px;color:#8B96A8 !important;white-space:nowrap}
+.c24 .rp-pr{font-weight:700;color:#0B1F3B !important}
+
+.c24 .rp-risk{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin:0 0 18px;padding:18px 22px;border-radius:13px;background:#0B1F3B}
+.c24 .rp-risk .rp-k{color:#E2BE6A}
+.c24 .rp-risk b{display:block;margin-top:4px;font-size:21px;font-weight:800;letter-spacing:-.01em;color:#FFFFFF}
+.c24 .rp-ra{font-size:15px;font-weight:600;color:#E2BE6A}
+.c24 .rp-quote{margin:9px 0 0;padding:14px 18px;border-left:3px solid #C8A24A;border-radius:0 10px 10px 0;background:#F7F8FA;font-size:14.5px;font-style:italic;line-height:1.6;color:#3B4A63}
+
+.c24 .rp-90{margin:0;padding:0;list-style:none;display:grid;gap:11px}
+.c24 .rp-90 li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start;padding:15px 18px;border-radius:13px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .rp-per{display:inline-flex;align-items:center;justify-content:center;min-width:66px;padding:5px 10px;border-radius:999px;background:#0B1F3B;font-size:11.5px;font-weight:700;letter-spacing:.04em;color:#E2BE6A}
+.c24 .rp-90 b{display:block;font-size:15px;color:#0B1F3B}
+.c24 .rp-90 div span{display:block;margin-top:3px;font-size:13.5px;line-height:1.55;color:#55617A}
+.c24 .rp-own{margin-top:6px !important;font-size:12px !important;font-weight:600;letter-spacing:.02em;color:#A07E24 !important}
+
+.c24 .rp-trace{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.c24 .rp-trace li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:center;padding:13px 18px;border-radius:12px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .rp-trace b{display:block;margin-top:2px;font-size:14.5px;color:#0B1F3B}
+.c24 .rp-keep{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.c24 .rp-keep li{padding:16px 18px;border-radius:13px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .rp-keep b{display:block;margin-top:5px;font-size:14.5px;color:#0B1F3B}
+.c24 .rp-keep li span:last-child{display:block;margin-top:4px;font-size:13px;line-height:1.55;color:#55617A}
+.c24 .rp-src{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.c24 .rp-src a{display:block;padding:12px 16px;border-radius:11px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E8EAEE;text-decoration:none}
+.c24 .rp-src a:hover{background:#EEF1F6}
+.c24 .rp-src a:focus-visible{outline:2px solid #C8A24A;outline-offset:2px}
+.c24 .rp-src b{display:block;font-size:14px;color:#0B1F3B}
+.c24 .rp-src span{display:block;margin-top:2px;font-size:12.5px;color:#8B96A8}
+
+.c24 .rp-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:24px 0 0;padding-top:18px;border-top:1px solid #EDF0F5}
+.c24 .rp-nav button{display:inline-flex;align-items:center;padding:10px 18px;border:0;border-radius:999px;background:#F2F4F8;font:inherit;font-size:14px;font-weight:600;color:#0B1F3B;cursor:pointer}
+.c24 .rp-nav button:hover{background:#E7EBF1}
+.c24 .rp-nav button:focus-visible{outline:2px solid #C8A24A;outline-offset:2px}
+.c24 .rp-nav button[disabled]{opacity:.42;cursor:default}
+.c24 .rp-count{font-size:13px;font-weight:600;letter-spacing:.04em;color:#8B96A8}
+
+@container page (max-width:1099px){
+.c24 .rp-body{grid-template-columns:minmax(0,1fr)}
+.c24 .rp-rail{flex-direction:row;overflow-x:auto;gap:8px;border-right:0;border-bottom:1px solid #E8EAEE}
+.c24 .rp-tab{flex:none;grid-template-columns:auto;gap:2px;padding:10px 14px;white-space:nowrap}
+.c24 .rp-keep{grid-template-columns:minmax(0,1fr)}
+.c24 .rp-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@container page (max-width:760px){
+.c24 .rp-panes{padding:22px 20px 18px}
+.c24 .rp-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+.c24 .rp-two{grid-template-columns:minmax(0,1fr)}
+.c24 .rp-pct{grid-template-columns:minmax(0,1fr);gap:12px}
+.c24 .rp-ph h3{font-size:21px}
+}
+@container page (max-width:560px){
+.c24 .rp-steps{grid-template-columns:minmax(0,1fr)}
+.c24 .rp-docs li{grid-template-columns:auto minmax(0,1fr)}
+.c24 .rp-dv{grid-column:2;white-space:normal}
+.c24 .rp-nav{flex-wrap:wrap;justify-content:center}
+.c24 .rp-count{order:3;width:100%;text-align:center}
+}
+
+/* ── downloadkaart bij het voorbeeldrapport ─────────────────────────── */
+.c24 .rp-dl{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:clamp(24px,4cqw,46px);margin:26px 0 0;padding:28px 32px;border-radius:18px;background:#FFFFFF;box-shadow:0 0 0 1px #E3E8F0,0 16px 40px rgba(11,31,59,.06)}
+.c24 .rp-cover{display:block;width:154px;height:auto;border-radius:10px;box-shadow:0 2px 0 rgba(11,31,59,.04),0 14px 30px rgba(11,31,59,.18),0 0 0 1px rgba(11,31,59,.08);transition:transform .24s ease,box-shadow .24s ease}
+.c24 .rp-dl:hover .rp-cover{transform:translateY(-4px);box-shadow:0 2px 0 rgba(11,31,59,.04),0 22px 44px rgba(11,31,59,.24),0 0 0 1px rgba(11,31,59,.08)}
+.c24 .rp-dl h3{margin:0;font-size:21px;font-weight:800;letter-spacing:-.02em;color:#0B1F3B}
+.c24 .rp-dl p{margin:10px 0 0;max-width:560px;font-size:15px;line-height:1.62;color:#55617A}
+.c24 .rp-meta2{display:flex;flex-wrap:wrap;gap:8px 20px;margin:16px 0 0;padding:0;list-style:none;font-size:13px;color:#8B96A8}
+.c24 .rp-meta2 li{display:inline-flex;align-items:center;gap:7px}
+.c24 .rp-dlb{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;margin-top:22px}
+@container page (max-width:760px){
+.c24 .rp-dl{grid-template-columns:minmax(0,1fr);justify-items:start;padding:24px 22px}
+.c24 .rp-cover{width:128px}
+}
+@container page (max-width:560px){
+.c24 .rp-dlb .btn{flex:1 1 100%;justify-content:center}
+}
+
+/* ── bevinding-verkenner ────────────────────────────────────────────── */
+.c24 .fx{position:relative;margin:34px 0 0;padding:24px 28px 22px;border-radius:20px;background:#FFFFFF;box-shadow:0 0 0 1px #E3E8F0,0 20px 48px rgba(11,31,59,.07)}
+.c24 .sec.dark .fx{padding:20px 22px;background:rgba(255,255,255,.055);box-shadow:inset 0 0 0 1px rgba(226,190,106,.24)}
+.c24 .fx-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px;margin:0 0 20px;padding-bottom:16px;border-bottom:1px solid #EDF0F5}
+.c24 .sec.dark .fx-top{border-bottom-color:rgba(255,255,255,.12)}
+.c24 .fx-tag{display:inline-flex;align-items:center;font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#8B96A8}
+.c24 .sec.dark .fx-tag{color:#A9B4C6}
+.c24 .fx-count{font-size:12.5px;font-weight:600;letter-spacing:.05em;color:#9AA4B4}
+.c24 .fx-count b{color:#0B1F3B}
+
+.c24 .fx-grid{display:grid;grid-template-columns:minmax(0,40fr) minmax(0,60fr);gap:clamp(22px,3cqw,38px);align-items:start}
+.c24 .fx-pane[hidden]{display:none}
+
+/* links: de keten */
+.c24 .fx-chain{position:relative;margin:0;padding:0;list-style:none;display:grid}
+.c24 .fx-i{position:relative}
+.c24 .fx-s{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);gap:15px;width:100%;padding:11px 12px 11px 0;border:0;border-radius:11px;background:transparent;font:inherit;text-align:left;cursor:pointer}
+.c24 .fx-s:hover,.c24 .fx-s:focus-visible{background:#F7F8FA}
+.c24 .sec.dark .fx-s:hover,.c24 .sec.dark .fx-s:focus-visible{background:rgba(255,255,255,.05)}
+.c24 .fx-s:focus-visible{outline:2px solid #C8A24A;outline-offset:-2px}
+.c24 .fx-i:not(:last-child) .fx-s::before{content:"";position:absolute;left:19px;top:34px;bottom:-11px;width:2px;border-radius:2px;background:linear-gradient(180deg,#C8A24A,rgba(200,162,74,.3));transform-origin:top center}
+.c24.armed .fx-i:not(:last-child) .fx-s::before{transform:scaleY(0)}
+.c24 .sec.in .fx-i:not(:last-child) .fx-s::before{animation:fxdraw .22s ease both;animation-delay:calc(.2s + var(--i) * .16s)}
+@keyframes fxdraw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.c24 .fx-d{position:relative;z-index:1;width:16px;height:16px;margin-left:12px;margin-top:5px;border-radius:50%;background:#FFFFFF;box-shadow:inset 0 0 0 2px #C8A24A}
+.c24 .sec.dark .fx-d{background:#122E51}
+.c24 .fx-s[data-on] .fx-d,.c24 .fx-s:hover .fx-d{box-shadow:inset 0 0 0 5px #C8A24A}
+.c24 .fx-c{min-width:0}
+.c24 .fx-l{display:block;font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#A07E24}
+.c24 .sec.dark .fx-l{color:#E2BE6A}
+.c24 .fx-v{display:block;margin-top:4px;font-size:15.5px;line-height:1.48;font-weight:600;color:#0B1F3B}
+.c24 .sec.dark .fx-v{color:#FFFFFF}
+.c24 .fx-sub{display:block;margin-top:3px;font-size:12.5px;line-height:1.5;color:#8B96A8}
+.c24 .sec.dark .fx-sub{color:#A9B4C6}
+
+/* rechts: het oordeel */
+.c24 .fx-detail{padding:24px 26px 22px;border-radius:16px;background:#0B1F3B;color:#C3CCDB}
+.c24 .fx-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:0 0 18px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.13)}
+.c24 .fx-prio{font-size:13px;font-weight:600;color:#FFFFFF}
+.c24 .fx-art{flex:1 1 100%;font-size:13px;color:#A9B4C6}
+.c24 .fx-badge{display:inline-flex;align-items:center;padding:4px 11px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.05em;white-space:nowrap}
+.c24 .fx-badge.fx-lg{padding:6px 14px;font-size:12.5px}
+.c24 .fx-gap{background:#FBE7EB;color:#8E2A40}
+.c24 .fx-dls{background:#FBF1DC;color:#7A5C10}
+.c24 .fx-ged{background:#E4F4EA;color:#145C3E}
+.c24 .fx-b{padding:13px 0;border-top:1px solid rgba(255,255,255,.09);transition:background .2s ease,box-shadow .2s ease}
+.c24 .fx-b:first-of-type{border-top:0;padding-top:0}
+.c24 .fx-b[data-hot]{background:rgba(226,190,106,.09);box-shadow:inset 3px 0 0 #C8A24A;border-radius:0 8px 8px 0;padding-left:14px;margin-left:-14px}
+.c24 .fx-bk{display:block;font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#E2BE6A}
+.c24 .fx-b p{margin:6px 0 0;font-size:14.5px;line-height:1.62;color:#D7DEE9}
+.c24 .fx-q{display:block;font-size:14.5px;font-style:italic;line-height:1.6;color:#FFFFFF}
+.c24 .fx-bm{display:block;margin-top:6px;font-size:12.5px;color:#9AA4B4}
+
+/* navigatie */
+.c24 .fx-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 20px;margin:22px 0 0;padding-top:18px;border-top:1px solid #EDF0F5}
+.c24 .fx-dots{display:flex;gap:9px}
+.c24 .fx-dot{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:#D5DBE4;cursor:pointer}
+.c24 .fx-dot.on{background:#C8A24A;transform:scale(1.25)}
+.c24 .fx-dot:focus-visible{outline:2px solid #C8A24A;outline-offset:3px}
+.c24 .fx-arrows{display:flex;gap:10px}
+.c24 .fx-arrows button{display:inline-flex;align-items:center;padding:9px 17px;border:0;border-radius:999px;background:#F2F4F8;font:inherit;font-size:13.5px;font-weight:600;color:#0B1F3B;cursor:pointer;transition:background .18s ease}
+.c24 .fx-arrows button:hover{background:#E7EBF1}
+.c24 .fx-arrows button:focus-visible{outline:2px solid #C8A24A;outline-offset:2px}
+.c24 .fx-arrows button[disabled]{opacity:.42;cursor:default}
+
+/* compacte variant op de homepage */
+.c24 .fx-sm{margin:0}
+.c24 .fx-sm .fx-top{margin-bottom:14px;padding-bottom:12px}
+.c24 .fx-sm .fx-s{cursor:default;padding:9px 10px 9px 0}
+.c24 .fx-sm .fx-s:hover{background:transparent}
+.c24 .fx-sm .fx-s:hover .fx-d{box-shadow:inset 0 0 0 2px #C8A24A}
+.c24 .fx-sm .fx-v{font-size:14.5px}
+
+@container page (max-width:1099px){
+.c24 .fx-grid{grid-template-columns:minmax(0,1fr);gap:22px}
+}
+@container page (max-width:560px){
+.c24 .fx{padding:20px 18px 18px}
+.c24 .fx-detail{padding:20px 18px 18px}
+.c24 .fx-nav{justify-content:center}
+.c24 .fx-arrows{flex:1 1 100%;justify-content:space-between}
+}
+@media (prefers-reduced-motion: reduce){
+.c24 .fx-i .fx-s::before{animation:none !important;transform:none !important}
+.c24 .fx-b,.c24 .fx-arrows button{transition:none}
+}
+
+/* ── sectie met de rapportfoto erachter ─────────────────────────────── */
+.c24 .qsphoto{position:relative;overflow:hidden;background:#F2F4F7}
+.c24 .qsp-bg{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%;will-change:transform}
+.c24 .qsp-wash{position:absolute;inset:0;background:linear-gradient(97deg,rgba(247,248,250,.82) 0,rgba(247,248,250,.6) 30%,rgba(247,248,250,.2) 54%,rgba(247,248,250,0) 74%)}
+.c24 .qsphoto > .wrap{position:relative;z-index:1}
+.c24 .qsphoto .lead{max-width:620px}
+.c24 .qsphoto .qsget li{background:rgba(255,255,255,.96);backdrop-filter:saturate(1.1) blur(2px);box-shadow:0 0 0 1px rgba(11,31,59,.07),0 18px 42px rgba(11,31,59,.12)}
+.c24 .qsphoto .qsget li:hover{box-shadow:0 0 0 1px rgba(11,31,59,.09),0 26px 54px rgba(11,31,59,.18)}
+@container page (max-width:860px){
+.c24 .qsp-bg{object-position:46% 44%}
+.c24 .qsp-wash{background:linear-gradient(176deg,rgba(247,248,250,.9) 0,rgba(247,248,250,.74) 36%,rgba(247,248,250,.3) 100%)}
+}
+@media (prefers-reduced-motion: reduce){
+.c24 .qsp-bg{height:100% !important;transform:none !important}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://comply24.nl/#organization",
+      "name": "Comply24",
+      "legalName": "Comply24 B.V.",
+      "url": "https://comply24.nl/",
+      "logo": "https://comply24.nl/assets/images/comply24-logo-navy.png",
+      "email": "info@comply24.nl",
+      "areaServed": "NL",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gansstraat 170",
+        "addressLocality": "Utrecht",
+        "addressCountry": "NL"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "KVK",
+        "value": "42175762"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/comply24/"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Comply24",
+          "item": "https://comply24.nl/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Compliance QuickScan",
+          "item": "https://comply24.nl/en/quickscan.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Compliance QuickScan",
+      "url": "https://comply24.nl/en/quickscan.html",
+      "serviceType": "Compliance gap assessment",
+      "description": "In ten working days you know what one law asks of you and where you stand. Fixed price, fixed lead time, every finding with its source.",
+      "provider": {
+        "@id": "https://comply24.nl/#organization"
+      },
+      "areaServed": "NL",
+      "offers": {
+        "@type": "Offer",
+        "price": "4900",
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false,
+        "url": "https://comply24.nl/en/quickscan.html",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="c24 l-en" data-page="qs" data-h-ref="root" style="container-type: inline-size; container-name: page; font-family: Inter, 'Helvetica Neue', Arial, sans-serif; color: #0B1F3B; background: #FFFFFF; -webkit-font-smoothing: antialiased">
+<svg width="0" height="0" aria-hidden="true" style="position: absolute">
+<defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4.500 20c1.400-3.800 4.200-5.600 7.500-5.600s6.100 1.800 7.500 5.600"></path></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.500 2.800v5.400c0 4.600-3.100 8.200-7.500 9.800-4.400-1.600-7.500-5.200-7.500-9.800V5.800L12 3z"></path></symbol>
+<symbol id="i-shieldok" viewBox="0 0 24 24"><path d="M12 3l7.500 2.800v5.400c0 4.600-3.100 8.200-7.500 9.800-4.400-1.600-7.500-5.200-7.500-9.800V5.800L12 3z"></path><path d="M9 12l2.200 2.200L15.200 10"></path></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"></path><path d="M14 3v4h4"></path><path d="M9.500 12.500h5"></path><path d="M9.500 16.500h5"></path></symbol>
+<symbol id="i-table" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.500"></rect><path d="M4 9h16"></path><path d="M9 4v16"></path></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.500 9.500a2.500 2.500 0 1 1 3.500 2.300c-.800.400-1 1-1 1.700"></path><path d="M12 17h.010"></path></symbol>
+<symbol id="i-checkc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.500l2.800 2.800L16 9.800"></path></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.500l4.500 4.500L19 7.500"></path></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4l9 15.500H3L12 4z"></path><path d="M12 10v4.500"></path><path d="M12 17h.010"></path></symbol>
+<symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></symbol>
+<symbol id="i-test" viewBox="0 0 24 24"><path d="M9 3h6"></path><path d="M10 3v6l-5 9a2 2 0 0 0 1.800 3h10.400a2 2 0 0 0 1.800-3l-5-9V3"></path><path d="M7.500 15h9"></path></symbol>
+<symbol id="i-env" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18"></path><path d="M8 4v6"></path></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M4 17V7l8-4 8 4v10l-8 4z"></path><path d="M4 7l8 4 8-4"></path><path d="M12 11v10"></path></symbol>
+<symbol id="i-replay" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 6"></path><path d="M20 5v6h-6"></path></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></symbol><symbol id="i-law" viewBox="0 0 24 24"><path d="M12 6v14"></path><path d="M7 20h10"></path><path d="M5 8h14"></path><path d="M5 8l-2.2 5.2a2.4 2.4 0 0 0 4.4 0z"></path><path d="M19 8l-2.2 5.2a2.4 2.4 0 0 0 4.4 0z"></path><circle cx="12" cy="4" r="1.4"></circle></symbol><symbol id="i-spark" viewBox="0 0 24 24"><path d="M11 3l1.7 4.6L17 9l-4.3 1.4L11 15l-1.7-4.6L5 9l4.3-1.4z"></path><path d="M17.5 14l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"></path></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10.2 13.4a3.8 3.8 0 0 0 5.4.4l2.5-2.5a3.8 3.8 0 0 0-5.4-5.4l-1.3 1.3"></path><path d="M13.8 10.6a3.8 3.8 0 0 0-5.4-.4l-2.5 2.5a3.8 3.8 0 0 0 5.4 5.4l1.3-1.3"></path></symbol><symbol id="i-radar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4.6"></circle><path d="M12 12l6.2-4.2"></path></symbol><symbol id="i-stack" viewBox="0 0 24 24"><path d="M12 3l8.5 4.6L12 12.2 3.5 7.6z"></path><path d="M3.5 12.4L12 17l8.5-4.6"></path></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 21h18"></path><path d="M5 21V8l7-5 7 5v13"></path><path d="M9 21v-6h6v6"></path></symbol>
+</defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+<div class="wrap nav-in">
+<a class="nav-logo" href="index.html" aria-label="Comply24"><img src="../assets/images/comply24-logo-navy.png" alt="Comply24" style="display: block; height: 30px; width: auto" width="320" height="90"></a>
+<nav class="nav-links" aria-label="Main menu">
+<div class="navitem has-dd"><a class="navlink" href="platform.html" aria-haspopup="true" aria-expanded="false">Platform<svg class="ic dd-c" aria-hidden="true" style="width: 15px; height: 15px; stroke-width: 2.2"><use href="#i-chev"></use></svg></a><div class="dd"><ul>
+<li><a href="platform.html"><span class="dd-t">Platform overview</span><span class="dd-d">Two modules, one chain</span></a></li>
+<li><a href="regulatory-intelligence.html"><span class="dd-t">Regulatory Intelligence</span><span class="dd-d">Regulation translated into your obligations</span></a></li>
+<li><a href="control-testing.html"><span class="dd-t">Control Testing</span><span class="dd-d">From control to tested evidence</span></a></li>
+<li><a href="wetswijzigingen.html"><span class="dd-t">Regulatory change</span><span class="dd-d">The change process, step by step</span></a></li>
+</ul></div></div>
+<div class="navitem"><a class="navlink" href="hoe-het-werkt.html">How it works</a></div>
+<div class="navitem"><a class="navlink" href="voor-wie.html">Who it is for</a></div>
+<div class="navitem"><a class="navlink on" href="quickscan.html" aria-current="page">QuickScan</a></div>
+<div class="navitem"><a class="navlink" href="prijzen.html">Pricing</a></div>
+</nav>
+<a class="lang nav-lang-d" href="../quickscan.html" hreflang="nl" lang="nl" aria-label="In het Nederlands" style="text-decoration: none"><b class="l1">NL</b>/<b class="l2">EN</b></a>
+<a class="btn btn-gold nav-cta" href="demo.html">Book a demo<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a>
+<button class="nav-burger" type="button" data-on-click="toggleMenu" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="nav-panel" id="nav-panel">
+<div class="wrap" style="padding-top: 18px; padding-bottom: 26px">
+<ul class="np-list">
+<li><a class="np-a" href="platform.html">Platform</a><ul class="np-sub"><li><a href="platform.html">Platform overview</a></li><li><a href="regulatory-intelligence.html">Regulatory Intelligence</a></li><li><a href="control-testing.html">Control Testing</a></li><li><a href="wetswijzigingen.html">Regulatory change</a></li></ul></li>
+<li><a class="np-a" href="hoe-het-werkt.html">How it works</a></li>
+<li><a class="np-a" href="voor-wie.html">Who it is for</a></li>
+<li><a class="np-a" href="quickscan.html">QuickScan</a></li>
+<li><a class="np-a" href="prijzen.html">Pricing</a></li>
+<li><a class="np-a" href="beveiliging.html">Security and trust</a></li>
+</ul>
+<div style="display: flex; align-items: center; gap: 18px; margin-top: 22px">
+<a class="btn btn-gold" href="demo.html" style="height: 48px">Book a demo</a>
+<a class="lang" href="../quickscan.html" hreflang="nl" lang="nl" aria-label="In het Nederlands" style="text-decoration: none; padding: 0; font-size: 15px"><b class="l1">NL</b>/<b class="l2">EN</b></a>
+</div>
+</div>
+</div>
+</header>
+
+<main id="main">
+
+<section id="qs-hd" class="sec dark" style="position: relative; overflow: hidden; background: radial-gradient(120% 140% at 85% 0%, #14305A 0%, #0B1F3B 46%, #081730 100%)">
+<svg class="plx" aria-hidden="true" viewBox="0 0 900 900" style="--pf: -.08; position: absolute; right: -300px; top: -420px; width: 900px; height: 900px; overflow: visible"><circle cx="450" cy="450" r="430" fill="none" stroke="#C8A24A" stroke-width="1.200" stroke-dasharray="3 7" opacity=".5"></circle><circle cx="450" cy="450" r="350" fill="none" stroke="#FFFFFF" stroke-width="1" opacity=".09"></circle><circle cx="146" cy="754" r="6" fill="#E2BE6A"></circle></svg>
+<div class="wrap" style="padding-top: clamp(44px, 4cqw, 64px); padding-bottom: clamp(52px, 5cqw, 80px)">
+<div class="ey rv" style="--rd: 0s">Compliance QuickScan · one-off compliance assessment</div>
+<h1 class="rv" style="--rd: .08s; margin: 20px 0 0; max-width: 1000px; font-size: clamp(30px, 3.3cqw, 48px); line-height: 1.08; letter-spacing: -.04em; font-weight: 800; color: #FFFFFF; text-wrap: balance">Understand the requirements. <span class="gold">See where you stand.</span></h1>
+<p class="lead rv" style="--rd: .16s; max-width: 820px">No months-long implementation and no upfront decision about a new platform. You pick one law from your scope; we build the framework and assess your own policies, procedures and files against it. You receive substantiated findings and a report you keep, even if you do not continue with Comply24.</p>
+<ul class="qsfacts dk">
+<li class="rv"><span class="qsf-v">€ 4,900</span><span class="qsf-k">fixed price, excluding VAT</span></li>
+<li class="rv"><span class="qsf-v">10 working days</span><span class="qsf-k">from intake to delivery</span></li>
+<li class="rv"><span class="qsf-v">1 law</span><span class="qsf-k">from your own scope</span></li>
+<li class="rv"><span class="qsf-v">3 documents</span><span class="qsf-k">150 pages in total at most</span></li>
+</ul>
+<div class="qsb-b rv" style="--rd: .34s; margin-top: 30px"><a class="btn btn-gold" href="demo.html#review">Book a QuickScan intake<svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2"><use href="#i-arrow"></use></svg></a><a class="more lt" href="#qs-result">Explore a sample finding<svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2"><use href="#i-arrow"></use></svg></a></div>
+</div>
+</section>
+
+<section id="qs-result" class="sec pad" style="position: relative; background: #FFFFFF">
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">You are left with something of value</div>
+<h2 class="h2 rv" style="--rd: .06s; max-width: 880px">This is what one finding looks like.</h2>
+<p class="lead rv" style="--rd: .12s; max-width: 800px">Every line in the gap report runs from the article to your own document and ends in a verdict with a recommended action. That trail stays visible, years later too, and is what a supervisor wants to see.</p>
+<div class="fx rv" style="--rd: .12s" data-fx>
+<div class="fx-top">
+<span class="fx-tag"><svg class="ic" aria-hidden="true" style="width: 14px; height: 14px; stroke-width: 2.2; color: #A07E24; margin-right: 8px"><use href="#i-spark"></use></svg>Illustrative example — no customer data</span>
+<span class="fx-count">Finding <b data-fx-n>01</b> / 03</span>
+</div>
+<div class="fx-pane" id="fxp-f1" role="group" aria-label="Voorbeeldbevinding 1 van 3">
+<div class="fx-grid">
+<ol class="fx-chain">
+<li class="fx-i" style="--i: 0"><button class="fx-s" type="button" data-fx-step="law" aria-describedby="fxd-law-f1"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Regulation</span><span class="fx-v">DORA · Article 30(2)(a)</span><span class="fx-sub">From your scope</span></span></button></li>
+<li class="fx-i" style="--i: 1"><button class="fx-s" type="button" data-fx-step="obl" aria-describedby="fxd-obl-f1"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Obligation</span><span class="fx-v">Conditions for subcontracting</span><span class="fx-sub">Derived per provision</span></span></button></li>
+<li class="fx-i" style="--i: 2"><button class="fx-s" type="button" data-fx-step="doc" aria-describedby="fxd-doc-f1"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Your document</span><span class="fx-v">CloudServ EU – master agreement</span><span class="fx-sub">v4.1 · §3.2</span></span></button></li>
+<li class="fx-i" style="--i: 3"><button class="fx-s" type="button" data-fx-step="ver" aria-describedby="fxd-ver-f1"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Verdict</span><span class="fx-v"><span class="fx-badge fx-gap"><svg class="ic" aria-hidden="true" style="width: 13px; height: 13px; stroke-width: 2.2; color: currentColor; margin-right: 6px"><use href="#i-alert"></use></svg>GAP</span></span><span class="fx-sub">High priority</span></span></button></li>
+<li class="fx-i" style="--i: 4"><button class="fx-s" type="button" data-fx-step="act" aria-describedby="fxd-act-f1"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Action</span><span class="fx-v">Conditions explicit in the contract annex</span><span class="fx-sub">Recommended next step</span></span></button></li>
+</ol>
+<div class="fx-detail">
+<div class="fx-head"><span class="fx-badge fx-lg fx-gap"><svg class="ic" aria-hidden="true" style="width: 15px; height: 15px; stroke-width: 2.2; color: currentColor; margin-right: 7px"><use href="#i-alert"></use></svg>GAP</span><span class="fx-prio">High priority</span><span class="fx-art">DORA · Article 30(2)(a)</span></div>
+<div class="fx-b" id="fxd-law-f1" data-fx-blk="law"><span class="fx-bk">What the rule requires</span><p>The contract states explicitly whether subcontracting of services supporting critical functions is permitted, and under which conditions.</p></div>
+<div class="fx-b" id="fxd-doc-f1" data-fx-blk="doc"><span class="fx-bk">What your document says</span><p><q class="fx-q">The supplier may engage subcontractors where this is necessary for adequate performance of the services.</q></p><span class="fx-bm">CloudServ EU – master agreement · v4.1 · §3.2</span></div>
+<div class="fx-b" id="fxd-ver-f1" data-fx-blk="ver"><span class="fx-bk">Why this is the verdict</span><p>The clause permits subcontracting broadly, but names no conditions, no prior assessment and no duty to notify. That makes it untestable what is permitted and who assessed it.</p></div>
+<div class="fx-b" id="fxd-act-f1" data-fx-blk="act"><span class="fx-bk">Recommended action</span><p>Make the permitted subcontracting and its conditions explicit per critical service in the contract annex, and record the approval in the vendor register.</p></div>
+</div>
+</div>
+</div>
+<div class="fx-pane" id="fxp-f2" role="group" aria-label="Voorbeeldbevinding 2 van 3" hidden>
+<div class="fx-grid">
+<ol class="fx-chain">
+<li class="fx-i" style="--i: 0"><button class="fx-s" type="button" data-fx-step="law" aria-describedby="fxd-law-f2"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Regulation</span><span class="fx-v">DORA · Article 30(2)(b)</span><span class="fx-sub">From your scope</span></span></button></li>
+<li class="fx-i" style="--i: 1"><button class="fx-s" type="button" data-fx-step="obl" aria-describedby="fxd-obl-f2"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Obligation</span><span class="fx-v">Locations and advance notice of change</span><span class="fx-sub">Derived per provision</span></span></button></li>
+<li class="fx-i" style="--i: 2"><button class="fx-s" type="button" data-fx-step="doc" aria-describedby="fxd-doc-f2"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Your document</span><span class="fx-v">CloudServ EU – master agreement</span><span class="fx-sub">v4.1 · §8.1</span></span></button></li>
+<li class="fx-i" style="--i: 3"><button class="fx-s" type="button" data-fx-step="ver" aria-describedby="fxd-ver-f2"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Verdict</span><span class="fx-v"><span class="fx-badge fx-dls"><svg class="ic" aria-hidden="true" style="width: 13px; height: 13px; stroke-width: 2.2; color: currentColor; margin-right: 6px"><use href="#i-alert"></use></svg>PARTIAL</span></span><span class="fx-sub">Medium priority</span></span></button></li>
+<li class="fx-i" style="--i: 4"><button class="fx-s" type="button" data-fx-step="act" aria-describedby="fxd-act-f2"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Action</span><span class="fx-v">Record a deadline and notification moment</span><span class="fx-sub">Recommended next step</span></span></button></li>
+</ol>
+<div class="fx-detail">
+<div class="fx-head"><span class="fx-badge fx-lg fx-dls"><svg class="ic" aria-hidden="true" style="width: 15px; height: 15px; stroke-width: 2.2; color: currentColor; margin-right: 7px"><use href="#i-alert"></use></svg>PARTIAL</span><span class="fx-prio">Medium priority</span><span class="fx-art">DORA · Article 30(2)(b)</span></div>
+<div class="fx-b" id="fxd-law-f2" data-fx-blk="law"><span class="fx-bk">What the rule requires</span><p>The contract names the countries or regions where the service is provided and data are processed, and requires notification in advance of any change.</p></div>
+<div class="fx-b" id="fxd-doc-f2" data-fx-blk="doc"><span class="fx-bk">What your document says</span><p><q class="fx-q">Processing takes place within the European Economic Area. Changes are communicated as soon as possible.</q></p><span class="fx-bm">CloudServ EU – master agreement · v4.1 · §8.1</span></div>
+<div class="fx-b" id="fxd-ver-f2" data-fx-blk="ver"><span class="fx-bk">Why this is the verdict</span><p>The region is named, but “as soon as possible” is neither a deadline nor advance notice. Without a deadline you cannot show a change of location was assessed in time.</p></div>
+<div class="fx-b" id="fxd-act-f2" data-fx-blk="act"><span class="fx-bk">Recommended action</span><p>Record a deadline and a notification moment before the change, with the countries per service in the register.</p></div>
+</div>
+</div>
+</div>
+<div class="fx-pane" id="fxp-f3" role="group" aria-label="Voorbeeldbevinding 3 van 3" hidden>
+<div class="fx-grid">
+<ol class="fx-chain">
+<li class="fx-i" style="--i: 0"><button class="fx-s" type="button" data-fx-step="law" aria-describedby="fxd-law-f3"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Regulation</span><span class="fx-v">DORA · Article 28(1)</span><span class="fx-sub">From your scope</span></span></button></li>
+<li class="fx-i" style="--i: 1"><button class="fx-s" type="button" data-fx-step="obl" aria-describedby="fxd-obl-f3"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Obligation</span><span class="fx-v">ICT third-party risk is assigned</span><span class="fx-sub">Derived per provision</span></span></button></li>
+<li class="fx-i" style="--i: 2"><button class="fx-s" type="button" data-fx-step="doc" aria-describedby="fxd-doc-f3"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Your document</span><span class="fx-v">ICT third-party risk policy</span><span class="fx-sub">v2.3 · §2</span></span></button></li>
+<li class="fx-i" style="--i: 3"><button class="fx-s" type="button" data-fx-step="ver" aria-describedby="fxd-ver-f3"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Verdict</span><span class="fx-v"><span class="fx-badge fx-ged"><svg class="ic" aria-hidden="true" style="width: 13px; height: 13px; stroke-width: 2.2; color: currentColor; margin-right: 6px"><use href="#i-check"></use></svg>COVERED</span></span><span class="fx-sub">Manage and keep assessing</span></span></button></li>
+<li class="fx-i" style="--i: 4"><button class="fx-s" type="button" data-fx-step="act" aria-describedby="fxd-act-f3"><span class="fx-d" aria-hidden="true"></span><span class="fx-c"><span class="fx-l">Action</span><span class="fx-v">No remediation</span><span class="fx-sub">Recommended next step</span></span></button></li>
+</ol>
+<div class="fx-detail">
+<div class="fx-head"><span class="fx-badge fx-lg fx-ged"><svg class="ic" aria-hidden="true" style="width: 15px; height: 15px; stroke-width: 2.2; color: currentColor; margin-right: 7px"><use href="#i-check"></use></svg>COVERED</span><span class="fx-prio">Manage and keep assessing</span><span class="fx-art">DORA · Article 28(1)</span></div>
+<div class="fx-b" id="fxd-law-f3" data-fx-blk="law"><span class="fx-bk">What the rule requires</span><p>Management of ICT third-party risk is assigned and forms part of the institution’s risk management.</p></div>
+<div class="fx-b" id="fxd-doc-f3" data-fx-blk="doc"><span class="fx-bk">What your document says</span><p><q class="fx-q">The third-party risk owner is responsible for the assessment and reassessment of ICT vendors and reports quarterly to the risk committee.</q></p><span class="fx-bm">ICT third-party risk policy · v2.3 · §2</span></div>
+<div class="fx-b" id="fxd-ver-f3" data-fx-blk="ver"><span class="fx-bk">Why this is the verdict</span><p>The responsibility is named, with a reporting line and a frequency. That is demonstrable within the evidence set examined.</p></div>
+<div class="fx-b" id="fxd-act-f3" data-fx-blk="act"><span class="fx-bk">Recommended action</span><p>No remediation. Include in the periodic reassessment when the policy is revised.</p></div>
+</div>
+</div>
+</div>
+<div class="fx-nav">
+<div class="fx-dots"><button class="fx-dot on" type="button" data-fx-go="0" aria-label="Bevinding 1" aria-current="true"></button><button class="fx-dot" type="button" data-fx-go="1" aria-label="Bevinding 2"></button><button class="fx-dot" type="button" data-fx-go="2" aria-label="Bevinding 3"></button></div>
+<div class="fx-arrows">
+<button class="fx-prev" type="button" data-fx-step-btn="-1"><svg class="ic" aria-hidden="true" style="width: 15px; height: 15px; stroke-width: 2.2; color: currentColor; transform: rotate(180deg); margin-right: 8px"><use href="#i-arrow"></use></svg>Previous</button>
+<button class="fx-next" type="button" data-fx-step-btn="1">Next finding<svg class="ic" aria-hidden="true" style="width: 15px; height: 15px; stroke-width: 2.2; color: currentColor; margin-left: 8px"><use href="#i-arrow"></use></svg></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="qs-report" class="sec pad" style="position: relative; background: #F7F8FA; border-top: 1px solid #E5E7EB">
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">The full example report</div>
+<h2 class="h2 rv" style="--rd: .06s; max-width: 880px">Page through it yourself.</h2>
+<p class="lead rv" style="--rd: .1s; max-width: 820px">Eight parts of a report like the one you receive after a QuickScan. The case, the institution, the documents, the quotations and the verdicts are fictitious; the structure, the legal references and the assessment scale are real.</p>
+<div class="rp-wrap rv" style="--rd: .12s">
+<div class="rp-bar-top">
+<span class="rp-brand"><svg class="ic" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2; color: #E2BE6A; margin-right: 9px"><use href="#i-doc"></use></svg>QuickScan · example report</span>
+<span class="rp-tag">Fictitious case</span>
+</div>
+<div class="rp-body">
+<div class="rp-rail" role="tablist" aria-label="Onderdelen van het rapport">
+<button class="rp-tab on" type="button" role="tab" id="rpt-exec" data-rep="exec" aria-controls="rpp-exec" aria-selected="true" tabindex="0"><span class="rp-no">01</span><span class="rp-tt">Executive view</span></button>
+<button class="rp-tab" type="button" role="tab" id="rpt-scope" data-rep="scope" aria-controls="rpp-scope" aria-selected="false" tabindex="-1"><span class="rp-no">02</span><span class="rp-tt">Engagement scope</span></button>
+<button class="rp-tab" type="button" role="tab" id="rpt-method" data-rep="method" aria-controls="rpp-method" aria-selected="false" tabindex="-1"><span class="rp-no">03</span><span class="rp-tt">Documents and method</span></button>
+<button class="rp-tab" type="button" role="tab" id="rpt-result" data-rep="result" aria-controls="rpp-result" aria-selected="false" tabindex="-1"><span class="rp-no">04</span><span class="rp-tt">Result per theme</span></button>
+<button class="rp-tab" type="button" role="tab" id="rpt-register" data-rep="register" aria-controls="rpp-register" aria-selected="false" tabindex="-1"><span class="rp-no">05</span><span class="rp-tt">Control register</span></button>
+<button class="rp-tab" type="button" role="tab" id="rpt-finding" data-rep="finding" aria-controls="rpp-finding" aria-selected="false" tabindex="-1"><span class="rp-no">06</span><span class="rp-tt">Finding F-01</span></button>
+<button class="rp-tab" type="button" role="tab" id="rpt-plan" data-rep="plan" aria-controls="rpp-plan" aria-selected="false" tabindex="-1"><span class="rp-no">07</span><span class="rp-tt">Remediation agenda</span></button>
+<button class="rp-tab" type="button" role="tab" id="rpt-trace" data-rep="trace" aria-controls="rpp-trace" aria-selected="false" tabindex="-1"><span class="rp-no">08</span><span class="rp-tt">Traceability</span></button>
+</div>
+<div class="rp-panes">
+<section class="rp-pane" id="rpp-exec" role="tabpanel" aria-labelledby="rpt-exec">
+<div class="rp-ph"><span class="rp-k">01 · Executive view</span><h3>The core at a glance</h3></div>
+<div class="rp-concl">
+<span class="rp-k">Executive conclusion</span>
+<p class="rp-ch">The basis is there.<br><span class="gold">Contractual assurance lags behind.</span></p>
+<p class="rp-cp">Subcontracting, audit rights, concentration management and exit arrangements in particular need demonstrable improvement.</p>
+</div>
+<ul class="rp-tiles">
+<li><span class="rp-tv" style="color: #0B1F3B">12</span><span class="rp-tk">controls assessed</span></li>
+<li><span class="rp-tv" style="color: #9E2F46">4</span><span class="rp-tk">GAP</span></li>
+<li><span class="rp-tv" style="color: #8A6411">5</span><span class="rp-tk">PARTIAL</span></li>
+<li><span class="rp-tv" style="color: #1B6B4A">3</span><span class="rp-tk">COVERED</span></li>
+</ul>
+<h4 class="rp-h4">What this means for the board</h4>
+<ul class="rp-bul">
+<li><b>There is direction.</b> Policy, vendor selection and SLA monitoring are partly demonstrable.</li>
+<li><b>There is exposure.</b> Four requirements lack a verifiable translation into contracts or processes.</li>
+<li><b>There is a workable path.</b> The findings can be tied to owners, evidence and a 90-day plan.</li>
+</ul>
+<div class="rp-note">
+<span class="rp-k">Advice to management</span>
+<p>Appoint an owner per priority within ten working days and start contractual remediation for critical vendors.</p>
+</div>
+</section>
+<section class="rp-pane" id="rpp-scope" role="tabpanel" aria-labelledby="rpt-scope" hidden>
+<div class="rp-ph"><span class="rp-k">02 · Engagement scope</span><h3>What we assessed</h3></div>
+<div class="rp-two">
+<div class="rp-meta"><span class="rp-k">Client and period</span><p>Noordhaven Bank N.V. (fictitious)<br>Example period: ten working days</p></div>
+<div class="rp-meta"><span class="rp-k">Regulatory framework</span><p>DORA · Regulation (EU) 2022/2554<br>Focus: ICT service providers and contracts</p></div>
+</div>
+<div class="rp-two">
+<div><h4 class="rp-h4">In scope</h4><ul class="rp-chk">
+<li><svg class="ic" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2; color: #1B6B4A; margin-top: 3px"><use href="#i-check"></use></svg><span>One theme: management of ICT third parties supporting critical or important functions.</span></li>
+<li><svg class="ic" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2; color: #1B6B4A; margin-top: 3px"><use href="#i-check"></use></svg><span>Regulation at selected article level: Articles 28, 29 and 30 DORA.</span></li>
+<li><svg class="ic" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2; color: #1B6B4A; margin-top: 3px"><use href="#i-check"></use></svg><span>Three fictitious internal documents, twelve assessable controls and four priority findings.</span></li>
+</ul></div>
+<div><h4 class="rp-h4">Out of scope</h4><ul class="rp-chk">
+<li><svg class="ic" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2; color: #9AA4B4; margin-top: 3px"><use href="#i-alert"></use></svg><span>No technical penetration test or operating-effectiveness test.</span></li>
+<li><svg class="ic" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2; color: #9AA4B4; margin-top: 3px"><use href="#i-alert"></use></svg><span>No full legal review of all DORA RTS and ITS.</span></li>
+<li><svg class="ic" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2; color: #9AA4B4; margin-top: 3px"><use href="#i-alert"></use></svg><span>No formal assurance opinion or guarantee of compliance.</span></li>
+</ul></div>
+</div>
+<div class="rp-quest">
+<span class="rp-k">The question</span>
+<p class="rp-qh">Which DORA obligations are relevant to this theme, how are they translated into internal controls, and what do the documents supplied prove — and not yet prove?</p>
+<p class="rp-qs">The report is a dated snapshot based on the documents within the agreed scope. New legislation and updated internal documents fall outside it.</p>
+</div>
+</section>
+<section class="rp-pane" id="rpp-method" role="tabpanel" aria-labelledby="rpt-method" hidden>
+<div class="rp-ph"><span class="rp-k">03 · Documents and method</span><h3>From source to verdict</h3></div>
+<ul class="rp-docs">
+<li><span class="rp-dc">D01</span><div><b>ICT third-party risk policy</b><span>Governance, risk appetite, policy</span></div><span class="rp-dv">v2.3 · 01 jul 2026</span></li>
+<li><span class="rp-dc">D02</span><div><b>CloudServ EU – master agreement</b><span>Contract with SLA annex, critical ICT service</span></div><span class="rp-dv">v4.1 · 12 mei 2026</span></li>
+<li><span class="rp-dc">D03</span><div><b>ICT vendor register</b><span>Vendors, criticality, dependencies</span></div><span class="rp-dv">Q3 2026 · 30 sep 2026</span></li>
+</ul>
+<div class="rp-warn"><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #86691F; margin-top: 2px"><use href="#i-alert"></use></svg><span><b>Important safeguard:</b> a GAP here means <i>not demonstrable within the evidence set examined</i>. It is not a finding that the organisation breaches the law.</span></div>
+<h4 class="rp-h4">The chain in six steps</h4>
+<ul class="rp-steps">
+<li><span class="rp-sn">01</span><b>Law</b><span>Provision and paragraph</span></li>
+<li><span class="rp-sn">02</span><b>Obligation</b><span>Requirement worked out</span></li>
+<li><span class="rp-sn">03</span><b>Control</b><span>Assessable requirement</span></li>
+<li><span class="rp-sn">04</span><b>Evidence</b><span>Document and quotation</span></li>
+<li><span class="rp-sn">05</span><b>Verdict</b><span>GAP / PARTIAL / COVERED</span></li>
+<li><span class="rp-sn">06</span><b>Action</b><span>Owner and deadline</span></li>
+</ul>
+<h4 class="rp-h4">Assessment scale</h4>
+<ul class="rp-scale">
+<li><span class="rp-st rp-ged"><svg class="ic" aria-hidden="true" style="width: 13px; height: 13px; stroke-width: 2.2; color: currentColor; margin-right: 6px"><use href="#i-check"></use></svg>COVERED</span><span>Requirement demonstrably covered in the documents assessed.</span></li>
+<li><span class="rp-st rp-dls"><svg class="ic" aria-hidden="true" style="width: 13px; height: 13px; stroke-width: 2.2; color: currentColor; margin-right: 6px"><use href="#i-alert"></use></svg>PARTIAL</span><span>Element present; essential elaboration or evidence missing.</span></li>
+<li><span class="rp-st rp-gap"><svg class="ic" aria-hidden="true" style="width: 13px; height: 13px; stroke-width: 2.2; color: currentColor; margin-right: 6px"><use href="#i-alert"></use></svg>GAP</span><span>No sufficient substantiation within the scope supplied.</span></li>
+</ul>
+<div class="rp-note">
+<span class="rp-k">Human-in-the-loop</span>
+<p>The platform supports identification, mapping and draft findings. An authorised reviewer assesses the source, confirms the verdict and records deviations or limitations.</p>
+</div>
+</section>
+<section class="rp-pane" id="rpp-result" role="tabpanel" aria-labelledby="rpt-result" hidden>
+<div class="rp-ph"><span class="rp-k">04 · Result per theme</span><h3>Where the institution stands</h3></div>
+<div class="rp-pct">
+<span class="rp-pv">25%</span>
+<p>3 of the 12 controls were assessed as COVERED; 5 PARTIAL and 4 GAP. This is a scope indicator, not a statement about overall DORA compliance.</p>
+</div>
+<ul class="rp-leg">
+<li><span class="rp-dot rp-ged-b"></span><b>3</b> COVERED</li>
+<li><span class="rp-dot rp-dls-b"></span><b>5</b> PARTIAL</li>
+<li><span class="rp-dot rp-gap-b"></span><b>4</b> GAP</li>
+</ul>
+<h4 class="rp-h4">Verdicts per domain</h4>
+<ul class="rp-bars">
+<li><div class="rp-bh"><b>Governance and register</b><span>2 controls</span></div><div class="rp-bar"><span class="rp-seg rp-ged-b" style="flex: 1"></span><span class="rp-seg rp-dls-b" style="flex: 1"></span></div></li>
+<li><div class="rp-bh"><b>Risk and concentration</b><span>2 controls</span></div><div class="rp-bar"><span class="rp-seg rp-ged-b" style="flex: 1"></span><span class="rp-seg rp-gap-b" style="flex: 1"></span></div></li>
+<li><div class="rp-bh"><b>Contractual provisions</b><span>6 controls</span></div><div class="rp-bar"><span class="rp-seg rp-ged-b" style="flex: 1"></span><span class="rp-seg rp-dls-b" style="flex: 4"></span><span class="rp-seg rp-gap-b" style="flex: 1"></span></div></li>
+<li><div class="rp-bh"><b>Monitoring and exit</b><span>2 controls</span></div><div class="rp-bar"><span class="rp-seg rp-gap-b" style="flex: 2"></span></div></li>
+</ul>
+<div class="rp-warn"><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #86691F; margin-top: 2px"><use href="#i-help"></use></svg><span><b>Reading:</b> priorities follow from relevance, impact on critical ICT services and the quality of available evidence. Not from a generic AI score.</span></div>
+</section>
+<section class="rp-pane" id="rpp-register" role="tabpanel" aria-labelledby="rpt-register" hidden>
+<div class="rp-ph"><span class="rp-k">05 · Control register</span><h3>Article, evidence and status</h3></div>
+<div class="rp-tw"><table class="rp-tbl">
+<thead><tr><th>ID</th><th>DORA</th><th>Control or requirement</th><th>Evidence</th><th>Status</th><th>Prio</th></tr></thead>
+<tbody>
+<tr><td class="rp-id">C01</td><td class="rp-art">28(1)</td><td>Accountability for ICT third parties</td><td class="rp-ev">D01 §2</td><td><span class="rp-st rp-ged"><svg class="ic" aria-hidden="true" style="width: 12px; height: 12px; stroke-width: 2.2; color: currentColor; margin-right: 5px"><use href="#i-check"></use></svg>COVERED</span></td><td class="rp-pr">P3</td></tr>
+<tr><td class="rp-id">C02</td><td class="rp-art">28(3)</td><td>Register of ICT service providers</td><td class="rp-ev">D03 tab 1</td><td><span class="rp-st rp-dls"><svg class="ic" aria-hidden="true" style="width: 12px; height: 12px; stroke-width: 2.2; color: currentColor; margin-right: 5px"><use href="#i-alert"></use></svg>PARTIAL</span></td><td class="rp-pr">P2</td></tr>
+<tr><td class="rp-id">C03</td><td class="rp-art">28(4)</td><td>Risk assessment before contracting</td><td class="rp-ev">D01 §4</td><td><span class="rp-st rp-ged"><svg class="ic" aria-hidden="true" style="width: 12px; height: 12px; stroke-width: 2.2; color: currentColor; margin-right: 5px"><use href="#i-check"></use></svg>COVERED</span></td><td class="rp-pr">P3</td></tr>
+<tr><td class="rp-id">C04</td><td class="rp-art">29(1)</td><td>ICT concentration risk</td><td class="rp-ev">D03 tab 2</td><td><span class="rp-st rp-gap"><svg class="ic" aria-hidden="true" style="width: 12px; height: 12px; stroke-width: 2.2; color: currentColor; margin-right: 5px"><use href="#i-alert"></use></svg>GAP</span></td><td class="rp-pr">P1</td></tr>
+<tr><td class="rp-id">C05</td><td class="rp-art">30(2)(a)</td><td>Scope and conditions for subcontracting</td><td class="rp-ev">D02 §3.2</td><td><span class="rp-st rp-gap"><svg class="ic" aria-hidden="true" style="width: 12px; height: 12px; stroke-width: 2.2; color: currentColor; margin-right: 5px"><use href="#i-alert"></use></svg>GAP</span></td><td class="rp-pr">P1</td></tr>
+<tr><td class="rp-id">C06</td><td class="rp-art">30(2)(b)</td><td>Locations and change notification</td><td class="rp-ev">D02 §8.1</td><td><span class="rp-st rp-dls"><svg class="ic" aria-hidden="true" style="width: 12px; height: 12px; stroke-width: 2.2; color: currentColor; margin-right: 5px"><use href="#i-alert"></use></svg>PARTIAL</span></td><td class="rp-pr">P2</td></tr>
+<tr><td class="rp-id">C07</td><td class="rp-art">30(2)(c)</td><td>Data integrity and confidentiality</td><td class="rp-ev">D02 §5</td><td><span class="rp-st rp-dls"><svg class="ic" aria-hidden="true" style="width: 12px; height: 12px; stroke-width: 2.2; color: currentColor; margin-right: 5px"><use href="#i-alert"></use></svg>PARTIAL</span></td><td class="rp-pr">P2</td></tr>
+<tr><td class="rp-id">C08</td><td class="rp-art">30(2)(d)</td><td>Access, recovery and return of data</td><td class="rp-ev">D02 §9</td><td><span class="rp-st rp-dls"><svg class="ic" aria-hidden="true" style="width: 12px; height: 12px; stroke-width: 2.2; color: currentColor; margin-right: 5px"><use href="#i-alert"></use></svg>PARTIAL</span></td><td class="rp-pr">P2</td></tr>
+<tr><td class="rp-id">C09</td><td class="rp-art">30(3)(a)</td><td>SLA and measurable performance targets</td><td class="rp-ev">D02 bijl. A §2</td><td><span class="rp-st rp-ged"><svg class="ic" aria-hidden="true" style="width: 12px; height: 12px; stroke-width: 2.2; color: currentColor; margin-right: 5px"><use href="#i-check"></use></svg>COVERED</span></td><td class="rp-pr">P3</td></tr>
+<tr><td class="rp-id">C10</td><td class="rp-art">30(3)(b)</td><td>Notification of material developments</td><td class="rp-ev">D02 §7</td><td><span class="rp-st rp-dls"><svg class="ic" aria-hidden="true" style="width: 12px; height: 12px; stroke-width: 2.2; color: currentColor; margin-right: 5px"><use href="#i-alert"></use></svg>PARTIAL</span></td><td class="rp-pr">P2</td></tr>
+<tr><td class="rp-id">C11</td><td class="rp-art">30(3)(e)</td><td>Monitoring and audit rights</td><td class="rp-ev">D02 §10</td><td><span class="rp-st rp-gap"><svg class="ic" aria-hidden="true" style="width: 12px; height: 12px; stroke-width: 2.2; color: currentColor; margin-right: 5px"><use href="#i-alert"></use></svg>GAP</span></td><td class="rp-pr">P1</td></tr>
+<tr><td class="rp-id">C12</td><td class="rp-art">30(3)(f)</td><td>Exit and transition period</td><td class="rp-ev">D02 §4</td><td><span class="rp-st rp-gap"><svg class="ic" aria-hidden="true" style="width: 12px; height: 12px; stroke-width: 2.2; color: currentColor; margin-right: 5px"><use href="#i-alert"></use></svg>GAP</span></td><td class="rp-pr">P1</td></tr>
+</tbody>
+</table></div>
+<div class="rp-warn"><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #86691F; margin-top: 2px"><use href="#i-help"></use></svg><span><b>Legend:</b> P1 = high priority; P2 = plan remediation; P3 = manage and keep assessing. The status concerns only the fictitious documents supplied and may change once further evidence is provided.</span></div>
+</section>
+<section class="rp-pane" id="rpp-finding" role="tabpanel" aria-labelledby="rpt-finding" hidden>
+<div class="rp-ph"><span class="rp-k">06 · Finding F-01</span><h3>Subcontracting</h3></div>
+<div class="rp-risk"><div><span class="rp-k">Risk profile</span><b>HIGH / P1</b></div><span class="rp-ra">DORA art. 30(2)(a)</span></div>
+<span class="rp-k">Core verdict</span>
+<p class="rp-lead">The contract clause broadly permits the use of subcontractors, but the conditions for subcontracting services supporting critical functions are insufficiently determinable.</p>
+<span class="rp-k">Source quotation (fictitious)</span>
+<blockquote class="rp-quote">“The supplier may engage subcontractors where this is necessary for adequate performance of the services.” (D02 §3.2)</blockquote>
+<span class="rp-k">Why this matters</span>
+<p>The requirement asks for explicit clarity on whether subcontracting is permitted and under which conditions. Without assessable conditions there is no demonstrable control over the chain.</p>
+<span class="rp-k">Recommended remediation</span>
+<ul class="rp-chk">
+<li><svg class="ic" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span>Make permitted subcontracting and its conditions explicit per critical service in the contract annex.</span></li>
+<li><svg class="ic" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span>Define a prior assessment and notification process for relevant changes.</span></li>
+<li><svg class="ic" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span>Record approval and reassessment in the ICT vendor register.</span></li>
+</ul>
+<div class="rp-note">
+<span class="rp-k">Recommended owner</span>
+<p>Legal and Procurement together with the third-party risk owner · draft addendum within 30 days</p>
+</div>
+</section>
+<section class="rp-pane" id="rpp-plan" role="tabpanel" aria-labelledby="rpt-plan" hidden>
+<div class="rp-ph"><span class="rp-k">07 · Remediation agenda</span><h3>An approach for the first 90 days</h3></div>
+<ul class="rp-90">
+<li><span class="rp-per">0–15D</span><div><b>Decision and ownership</b><span>Appoint P1 owners; prioritise contracts and critical services.</span><span class="rp-own">Management / Compliance</span></div></li>
+<li><span class="rp-per">15–30D</span><div><b>Contract addenda</b><span>Draft and review subcontracting, audit and location clauses.</span><span class="rp-own">Legal / Procurement</span></div></li>
+<li><span class="rp-per">30–60D</span><div><b>Concentration picture</b><span>Record dependencies, substitutability and chain risk.</span><span class="rp-own">Risk / Vendor Mgmt</span></div></li>
+<li><span class="rp-per">30–75D</span><div><b>Exit plan and test design</b><span>Record transition period and test criteria per critical ICT service.</span><span class="rp-own">IT / BCM / Security</span></div></li>
+<li><span class="rp-per">60–90D</span><div><b>Reassessment and evidence</b><span>Reassess findings against new documents and close them.</span><span class="rp-own">Compliance / Reviewer</span></div></li>
+</ul>
+<div class="rp-concl rp-concl-s">
+<p class="rp-cp">Decision gate after day 90: reconfirm the status against current documents. Close only on demonstrable evidence, not on intended actions.</p>
+</div>
+</section>
+<section class="rp-pane" id="rpp-trace" role="tabpanel" aria-labelledby="rpt-trace" hidden>
+<div class="rp-ph"><span class="rp-k">08 · Traceability</span><h3>From law to evidence, in one chain</h3></div>
+<ul class="rp-trace">
+<li><span class="rp-sn">01</span><div><span class="rp-k">Standard</span><b>DORA · Article 30(2)(a)</b></div></li>
+<li><span class="rp-sn">02</span><div><span class="rp-k">Obligation</span><b>Subcontracting only under explicit conditions</b></div></li>
+<li><span class="rp-sn">03</span><div><span class="rp-k">Control</span><b>C05 · Described and assessed subcontracting</b></div></li>
+<li><span class="rp-sn">04</span><div><span class="rp-k">Source</span><b>D02 §3.2 · contract version 4.1</b></div></li>
+<li><span class="rp-sn">05</span><div><span class="rp-k">Verdict</span><b>GAP · F-01 · reviewer confirmed</b></div></li>
+<li><span class="rp-sn">06</span><div><span class="rp-k">Action</span><b>Contract addendum and register update · P1</b></div></li>
+</ul>
+<div class="rp-warn"><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #86691F; margin-top: 2px"><use href="#i-link"></use></svg><span><b>Why this matters:</b> when a source changes, it stays visible which previously confirmed control, conclusion and action must be reviewed again.</span></div>
+<h4 class="rp-h4">A completed result</h4>
+<ul class="rp-keep">
+<li><span class="rp-sn">01</span><b>Report received</b><span>Framework, gap register, management summary and traceability.</span></li>
+<li><span class="rp-sn">02</span><b>Improve</b><span>Your team carries out the actions with existing tooling or in its own way.</span></li>
+<li><span class="rp-sn">03</span><b>Continue, optionally</b><span>With Comply24 the framework is kept up to date and reassessed continuously.</span></li>
+</ul>
+<h4 class="rp-h4">Public sources consulted</h4>
+<ul class="rp-src">
+<li><a href="https://eur-lex.europa.eu/eli/reg/2022/2554/oj" target="_blank" rel="noopener"><b>Regulation (EU) 2022/2554 (DORA), Art. 28–30</b><span>EUR-Lex · CELEX:32022R2554</span></a></li>
+<li><a href="https://www.dnb.nl/" target="_blank" rel="noopener"><b>DORA applies from 17 January 2025</b><span>De Nederlandsche Bank · dnb.nl</span></a></li>
+<li><a href="https://www.eba.europa.eu/" target="_blank" rel="noopener"><b>Registers of information under DORA</b><span>European Banking Authority · eba.europa.eu</span></a></li>
+</ul>
+</section>
+<div class="rp-nav">
+<button class="rp-prev" type="button" data-rep-step="-1"><svg class="ic" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2; color: currentColor; transform: rotate(180deg); margin-right: 9px"><use href="#i-arrow"></use></svg>Previous</button>
+<span class="rp-count" data-rep-count>1 / 8</span>
+<button class="rp-next" type="button" data-rep-step="1">Next<svg class="ic" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2; color: currentColor; margin-left: 9px"><use href="#i-arrow"></use></svg></button>
+</div>
+</div>
+</div>
+</div>
+<div class="rp-dl rv" style="--rd: .2s">
+<a href="../assets/rapport/Comply24_QuickScan_Example_Report.pdf" download><img class="rp-cover" src="../assets/images/comply24-rapport-omslag.jpg" alt="Cover of the Comply24 QuickScan example report" width="760" height="1075" loading="lazy" decoding="async"></a>
+<div>
+<h3>Or download the example report</h3>
+<p>The same content as above, as a nine-page PDF in our house style. Useful to forward to your board, your second line or your procurement team.</p>
+<ul class="rp-meta2">
+<li><svg class="ic" aria-hidden="true" style="width: 15px; height: 15px; stroke-width: 2.2; color: #A07E24;"><use href="#i-doc"></use></svg>PDF · nine pages</li>
+<li><svg class="ic" aria-hidden="true" style="width: 15px; height: 15px; stroke-width: 2.2; color: #A07E24;"><use href="#i-shield"></use></svg>Fictitious case, no customer data</li>
+<li><svg class="ic" aria-hidden="true" style="width: 15px; height: 15px; stroke-width: 2.2; color: #A07E24;"><use href="#i-law"></use></svg>DORA · ICT third-party risk</li>
+</ul>
+<div class="rp-dlb">
+<a class="btn btn-nav" href="../assets/rapport/Comply24_QuickScan_Example_Report.pdf" download><svg class="ic" aria-hidden="true" style="width: 16px; height: 16px; stroke-width: 2.2; color: currentColor; margin-right: 9px"><use href="#i-down"></use></svg>Download the example report</a>
+<a class="more" href="#qs-intake">Or request one for your own law<svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2"><use href="#i-arrow"></use></svg></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="qs-get" class="sec pad qsphoto" style="border-top: 1px solid #E5E7EB">
+<img class="qsp-bg" src="../assets/images/comply24-rapport-foto.jpg" alt="" aria-hidden="true" width="2000" height="771" loading="lazy" decoding="async">
+<span class="qsp-wash" aria-hidden="true"></span>
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">What you receive</div>
+<h2 class="h2 rv" style="--rd: .06s; max-width: 880px">One report, in four parts.</h2>
+<p class="lead rv" style="--rd: .1s">The framework, the assessment, the summary and the trail back to the source — in one document you can present and keep using.</p>
+<ul class="qsget">
+<li class="rv" style="--rd: .06s"><span class="qsg-n">1</span><h3>Your compliance framework</h3><p>The chosen law worked out into obligations, down to article and paragraph level, mapped to controls. Not from a template, but built on your scope.</p></li>
+<li class="rv" style="--rd: .13s"><span class="qsg-n">2</span><h3>A gap assessment</h3><p>A verdict per control — GAP, PARTIAL or COVERED — with rationale, a quotation from your own document and a priority.</p></li>
+<li class="rv" style="--rd: .20s"><span class="qsg-n">3</span><h3>An executive summary</h3><p>Scope, methodology, key findings and priorities. Fit to put in front of the board, the second line or the supervisor.</p></li>
+<li class="rv" style="--rd: .27s"><span class="qsg-n">4</span><h3>Traceability</h3><p>The route from finding to document and regulatory source stays visible. That is the difference from an advisory report.</p></li>
+</ul>
+</div>
+</section>
+
+<section id="qs-how" class="sec pad" style="position: relative; background: #FFFFFF; border-top: 1px solid #E5E7EB">
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">How it works</div>
+<h2 class="h2 rv" style="--rd: .06s; max-width: 880px">Four steps, ten working days.</h2>
+<ol class="qtime rv" style="--rd: .12s">
+<li class="qt-i" style="--i: 0"><span class="qt-d" aria-hidden="true"></span><span class="qt-n">1</span><h3>Intake</h3><p>You name the law and the documents. Within one working day we confirm the law is available in the platform, propose a start date and send the intake form and a non-disclosure agreement.</p></li>
+<li class="qt-i" style="--i: 1"><span class="qt-d" aria-hidden="true"></span><span class="qt-n">2</span><h3>Framework</h3><p>We build the framework: the law worked out into obligations by article and paragraph, mapped to controls. You confirm the scope.</p></li>
+<li class="qt-i" style="--i: 2"><span class="qt-d" aria-hidden="true"></span><span class="qt-n">3</span><h3>Assessment</h3><p>Your documents are assessed against that framework. The platform puts every finding forward with source and quotation; a named person confirms them.</p></li>
+<li class="qt-i" style="--i: 3"><span class="qt-d" aria-hidden="true"></span><span class="qt-n">4</span><h3>Delivery</h3><p>We walk through the report with you and hand it over. That completes the engagement.</p></li>
+</ol>
+</div>
+</section>
+
+<section id="qs-ask" class="sec pad" style="position: relative; background: #F7F8FA; border-top: 1px solid #E5E7EB">
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">What we ask of you</div>
+<h2 class="h2 rv" style="--rd: .06s; max-width: 880px">Three things. We take the rest off your hands.</h2>
+<ul class="qsask">
+<li class="rv"><svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2.2; color: #A07E24;"><use href="#i-check"></use></svg><div><h3>The documents</h3><p>At most three documents within scope, 150 pages in total at most.</p></div></li>
+<li class="rv"><svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2.2; color: #A07E24;"><use href="#i-check"></use></svg><div><h3>Confirmation of scope</h3><p>One moment at which you review and confirm the framework we built.</p></div></li>
+<li class="rv"><svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2.2; color: #A07E24;"><use href="#i-check"></use></svg><div><h3>A closing conversation</h3><p>One session in which we walk through the report and hand it over.</p></div></li>
+</ul>
+</div>
+</section>
+
+<section id="qs-after" class="sec pad qsaphoto" style="position: relative; overflow: hidden">
+<img class="qsa-bg" src="../assets/images/comply24-overdracht.jpg" alt="" aria-hidden="true" width="1800" height="873" loading="lazy" decoding="async">
+<span class="qsa-wash" aria-hidden="true"></span>
+<div class="wrap">
+<div class="qsa-in">
+<div class="ey rv" style="--rd: 0s">What happens next?</div>
+<h2 class="h2 rv" style="--rd: .08s; max-width: 16ch">Two outcomes, <span class="goldtxt blk">both fine.</span></h2>
+<ul class="qsafter">
+<li class="rv" style="--rd: .06s"><span class="qsa-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-doc"></use></svg></span><div class="qsa-b"><h3>You stop here</h3><p>The report is yours. You decide what comes next, and you take no Comply24 subscription to do so. The engagement is complete.</p></div></li>
+<li class="rv" style="--rd: .14s"><span class="qsa-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-arrow"></use></svg></span><div class="qsa-b"><h3>You continue</h3><p>The framework is already in the platform and forms the starting point. If you commission the implementation within six months, we deduct the € 4,900.</p></div></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="qs-terms" class="sec pad" style="position: relative; background: #F7F8FA; border-top: 1px solid #E5E7EB">
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">Terms and price</div>
+<h2 class="h2 rv" style="--rd: .06s; max-width: 880px">Exactly what the scope is.</h2>
+<div class="qscond rv" style="--rd: .12s">
+<ul>
+<li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span><b>One law</b> that is available in the platform. You name the law in your request; within one working day we confirm whether it is available.</span></li>
+<li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span><b>Three documents at most</b> of 150 pages in total at most.</span></li>
+<li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span><b>One review per institution</b></span></li>
+<li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span><b>Fixed price</b> € 4,900 excluding VAT. Deducted from the implementation if commissioned within six months.</span></li>
+<li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span><b>Agreed up front</b> a non-disclosure agreement, and a data processing agreement for the documents you supply.</span></li>
+<li><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2; color: #A07E24; margin-top: 3px"><use href="#i-check"></use></svg><span><b>Bound to the scope</b> the outcome applies to the law and documents assessed, on the date of delivery. It is not a statement about your whole organisation and not an approval by a supervisor.</span></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="qs-faq" class="sec pad" style="position: relative; background: #FFFFFF; border-top: 1px solid #E5E7EB">
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">Frequently asked questions</div>
+<h2 class="h2 rv" style="--rd: .06s; max-width: 880px">What clients ask first.</h2>
+<div class="qfaq rv" style="--rd: .12s">
+<details class="qfaq-i"><summary>Do we have to buy the platform afterwards?<span class="qfaq-c" aria-hidden="true"></span></summary><div class="qfaq-a"><p>No. The QuickScan is a standalone engagement and is complete on delivery. The report remains yours.</p></div></details>
+<details class="qfaq-i"><summary>Do you assess our own documents?<span class="qfaq-c" aria-hidden="true"></span></summary><div class="qfaq-a"><p>Yes, within the agreed scope and after a non-disclosure agreement and a data processing agreement. Three documents at most, 150 pages in total at most.</p></div></details>
+<details class="qfaq-i"><summary>Who decides the verdict?<span class="qfaq-c" aria-hidden="true"></span></summary><div class="qfaq-a"><p>The platform supports the analysis and puts findings forward with source and quotation. A named person reviews and confirms every finding.</p></div></details>
+<details class="qfaq-i"><summary>Which laws can we choose?<span class="qfaq-c" aria-hidden="true"></span></summary><div class="qfaq-a"><p>One law that is available in the platform. You name it in your request; within one working day we confirm whether it is available, or propose an alternative.</p></div></details>
+<details class="qfaq-i"><summary>What if we stop afterwards?<span class="qfaq-c" aria-hidden="true"></span></summary><div class="qfaq-a"><p>You keep the agreed report. Access to the environment ends under the terms agreed.</p></div></details>
+<details class="qfaq-i"><summary>Is this an approval?<span class="qfaq-c" aria-hidden="true"></span></summary><div class="qfaq-a"><p>No. The outcome is bound to the scope and is a snapshot on the date of delivery. It is not a judgement by DNB, the AFM or the ECB.</p></div></details>
+</div>
+</div>
+</section>
+
+<section id="qs-intake" class="sec dark pad" style="position: relative; overflow: hidden; background: linear-gradient(145deg, #0B1F3B 0%, #102A4C 58%, #0B1F3B 100%)">
+<div class="wrap" style="position: relative">
+<div class="ctaband">
+<div style="flex: 1 1 460px; min-width: 0">
+<h2 class="h2 rv" style="--rd: 0s; color: #FFFFFF">Ready to put one law through it?</h2>
+<p class="lead rv" style="--rd: .08s; max-width: 620px; color: #C3CCDB">You name the law; within one working day we confirm it is available and propose a start date.</p>
+</div>
+<div class="ctab-b rv" style="--rd: .16s">
+<a class="btn btn-gold" href="demo.html#review">Book a QuickScan intake<svg class="ic" aria-hidden="true" style="width: 17px; height: 17px; stroke-width: 2.2"><use href="#i-arrow"></use></svg></a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="dark" style="position: relative; background: #0B1F3B; color: #C3CCDB">
+<div class="wrap" style="padding-top: 72px; padding-bottom: 34px">
+<div class="split" style="gap: clamp(30px, 5cqw, 72px)">
+<div style="flex: 0 0 300px; min-width: 0">
+<img src="../assets/images/comply24-logo-wit.png" alt="Comply24" style="display: block; height: 38px; width: auto" width="320" height="90">
+<p style="margin: 20px 0 0; max-width: 320px; font-size: 14.5px; line-height: 1.55; color: #C3CCDB">One platform from law to evidence, for institutions supervised by DNB, the AFM and the ECB.</p>
+<p style="margin: 14px 0 0; font-size: 14px; line-height: 1.55; color: #A9B4C6">Comply24 B.V. · Gansstraat 170, Utrecht<br>KvK 42175762 · <a class="flink" href="mailto:info@comply24.nl" style="font-size: 14px; text-decoration: underline">info@comply24.nl</a></p>
+</div>
+<div class="fcols" style="flex: 1 1 0; min-width: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 36px 22px">
+<nav aria-label="Platform" style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0 0 4px; font-size: 14.5px; font-weight: 600; color: #FFFFFF">Platform</h3>
+<a class="flink" href="platform.html#modules">Two modules</a>
+<a class="flink" href="platform.html#lineage">Lineage</a>
+<a class="flink" href="wetswijzigingen.html">Regulatory change</a>
+<a class="flink" href="control-testing.html#testing">Control testing</a>
+</nav>
+<nav aria-label="Use cases" style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0 0 4px; font-size: 14.5px; font-weight: 600; color: #FFFFFF">Use cases</h3>
+<a class="flink" href="use-case-bank.html">Bank</a>
+<a class="flink" href="use-case-verzekeraar.html">Insurer</a>
+<a class="flink" href="use-case-beleggingsonderneming.html">Investment firm</a>
+<a class="flink" href="use-case-pensioenfonds.html">Pension fund</a>
+</nav>
+<nav aria-label="Company" style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0 0 4px; font-size: 14.5px; font-weight: 600; color: #FFFFFF">Company</h3>
+<a class="flink" href="#main">Compliance QuickScan</a>
+<a class="flink" href="beveiliging.html">Security and trust</a>
+<a class="flink" href="prijzen.html#pricing">Pricing</a>
+<a class="flink" href="demo.html">Contact</a>
+</nav>
+<nav aria-label="Documentation" style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0 0 4px; font-size: 14.5px; font-weight: 600; color: #FFFFFF">Documentation</h3>
+<a class="flink" href="beveiliging.html#security-doc">Security documentation</a>
+<a class="flink" href="demo.html#review">Request a QuickScan</a>
+<a class="flink" href="demo.html">Price list</a>
+</nav>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 30px; margin-top: 64px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.12); font-size: 13px">
+<span class="mono" style="letter-spacing: .04em; color: #E2BE6A">From law to evidence. One platform.</span>
+<span style="display: inline-flex; align-items: center; gap: 14px; color: #A9B4C6">© 2026 Comply24 B.V.<a class="lang" href="../quickscan.html" hreflang="nl" lang="nl" aria-label="In het Nederlands" style="text-decoration: none; color: #A9B4C6"><b class="l1">NL</b>/<b class="l2">EN</b></a></span>
+</div>
+</div>
+</footer>
+</div>
+<script src="../assets/js/main.js" defer></script>
+<script>
+/* Compliance QuickScan — het voorbeeldrapport doorbladeren.
+   Staat in de pagina zelf, zodat die werkt ongeacht de main.js op de server.
+   Werkt met muis, toetsenbord en aanraking; zonder JavaScript staat het eerste
+   onderdeel gewoon zichtbaar. */
+(function () {
+  'use strict';
+  function init() {
+    var rail = document.querySelector('.rp-rail');
+    if (!rail) return;
+    var tabs = [].slice.call(rail.querySelectorAll('[data-rep]'));
+    var count = document.querySelector('[data-rep-count]');
+    var prev = document.querySelector('[data-rep-step="-1"]');
+    var next = document.querySelector('[data-rep-step="1"]');
+    var cur = 0;
+
+    function show(i, focus, user) {
+      if (i < 0 || i >= tabs.length) return;
+      cur = i;
+      tabs.forEach(function (t, n) {
+        var on = n === i;
+        t.classList.toggle('on', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.setAttribute('tabindex', on ? '0' : '-1');
+        var pane = document.getElementById('rpp-' + t.getAttribute('data-rep'));
+        if (pane) { if (on) { pane.removeAttribute('hidden'); } else { pane.setAttribute('hidden', ''); } }
+      });
+      if (count) count.textContent = (i + 1) + ' / ' + tabs.length;
+      if (prev) prev.disabled = i === 0;
+      if (next) next.disabled = i === tabs.length - 1;
+      if (focus) tabs[i].focus();
+      /* alleen meeschuiven na een klik of toets, niet bij het laden van de pagina:
+         anders springt de pagina bij binnenkomst naar de lezer toe */
+      if (user && tabs[i].scrollIntoView) tabs[i].scrollIntoView({ block: 'nearest', inline: 'nearest' });
+    }
+
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { show(i, false, true); });
+      t.addEventListener('keydown', function (e) {
+        var k = e.key, j = null;
+        if (k === 'ArrowDown' || k === 'ArrowRight') j = (i + 1) % tabs.length;
+        else if (k === 'ArrowUp' || k === 'ArrowLeft') j = (i - 1 + tabs.length) % tabs.length;
+        else if (k === 'Home') j = 0;
+        else if (k === 'End') j = tabs.length - 1;
+        if (j === null) return;
+        e.preventDefault();
+        show(j, true, true);
+      });
+    });
+    if (prev) prev.addEventListener('click', function () { show(cur - 1, false, true); });
+    if (next) next.addEventListener('click', function () { show(cur + 1, false, true); });
+    show(0);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+
+/* De bevinding-verkenner: wisselen tussen voorbeelden, en een stap links
+   licht het bijbehorende blok rechts op. Werkt met muis, toetsenbord en
+   aanraking; zonder JavaScript staat de eerste bevinding gewoon zichtbaar. */
+(function () {
+  'use strict';
+  function init() {
+    var box = document.querySelector('[data-fx]');
+    if (!box) return;
+    var panes = [].slice.call(box.querySelectorAll('.fx-pane'));
+    var dots = [].slice.call(box.querySelectorAll('[data-fx-go]'));
+    var num = box.querySelector('[data-fx-n]');
+    var prev = box.querySelector('[data-fx-step-btn="-1"]');
+    var next = box.querySelector('[data-fx-step-btn="1"]');
+    var cur = 0;
+
+    /* hoogte vastzetten, zodat wisselen niets laat verspringen */
+    function lock() {
+      var h = 0;
+      panes.forEach(function (p) {
+        var was = p.hasAttribute('hidden');
+        if (was) p.removeAttribute('hidden');
+        h = Math.max(h, p.offsetHeight);
+        if (was) p.setAttribute('hidden', '');
+      });
+      if (h) box.style.setProperty('--fxh', h + 'px');
+      panes.forEach(function (p) { p.style.minHeight = 'var(--fxh)'; });
+    }
+
+    function show(i) {
+      if (i < 0 || i >= panes.length) return;
+      cur = i;
+      panes.forEach(function (p, n) {
+        if (n === i) { p.removeAttribute('hidden'); } else { p.setAttribute('hidden', ''); }
+      });
+      dots.forEach(function (d, n) {
+        d.classList.toggle('on', n === i);
+        if (n === i) { d.setAttribute('aria-current', 'true'); } else { d.removeAttribute('aria-current'); }
+      });
+      if (num) num.textContent = '0' + (i + 1);
+      if (prev) prev.disabled = i === 0;
+      if (next) next.disabled = i === panes.length - 1;
+      bind(panes[i]);
+    }
+
+    function bind(pane) {
+      var steps = [].slice.call(pane.querySelectorAll('[data-fx-step]'));
+      steps.forEach(function (s) {
+        if (s._fx) return;
+        s._fx = true;
+        var key = s.getAttribute('data-fx-step');
+        var blk = pane.querySelector('[data-fx-blk="' + key + '"]');
+        var on = function () {
+          steps.forEach(function (o) { o.removeAttribute('data-on'); });
+          [].forEach.call(pane.querySelectorAll('[data-fx-blk]'), function (b) { b.removeAttribute('data-hot'); });
+          s.setAttribute('data-on', '');
+          if (blk) blk.setAttribute('data-hot', '');
+        };
+        var off = function () {
+          s.removeAttribute('data-on');
+          if (blk) blk.removeAttribute('data-hot');
+        };
+        s.addEventListener('mouseenter', on);
+        s.addEventListener('mouseleave', off);
+        s.addEventListener('focus', on);
+        s.addEventListener('blur', off);
+        s.addEventListener('click', on);          /* aanraking */
+      });
+    }
+
+    dots.forEach(function (d, i) { d.addEventListener('click', function () { show(i); }); });
+    if (prev) prev.addEventListener('click', function () { show(cur - 1); });
+    if (next) next.addEventListener('click', function () { show(cur + 1); });
+    lock();
+    window.addEventListener('resize', function () {
+      panes.forEach(function (p) { p.style.minHeight = ''; });
+      box.style.removeProperty('--fxh');
+      lock();
+    });
+    show(0);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+
+/* Vaste achtergrondfoto in de sectie "Eén rapportage, in vier delen".
+   De foto blijft stil staan terwijl de sectie eroverheen schuift. Staat los
+   van main.js, zodat een oude gedeelde bundel dit niet kan breken. */
+(function () {
+  'use strict';
+  function init() {
+    var img = document.querySelector('.qsp-bg');
+    if (!img) return;
+    var sec = img.closest ? img.closest('.qsphoto') : null;
+    if (!sec) return;
+    var mq = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)');
+    var raf = 0;
+
+    function rest() {                       /* niet-bewegende weergave */
+      img.style.height = '';
+      img.style.transform = '';
+    }
+
+    function frame() {
+      raf = 0;
+      var r = sec.getBoundingClientRect();
+      if (r.bottom < -400 || r.top > (window.innerHeight || 800) + 400) return;
+      img.style.transform = 'translate3d(0,' + (-r.top - 80).toFixed(1) + 'px,0)';
+    }
+
+    function onScroll() {
+      if (!raf) raf = requestAnimationFrame(frame);
+    }
+
+    function stop() {
+      window.removeEventListener('scroll', onScroll, true);
+      window.removeEventListener('resize', onScroll);
+      rest();
+    }
+
+    function start() {
+      img.style.height = 'calc(100vh + 160px)';
+      window.addEventListener('scroll', onScroll, { passive: true, capture: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      frame();
+    }
+
+    function apply() {
+      stop();
+      /* onder 860px en bij "verminder beweging" blijft de foto gewoon staan */
+      if (mq && mq.matches) return;
+      if ((window.innerWidth || 1200) < 860) return;
+      start();
+    }
+
+    apply();
+    window.addEventListener('resize', function () {
+      var live = img.style.height !== '';
+      var want = !(mq && mq.matches) && (window.innerWidth || 1200) >= 860;
+      if (live !== want) apply();
+    }, { passive: true });
+    if (mq && mq.addEventListener) mq.addEventListener('change', apply);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+<noscript><style>.c24 .rv{opacity:1 !important;transform:none !important}</style></noscript>
+</body>
+</html>

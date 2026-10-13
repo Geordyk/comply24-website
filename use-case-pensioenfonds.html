@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Use case pensioenfonds: IORP II en de Pensioenwet — Comply24</title>
+<meta name="description" content="Hoe een pensioenfonds IORP II, de Pensioenwet en DORA in één keten belegt.">
+<link rel="canonical" href="https://comply24.nl/use-case-pensioenfonds.html">
+<link rel="alternate" hreflang="nl" href="https://comply24.nl/use-case-pensioenfonds.html">
+<link rel="alternate" hreflang="en" href="https://comply24.nl/en/use-case-pensioenfonds.html">
+<link rel="alternate" hreflang="x-default" href="https://comply24.nl/use-case-pensioenfonds.html">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:url" content="https://comply24.nl/use-case-pensioenfonds.html">
+<meta property="og:site_name" content="Comply24">
+<meta property="og:locale" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Use case pensioenfonds: IORP II en de Pensioenwet — Comply24">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Use case pensioenfonds: IORP II en de Pensioenwet — Comply24">
+<meta property="og:description" content="Hoe een pensioenfonds IORP II, de Pensioenwet en DORA in één keten belegt.">
+<meta property="og:image" content="https://comply24.nl/assets/images/comply24-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://comply24.nl/assets/images/comply24-og.jpg">
+<link rel="icon" href="assets/images/comply24-logo-navy.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+/* ── use cases 2.0 ─────────────────────────────────────────────────────── */
+
+/* hero: tekst links, keten rechts */
+.c24 .uc2-hw{display:flex;gap:clamp(28px,4cqw,64px);align-items:center}
+.c24 .uc2-hl{flex:1.06 1 0;min-width:0}
+.c24 .uc2-hr{flex:1 1 0;min-width:0}
+.c24 .uc2-h1{margin:18px 0 0;max-width:17ch;font-size:clamp(30px,3.3cqw,46px);line-height:1.08;letter-spacing:-.04em;font-weight:800;color:#FFFFFF;text-wrap:balance}
+.c24 .uc2-ill{margin:22px 0 0;max-width:58ch;font-size:13px;line-height:1.5;color:#9FAEC6}
+.c24 .uc2-ill::before{content:"";display:inline-block;width:7px;height:7px;margin-right:9px;border-radius:50%;background:#C8A24A;vertical-align:middle}
+.c24 .uc2-down{display:inline-flex;align-items:center;gap:6px;margin-top:22px;padding-bottom:3px;border-bottom:1px solid rgba(226,190,106,.5);font-size:15px;font-weight:600;color:#E2BE6A;text-decoration:none}
+.c24 .uc2-down:hover{border-bottom-color:#E2BE6A}
+
+/* de keten als knopenrij */
+.c24 .uc2-chain{display:flex;flex-direction:column;gap:0;margin:0;padding:0;list-style:none}
+.c24 .uc2-nd{position:relative;display:flex;align-items:center;gap:14px;padding:11px 16px 11px 0}
+.c24 .uc2-nd::before{content:"";position:absolute;left:7px;top:50%;bottom:-50%;width:1px;background:rgba(200,162,74,.38)}
+.c24 .uc2-nd:last-child::before{display:none}
+.c24 .uc2-dot{position:relative;z-index:1;flex:0 0 auto;width:15px;height:15px;border-radius:50%;background:#F7F8FA;box-shadow:inset 0 0 0 1.5px #C8A24A;transition:background .22s ease,box-shadow .22s ease,transform .22s ease}
+.c24 .uc2-ndl{font-size:15px;font-weight:600;color:#0B1F3B;transition:color .22s ease}
+.c24 .uc2-hero .uc2-chain{padding:clamp(20px,2.4cqw,30px) clamp(20px,2.4cqw,30px) clamp(20px,2.4cqw,30px) clamp(18px,2cqw,26px);border-radius:16px;background:rgba(255,255,255,.045);box-shadow:inset 0 0 0 1px rgba(226,190,106,.22)}
+.c24 .uc2-hero .uc2-dot{background:#0B1F3B;box-shadow:inset 0 0 0 1.5px #E2BE6A}
+.c24 .uc2-hero .uc2-ndl{color:#E7ECF4}
+.c24 .uc2-hero .uc2-nd::before{background:rgba(226,190,106,.45)}
+
+/* de keten tekent zich één keer op bij binnenkomst */
+.c24.armed .uc2-hero .uc2-nd{opacity:0;transform:translateY(8px)}
+.c24.armed .uc2-hero.in .uc2-nd{animation:uc2in .5s cubic-bezier(.22,.8,.3,1) forwards;animation-delay:calc(.25s + var(--nd) * .16s)}
+@keyframes uc2in{to{opacity:1;transform:none}}
+
+/* uitgangssituatie */
+.c24 .uc2-ctx{display:flex;gap:clamp(24px,3.4cqw,52px);margin-top:clamp(26px,3cqw,38px)}
+.c24 .uc2-cl,.c24 .uc2-cr{flex:1 1 0;min-width:0}
+.c24 .uc2-facts{margin:0;padding:0}
+.c24 .uc2-fact{padding:15px 0;border-top:1px solid #EADFC8}
+.c24 .uc2-fact:first-child{border-top:none;padding-top:0}
+.c24 .uc2-fact dt{margin:0;font-size:12px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#A07E24}
+.c24 .uc2-fact dd{margin:6px 0 0;font-size:16px;line-height:1.55;color:#2A3A57}
+.c24 .uc2-broken{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;padding:0;list-style:none}
+.c24 .uc2-bk{padding:10px 15px;border-radius:9px;background:#FFFFFF;box-shadow:0 0 0 1px #EADFC8;font-size:14px;font-weight:600;color:#55617A;transform:translateY(calc(var(--nd) * 3px))}
+.c24 .uc2-pains{margin:0;padding:0 0 0 22px;color:#55617A}
+.c24 .uc2-pains li{margin-top:12px;font-size:16px;line-height:1.6}
+
+/* uitklapbaar detail */
+.c24 .uc2-det{margin-top:22px}
+.c24 .uc2-det summary{display:inline-flex;align-items:center;gap:8px;padding:8px 0;font-size:14.5px;font-weight:600;color:#A07E24;cursor:pointer}
+.c24 .uc2-det summary::marker{content:""}
+.c24 .uc2-det summary::after{content:"+";font-size:17px;line-height:1}
+.c24 .uc2-det[open] summary::after{content:"–"}
+.c24 .uc2-detb{padding:4px 0 2px}
+.c24 .uc2-detb p{margin:0 0 10px;font-size:15px;line-height:1.6;color:#55617A}
+.c24 .uc2-detb p b{color:#0B1F3B}
+
+/* drie ankers */
+.c24 .uc2-ancs{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2cqw,26px);margin:clamp(26px,3cqw,36px) 0 0;padding:0;list-style:none}
+.c24 .uc2-anc{padding:clamp(20px,2.2cqw,28px);border-radius:14px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E5E7EB}
+.c24 .uc2-ancn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#FBF1DC;font-size:13px;font-weight:700;color:#A07E24}
+.c24 .uc2-anc h3{margin:14px 0 0;font-size:17px;font-weight:700;letter-spacing:-.01em;color:#0B1F3B}
+.c24 .uc2-anc p{margin:7px 0 0;font-size:15.5px;line-height:1.55;color:#55617A}
+.c24 .uc2-uses{margin:0;padding:0 0 0 20px;color:#55617A}
+.c24 .uc2-uses li{margin-top:7px;font-size:15px;line-height:1.55}
+.c24 .uc2-not{margin:16px 0 0;font-size:15px;line-height:1.6;color:#55617A}
+.c24 .uc2-not b{color:#0B1F3B}
+
+/* interactief caseverhaal */
+.c24 .uc2-sg{display:flex;gap:clamp(24px,3.4cqw,56px);margin-top:clamp(26px,3cqw,40px)}
+.c24 .uc2-sl{flex:1.45 1 0;min-width:0}
+.c24 .uc2-sr{flex:1 1 0;min-width:0}
+.c24 .uc2-sticky{position:sticky;top:96px;padding:clamp(22px,2.6cqw,32px);border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(11,31,59,.07),0 16px 38px rgba(11,31,59,.08)}
+.c24 .uc2-sr .uc2-nd{padding:15px 16px 15px 0}
+.c24 .uc2-cap{margin:16px 0 0;font-size:12.5px;color:#8B96A8}
+.c24 .uc2-rail{display:flex;flex-direction:column;gap:2px;margin-bottom:22px}
+.c24 .uc2-rb{position:relative;display:flex;align-items:center;gap:12px;padding:11px 12px 11px 0;border:0;background:none;text-align:left;cursor:pointer;color:#55617A}
+.c24 .uc2-rn{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#FFFFFF;box-shadow:inset 0 0 0 1px #C9D3DE;font-size:12.5px;font-weight:700;color:#55617A;transition:background .2s ease,color .2s ease,box-shadow .2s ease}
+.c24 .uc2-rt{font-size:15px;font-weight:600;line-height:1.35}
+.c24 .uc2-rb.on .uc2-rn{background:#C8A24A;box-shadow:none;color:#FFFFFF}
+.c24 .uc2-rb.on .uc2-rt{color:#0B1F3B}
+.c24 .uc2-rb:hover .uc2-rt{color:#0B1F3B}
+.c24 .uc2-rb:focus-visible{outline:2px solid #C8A24A;outline-offset:2px;border-radius:8px}
+.c24 .uc2-pane{padding:clamp(20px,2.4cqw,28px);border-radius:14px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(11,31,59,.06)}
+.c24 .uc2-pane + .uc2-pane{margin-top:14px}
+.c24 .uc2-pt{display:flex;align-items:center;gap:11px;margin:0;font-size:18px;font-weight:700;letter-spacing:-.015em;color:#0B1F3B}
+.c24 .uc2-pn{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;border-radius:50%;background:#C8A24A;font-size:12.5px;font-weight:700;color:#FFFFFF}
+.c24 .uc2-roles{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.c24 .uc2-role{padding-left:14px;border-left:2px solid #E5E7EB}
+.c24 .uc2-role.tm{border-left-color:#C8A24A}
+.c24 .uc2-role b{display:block;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8B96A8}
+.c24 .uc2-role.tm b{color:#A07E24}
+.c24 .uc2-role p{margin:7px 0 0;font-size:15px;line-height:1.6;color:#55617A}
+.c24 .uc2-nav2{display:none;align-items:center;gap:14px;margin-top:18px}
+.c24 .uc2-pv,.c24 .uc2-nx{height:40px;padding:0 18px;border:0;border-radius:999px;background:#FFFFFF;box-shadow:inset 0 0 0 1px #C9D3DE;font-size:14.5px;font-weight:600;color:#0B1F3B;cursor:pointer}
+.c24 .uc2-pv[disabled],.c24 .uc2-nx[disabled]{opacity:.45;cursor:default}
+.c24 .uc2-cnt{font-size:13.5px;color:#55617A}
+.c24 .uc2-cnt b{color:#0B1F3B}
+/* met JS: één hoofdstuk tegelijk, de rail bedient het */
+.c24 .uc2-sg.live .uc2-pane{display:none}
+.c24 .uc2-sg.live .uc2-pane.on{display:block;animation:uc2fade .22s ease}
+.c24 .uc2-sg.live .uc2-nav2{display:flex}
+@keyframes uc2fade{from{opacity:0}to{opacity:1}}
+/* de knoop die bij het hoofdstuk hoort */
+.c24 .uc2-sr .uc2-nd.on .uc2-dot{background:#C8A24A;box-shadow:inset 0 0 0 1.5px #C8A24A;transform:scale(1.25)}
+.c24 .uc2-sr .uc2-nd.on .uc2-ndl{color:#0B1F3B}
+.c24 .uc2-sr .uc2-nd:not(.on) .uc2-ndl{color:#8B96A8}
+
+/* bewijsvoorbeeld */
+.c24 .uc2-ev{position:relative;max-width:820px;margin-top:clamp(24px,3cqw,34px);padding:clamp(24px,2.8cqw,34px);border-radius:16px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(226,190,106,.25)}
+.c24 .uc2-evtag{display:inline-block;padding:5px 11px;border-radius:999px;background:rgba(226,190,106,.14);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#E2BE6A}
+.c24 .uc2-ers{margin:18px 0 0}
+.c24 .uc2-er{display:flex;gap:18px;padding:12px 0;border-top:1px solid rgba(255,255,255,.1)}
+.c24 .uc2-er:first-child{border-top:none}
+.c24 .uc2-er dt{flex:0 0 32%;margin:0;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9FAEC6}
+.c24 .uc2-er dd{margin:0;font-size:15.5px;line-height:1.5;color:#FFFFFF}
+.c24 .uc2-evv{margin:18px 0 0;padding-top:16px;border-top:1px solid rgba(226,190,106,.3);font-size:16px;font-weight:600;color:#E2BE6A}
+.c24 .uc2-rep{display:inline-flex}
+
+/* vóór en na */
+.c24 .uc2-cmps{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2cqw,24px);margin-top:clamp(26px,3cqw,36px)}
+.c24 .uc2-cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:clamp(18px,2cqw,24px);border-radius:14px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E5E7EB}
+.c24 .uc2-cmh{grid-column:1 / -1;margin:0;font-size:16px;font-weight:700;color:#0B1F3B}
+.c24 .uc2-cb,.c24 .uc2-ca{min-width:0}
+.c24 .uc2-ca{padding-left:14px;border-left:2px solid #C8A24A}
+.c24 .uc2-cl2{display:block;font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#8B96A8}
+.c24 .uc2-ca .uc2-cl2{color:#A07E24}
+.c24 .uc2-cb p,.c24 .uc2-ca p{margin:6px 0 0;font-size:15px;line-height:1.55;color:#55617A}
+.c24 .uc2-ca p{color:#0B1F3B}
+
+/* volgende stap */
+.c24 .uc2-end{display:flex;gap:clamp(22px,3cqw,44px);align-items:flex-start}
+.c24 .uc2-adopt{flex:1 1 0;min-width:0;padding:clamp(22px,2.6cqw,32px);border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px #F0E8D6}
+.c24 .uc2-h{margin:0;font-size:21px;font-weight:800;letter-spacing:-.025em;color:#0B1F3B}
+.c24 .uc2-adopt ul{margin:18px 0 0;padding:0;list-style:none}
+.c24 .uc2-adopt li{padding:13px 0;border-top:1px solid #F0E8D6}
+.c24 .uc2-adopt li:first-child{border-top:none;padding-top:0}
+.c24 .uc2-adopt li b{display:block;font-size:15px;color:#0B1F3B}
+.c24 .uc2-adopt li span{display:block;margin-top:4px;font-size:15px;line-height:1.55;color:#55617A}
+.c24 .uc2-routes{flex:1.1 1 0;min-width:0;display:grid;gap:16px}
+.c24 .uc2-route{padding:clamp(22px,2.6cqw,30px);border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px #F0E8D6}
+.c24 .uc2-route:first-child{background:#0B1F3B;box-shadow:none}
+.c24 .uc2-rk{display:block;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#A07E24}
+.c24 .uc2-route:first-child .uc2-rk{color:#E2BE6A}
+.c24 .uc2-route h3{margin:9px 0 0;font-size:21px;font-weight:800;letter-spacing:-.025em;color:#0B1F3B}
+.c24 .uc2-route:first-child h3{color:#FFFFFF}
+.c24 .uc2-route p{margin:9px 0 18px;font-size:15.5px;line-height:1.6;color:#55617A}
+.c24 .uc2-route:first-child p{color:#C3CCDB}
+.c24 .uc2-others{margin-top:clamp(32px,4cqw,52px);padding-top:26px;border-top:1px solid #EADFC8}
+.c24 .uc2-oh{display:block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#A07E24}
+.c24 .uc2-ocs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+.c24 .uc2-oc{display:flex;align-items:center;gap:10px;padding:16px 18px;border-radius:12px;background:#FFFFFF;box-shadow:0 0 0 1px #F0E8D6;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease}
+.c24 .uc2-oc:hover{transform:translateY(-3px);box-shadow:0 0 0 1px #E3D5B4,0 12px 26px rgba(11,31,59,.09)}
+.c24 .uc2-ocl{font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#A07E24}
+.c24 .uc2-ocn{flex:1 1 auto;font-size:16px;font-weight:700;color:#0B1F3B}
+.c24 .uc2-oca{color:#A07E24}
+
+/* ── smaller ─────────────────────────────────────────────────────────── */
+@container page (max-width:1000px){
+.c24 .uc2-hw{flex-direction:column;align-items:stretch}
+.c24 .uc2-hr{margin-top:8px}
+.c24 .uc2-sg{flex-direction:column}
+.c24 .uc2-sr{order:-1}
+.c24 .uc2-sticky{position:static}
+.c24 .uc2-end{flex-direction:column}
+.c24 .uc2-adopt,.c24 .uc2-routes{width:100%}
+}
+@container page (max-width:860px){
+.c24 .uc2-ancs{grid-template-columns:1fr}
+.c24 .uc2-cmps{grid-template-columns:1fr}
+.c24 .uc2-ocs{grid-template-columns:1fr}
+.c24 .uc2-ctx{flex-direction:column}
+}
+@container page (max-width:640px){
+.c24 .uc2-roles{grid-template-columns:1fr}
+.c24 .uc2-er{flex-direction:column;gap:4px}
+.c24 .uc2-er dt{flex:none}
+.c24 .uc2-cmp{grid-template-columns:1fr}
+.c24 .uc2-ca{padding-left:0;padding-top:12px;border-left:0;border-top:2px solid #C8A24A}
+.c24 .uc2-pv,.c24 .uc2-nx{flex:1 1 0;padding:0 12px}
+.c24 .uc2-route .btn-gold,.c24 .uc2-route .btn-ghost{height:auto;min-height:50px;padding:13px 20px;white-space:normal;text-align:left;max-width:100%}
+.c24 .uc2-rep{height:auto;min-height:46px;padding:12px 18px;white-space:normal;text-align:left}
+}
+@media (prefers-reduced-motion: reduce){
+.c24.armed .uc2-hero .uc2-nd{opacity:1;transform:none;animation:none}
+.c24 .uc2-sg.live .uc2-pane.on{animation:none}
+.c24 .uc2-oc:hover{transform:none}
+}
+
+/* ── productstage op de use-case-pagina's ──────────────────────────────── */
+
+.c24 .ucs{padding:clamp(20px,2.2cqw,26px);border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(11,31,59,.07),0 18px 44px rgba(11,31,59,.10)}
+.c24 .ucs-hd{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid #E9EDF3}
+.c24 .ucs-hdt{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:13px;font-weight:600;letter-spacing:.02em;color:#0B1F3B}
+.c24 .ucs-sub{margin:12px 0 0;font-size:14.5px;line-height:1.5;color:#55617A}
+.c24 .ucs-tag{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;background:#F1F4F8;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#6B7689;white-space:nowrap}
+.c24 .ucs-tag.ok{background:#EAF3EC;color:#2F6B45}
+.c24 .ucs-tag.warn{background:#FBF1DC;color:#8A6612}
+.c24 .ucs-tag.soft{background:#EEF2F8;color:#45546F}
+
+/* regels label/waarde */
+.c24 .ucs-r{display:flex;gap:14px;padding:10px 0;border-top:1px solid #F0F3F7}
+.c24 .ucs-r:first-of-type{border-top:none}
+.c24 .ucs-rl{flex:0 0 34%;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#8B96A8;line-height:1.5}
+.c24 .ucs-rv{flex:1 1 auto;min-width:0;font-size:14.5px;line-height:1.5;color:#0B1F3B}
+.c24 .ucs-r.link .ucs-rv{padding-left:16px;position:relative}
+.c24 .ucs-r.link .ucs-rv::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:#C8A24A}
+.c24 .ucs-r.gap{background:#FDF4F2;margin:0 -10px;padding-left:10px;padding-right:10px;border-radius:8px}
+.c24 .ucs-r.gap .ucs-rv{padding-left:16px;position:relative;color:#9B3B2A;font-weight:600}
+.c24 .ucs-r.gap .ucs-rv::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:#C8503A}
+.c24 .ucs-r.warn .ucs-rv{color:#8A6612;font-weight:600}
+
+.c24 .ucs-foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:14px;padding-top:13px;border-top:1px solid #E9EDF3}
+.c24 .ucs-src{font-size:12.5px;line-height:1.45;color:#8B96A8}
+
+/* hero: keten als kaartjes met een gouden lijn */
+.c24 .ucs-chainc{margin:16px 0 0;padding:0;list-style:none}
+.c24 .ucs-n{position:relative;padding:12px 0 12px 30px}
+.c24 .ucs-n::before{content:"";position:absolute;left:5px;top:22px;bottom:-12px;width:1px;background:rgba(200,162,74,.4);transform:scaleY(0);transform-origin:top;animation:ucsline .45s ease forwards;animation-delay:calc(.5s + var(--nd) * .28s)}
+.c24 .ucs-n:last-child::before{display:none}
+.c24 .ucs-n::after{content:"";position:absolute;left:0;top:17px;width:11px;height:11px;border-radius:50%;background:#FFFFFF;box-shadow:inset 0 0 0 1.5px #C8A24A}
+.c24 .ucs-nk{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#A07E24}
+.c24 .ucs-nv{display:block;margin-top:3px;font-size:15px;font-weight:600;line-height:1.4;color:#0B1F3B}
+.c24 .ucs-nd{display:block;max-height:0;overflow:hidden;font-size:13px;line-height:1.5;color:#55617A;opacity:0;transition:max-height .22s ease,opacity .22s ease,margin-top .22s ease}
+.c24 .ucs-n:hover .ucs-nd,.c24 .ucs-n:focus-visible .ucs-nd{max-height:48px;margin-top:4px;opacity:1}
+.c24 .ucs-n:focus-visible{outline:2px solid #C8A24A;outline-offset:2px;border-radius:10px}
+@keyframes ucsline{to{transform:scaleY(1)}}
+.c24 .ucs-hero .ucs-n{opacity:0;animation:ucsin .42s ease forwards;animation-delay:calc(.35s + var(--nd) * .28s)}
+@keyframes ucsin{to{opacity:1}}
+
+/* story: 40/60 met de productstage als hoofdrol */
+.c24 .uc2-sg.v3 .uc2-sl{flex:.82 1 0}
+.c24 .uc2-sg.v3 .uc2-sr{flex:1.18 1 0}
+.c24 .uc2-sg.v3 .uc2-roles{grid-template-columns:1fr;gap:14px}
+.c24 .uc2-sg.v3 .uc2-pane{padding:clamp(18px,2cqw,24px)}
+
+/* story: vaste hoogte zodat er niets verspringt */
+.c24 .uc2-stgs{position:relative;min-height:430px}
+.c24 .uc2-stg{animation:ucsfade .22s ease}
+@keyframes ucsfade{from{opacity:0}to{opacity:1}}
+.c24 .uc2-sticky.v3{padding:0;background:none;box-shadow:none}
+.c24 .ucs-stage .ucs-r:first-of-type{border-top:1px solid #F0F3F7}
+.c24 .ucs-art{margin:14px 0 4px;padding:16px 18px;border-radius:12px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E9EDF3}
+.c24 .ucs-artk{display:block;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;font-weight:600;color:#A07E24}
+.c24 .ucs-artq{margin:8px 0 0;font-size:15px;line-height:1.55;color:#0B1F3B}
+.c24 .ucs-bar{height:7px;margin:12px 0 2px;border-radius:999px;background:#EEF1F6;overflow:hidden}
+.c24 .ucs-bar span{display:block;height:100%;border-radius:999px;background:#C8A24A}
+.c24 .ucs-doc{margin:14px 0 4px;padding:16px 18px;border-radius:12px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E9EDF3}
+.c24 .ucs-dock{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8B96A8}
+.c24 .ucs-quote{margin:9px 0 0;font-size:15px;line-height:1.6;color:#55617A}
+.c24 .ucs-quote mark{background:#FBF1DC;color:#0B1F3B;padding:1px 3px;border-radius:3px}
+.c24 .ucs-flow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:14px 0 6px}
+.c24 .ucs-st{padding:7px 13px;border-radius:999px;font-size:13.5px;font-weight:600}
+.c24 .ucs-st.old{background:#F1F4F8;color:#8B96A8;text-decoration:line-through}
+.c24 .ucs-st.new{background:#EAF3EC;color:#2F6B45}
+.c24 .ucs-arr{color:#C8A24A}
+
+/* bewijs-showcase */
+.c24 .ucs-show{display:flex;gap:clamp(20px,2.6cqw,36px);margin-top:clamp(24px,3cqw,34px)}
+.c24 .ucs-shl{flex:0 0 36%;min-width:0}
+.c24 .ucs-shr{flex:1 1 0;min-width:0;padding:clamp(18px,2.2cqw,26px);border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(255,255,255,.14)}
+.c24 .ucs-shk{display:block;margin-top:14px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:13px;font-weight:600;color:#E2BE6A}
+.c24 .ucs-sht{margin:8px 0 0;font-size:24px;font-weight:800;letter-spacing:-.025em;line-height:1.2;color:#FFFFFF}
+.c24 .ucs-badge{display:inline-block;margin-top:14px;padding:5px 12px;border-radius:7px;font-size:12px;font-weight:800;letter-spacing:.1em}
+.c24 .ucs-badge.warn{background:#E2BE6A;color:#3B2D08}
+.c24 .ucs-shp{margin:14px 0 0;font-size:15.5px;line-height:1.6;color:#C3CCDB}
+.c24 .ucs-path{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14)}
+.c24 .ucs-path span{font-size:12.5px;font-weight:600;color:#9FAEC6}
+.c24 .ucs-path span + span::before{content:"→";margin-right:6px;color:#C8A24A}
+.c24 .ucs-tabs{display:flex;flex-wrap:wrap;gap:4px;padding:4px;border-radius:999px;background:#F1F4F8}
+.c24 .ucs-tb{height:36px;padding:0 15px;border:0;border-radius:999px;background:none;font-size:14px;font-weight:600;color:#55617A;cursor:pointer;transition:background .18s ease,color .18s ease}
+.c24 .ucs-tb:hover{color:#0B1F3B}
+.c24 .ucs-tb.on{background:#0B1F3B;color:#FFFFFF}
+.c24 .ucs-tb:focus-visible{outline:2px solid #C8A24A;outline-offset:2px}
+.c24 .ucs-tps{position:relative;min-height:250px;margin-top:18px}
+.c24 .ucs-show.live .ucs-tp{display:none}
+.c24 .ucs-show.live .ucs-tp.on{display:block;animation:ucsfade .2s ease}
+.c24 .ucs-tp + .ucs-tp{margin-top:18px;padding-top:18px;border-top:1px solid #E9EDF3}
+
+/* vóór en na als splitview */
+.c24 .ucsp{margin-top:clamp(26px,3cqw,36px);border-radius:16px;overflow:hidden;box-shadow:0 0 0 1px #E5E7EB}
+.c24 .ucsp-h,.c24 .ucsp-r{display:grid;grid-template-columns:minmax(150px,1fr) 1.5fr 1.5fr}
+.c24 .ucsp-h{background:#F7F8FA;border-bottom:1px solid #E5E7EB}
+.c24 .ucsp-hb,.c24 .ucsp-ha{padding:14px 20px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.c24 .ucsp-hb{color:#8B96A8}
+.c24 .ucsp-ha{background:#0B1F3B;color:#E2BE6A}
+.c24 .ucsp-r{border-top:1px solid #EEF1F6}
+.c24 .ucsp-r:first-of-type{border-top:none}
+.c24 .ucsp-d{padding:18px 20px;font-size:15.5px;font-weight:700;color:#0B1F3B;background:#FCFDFE}
+.c24 .ucsp-b{padding:18px 20px;font-size:15px;line-height:1.55;color:#8B96A8}
+.c24 .ucsp-a{position:relative;padding:18px 20px;font-size:15px;line-height:1.55;font-weight:600;color:#0B1F3B;background:#FBF6EC}
+.c24 .ucsp-a::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#C8A24A}
+
+/* sectorstrip met de huidige case actief */
+.c24 .uc2-ocs.strip{grid-template-columns:repeat(4,1fr);gap:10px}
+.c24 .uc2-ocs.strip .uc2-oc{flex-direction:column;align-items:flex-start;gap:4px;padding:15px 17px}
+.c24 .uc2-ocs.strip .uc2-oc.on{background:#0B1F3B;box-shadow:none}
+.c24 .uc2-ocs.strip .uc2-oc.on .uc2-ocn{color:#FFFFFF}
+.c24 .uc2-ocs.strip .uc2-oc.on .uc2-ocl{color:#E2BE6A}
+.c24 .uc2-ocs.strip .uc2-oca{align-self:flex-end;margin-top:-18px}
+
+/* ── smaller ─────────────────────────────────────────────────────────── */
+@container page (max-width:1000px){
+.c24 .ucs-show{flex-direction:column}
+.c24 .ucs-shl{flex:none}
+.c24 .uc2-stgs{min-height:0}
+}
+@container page (max-width:760px){
+.c24 .ucsp-h{display:none}
+.c24 .ucsp-r{grid-template-columns:1fr;gap:0}
+.c24 .ucsp-d{padding-bottom:4px;background:#FFFFFF}
+.c24 .ucsp-b{padding-top:6px;padding-bottom:6px;background:#FFFFFF}
+.c24 .ucsp-b::before{content:"Voorheen — ";font-weight:700;color:#8B96A8}
+.c24 .l-en .ucsp-b::before{content:"Before — "}
+.c24 .ucsp-a::before{width:100%;height:3px;bottom:auto}
+.c24 .ucsp-a{padding-top:14px}
+}
+@container page (max-width:860px){
+.c24 .uc2-ocs.strip{grid-template-columns:1fr 1fr}
+}
+@container page (max-width:640px){
+.c24 .uc2-ocs.strip{grid-template-columns:1fr}
+.c24 .ucs-r{flex-direction:column;gap:3px}
+.c24 .ucs-rl{flex:none}
+.c24 .ucs-tabs{border-radius:14px}
+.c24 .ucs-tb{flex:1 1 auto}
+.c24 .ucs-n .ucs-nd{max-height:none;opacity:1;margin-top:4px}
+}
+@media (prefers-reduced-motion: reduce){
+.c24 .ucs-hero .ucs-n{opacity:1;animation:none}
+.c24 .ucs-n::before{transform:none;animation:none}
+.c24 .uc2-stg,.c24 .ucs-show.live .ucs-tp.on{animation:none}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://comply24.nl/#organization",
+      "name": "Comply24",
+      "legalName": "Comply24 B.V.",
+      "url": "https://comply24.nl/",
+      "logo": "https://comply24.nl/assets/images/comply24-logo-navy.png",
+      "email": "info@comply24.nl",
+      "areaServed": "NL",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gansstraat 170",
+        "addressLocality": "Utrecht",
+        "addressCountry": "NL"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "KVK",
+        "value": "42175762"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/comply24/"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Comply24",
+          "item": "https://comply24.nl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Use case pensioenfonds",
+          "item": "https://comply24.nl/use-case-pensioenfonds.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="c24 l-nl" data-page="uc-pension-fund" data-h-ref="root" style="container-type: inline-size; container-name: page; font-family: Inter, 'Helvetica Neue', Arial, sans-serif; color: #0B1F3B; background: #FFFFFF; -webkit-font-smoothing: antialiased">
+<svg width="0" height="0" aria-hidden="true" style="position: absolute">
+<defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4.500 20c1.400-3.800 4.200-5.600 7.500-5.600s6.100 1.800 7.500 5.600"></path></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.500 2.800v5.400c0 4.600-3.100 8.200-7.500 9.800-4.400-1.600-7.500-5.200-7.500-9.800V5.800L12 3z"></path></symbol>
+<symbol id="i-shieldok" viewBox="0 0 24 24"><path d="M12 3l7.500 2.800v5.400c0 4.600-3.100 8.200-7.500 9.800-4.400-1.600-7.500-5.200-7.500-9.800V5.800L12 3z"></path><path d="M9 12l2.200 2.200L15.200 10"></path></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"></path><path d="M14 3v4h4"></path><path d="M9.500 12.500h5"></path><path d="M9.500 16.500h5"></path></symbol>
+<symbol id="i-table" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.500"></rect><path d="M4 9h16"></path><path d="M9 4v16"></path></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.500 9.500a2.500 2.500 0 1 1 3.500 2.300c-.800.400-1 1-1 1.700"></path><path d="M12 17h.010"></path></symbol>
+<symbol id="i-checkc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.500l2.800 2.800L16 9.800"></path></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.500l4.500 4.500L19 7.500"></path></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4l9 15.500H3L12 4z"></path><path d="M12 10v4.500"></path><path d="M12 17h.010"></path></symbol>
+<symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></symbol>
+<symbol id="i-test" viewBox="0 0 24 24"><path d="M9 3h6"></path><path d="M10 3v6l-5 9a2 2 0 0 0 1.800 3h10.400a2 2 0 0 0 1.800-3l-5-9V3"></path><path d="M7.500 15h9"></path></symbol>
+<symbol id="i-env" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18"></path><path d="M8 4v6"></path></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M4 17V7l8-4 8 4v10l-8 4z"></path><path d="M4 7l8 4 8-4"></path><path d="M12 11v10"></path></symbol>
+<symbol id="i-replay" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 6"></path><path d="M20 5v6h-6"></path></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></symbol><symbol id="i-law" viewBox="0 0 24 24"><path d="M12 6v14"></path><path d="M7 20h10"></path><path d="M5 8h14"></path><path d="M5 8l-2.2 5.2a2.4 2.4 0 0 0 4.4 0z"></path><path d="M19 8l-2.2 5.2a2.4 2.4 0 0 0 4.4 0z"></path><circle cx="12" cy="4" r="1.4"></circle></symbol><symbol id="i-spark" viewBox="0 0 24 24"><path d="M11 3l1.7 4.6L17 9l-4.3 1.4L11 15l-1.7-4.6L5 9l4.3-1.4z"></path><path d="M17.5 14l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"></path></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10.2 13.4a3.8 3.8 0 0 0 5.4.4l2.5-2.5a3.8 3.8 0 0 0-5.4-5.4l-1.3 1.3"></path><path d="M13.8 10.6a3.8 3.8 0 0 0-5.4-.4l-2.5 2.5a3.8 3.8 0 0 0 5.4 5.4l1.3-1.3"></path></symbol><symbol id="i-radar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4.6"></circle><path d="M12 12l6.2-4.2"></path></symbol><symbol id="i-stack" viewBox="0 0 24 24"><path d="M12 3l8.5 4.6L12 12.2 3.5 7.6z"></path><path d="M3.5 12.4L12 17l8.5-4.6"></path></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 21h18"></path><path d="M5 21V8l7-5 7 5v13"></path><path d="M9 21v-6h6v6"></path></symbol>
+</defs>
+</svg>
+
+<a class="skip" href="#main">Naar de inhoud</a>
+<header class="nav">
+<div class="wrap nav-in">
+<a class="nav-logo" href="index.html" aria-label="Comply24"><img src="assets/images/comply24-logo-navy.png" alt="Comply24" style="display: block; height: 30px; width: auto" width="320" height="90"></a>
+<nav class="nav-links" aria-label="Hoofdmenu">
+<div class="navitem has-dd"><a class="navlink" href="platform.html" aria-haspopup="true" aria-expanded="false">Platform<svg class="ic dd-c" aria-hidden="true" style="width: 15px; height: 15px; stroke-width: 2.2"><use href="#i-chev"></use></svg></a><div class="dd"><ul>
+<li><a href="platform.html"><span class="dd-t">Platformoverzicht</span><span class="dd-d">Twee modules, één keten</span></a></li>
+<li><a href="regulatory-intelligence.html"><span class="dd-t">Regulatory Intelligence</span><span class="dd-d">De wet vertaald naar uw verplichtingen</span></a></li>
+<li><a href="control-testing.html"><span class="dd-t">Control Testing</span><span class="dd-d">Van control naar getoetst bewijs</span></a></li>
+<li><a href="wetswijzigingen.html"><span class="dd-t">Wetswijzigingen</span><span class="dd-d">Het changeproces, stap voor stap</span></a></li>
+</ul></div></div>
+<div class="navitem"><a class="navlink" href="hoe-het-werkt.html">Hoe het werkt</a></div>
+<div class="navitem"><a class="navlink on" href="voor-wie.html">Voor wie</a></div>
+<div class="navitem"><a class="navlink" href="quickscan.html">QuickScan</a></div>
+<div class="navitem"><a class="navlink" href="prijzen.html">Prijzen</a></div>
+</nav>
+<a class="lang nav-lang-d" href="en/use-case-pensioenfonds.html" hreflang="en" lang="en" aria-label="In English" style="text-decoration: none"><b class="l1">NL</b>/<b class="l2">EN</b></a>
+<a class="btn btn-gold nav-cta" href="demo.html">Plan een demo<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a>
+<button class="nav-burger" type="button" data-on-click="toggleMenu" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="nav-panel" id="nav-panel">
+<div class="wrap" style="padding-top: 18px; padding-bottom: 26px">
+<ul class="np-list">
+<li><a class="np-a" href="platform.html">Platform</a><ul class="np-sub"><li><a href="platform.html">Platformoverzicht</a></li><li><a href="regulatory-intelligence.html">Regulatory Intelligence</a></li><li><a href="control-testing.html">Control Testing</a></li><li><a href="wetswijzigingen.html">Wetswijzigingen</a></li></ul></li>
+<li><a class="np-a" href="hoe-het-werkt.html">Hoe het werkt</a></li>
+<li><a class="np-a" href="voor-wie.html">Voor wie</a></li>
+<li><a class="np-a" href="quickscan.html">QuickScan</a></li>
+<li><a class="np-a" href="prijzen.html">Prijzen</a></li>
+<li><a class="np-a" href="beveiliging.html">Beveiliging en vertrouwen</a></li>
+</ul>
+<div style="display: flex; align-items: center; gap: 18px; margin-top: 22px">
+<a class="btn btn-gold" href="demo.html" style="height: 48px">Plan een demo</a>
+<a class="lang" href="en/use-case-pensioenfonds.html" hreflang="en" lang="en" aria-label="In English" style="text-decoration: none; padding: 0; font-size: 15px"><b class="l1">NL</b>/<b class="l2">EN</b></a>
+</div>
+</div>
+</div>
+</header>
+
+<main id="main">
+
+
+<section id="uc-pension-fund-hd" class="sec dark uc2-hero" style="position: relative; overflow: hidden; background: radial-gradient(120% 140% at 85% 0%, #14305A 0%, #0B1F3B 46%, #081730 100%)">
+<div class="wrap uc2-hw" style="padding-top: 44px; padding-bottom: clamp(52px, 5cqw, 76px)">
+<div class="uc2-hl">
+<div class="ey rv" style="--rd: 0s">USE CASE · PENSIOENFONDSEN</div>
+<h1 class="rv uc2-h1" style="--rd: .08s">Breng uw verplichtingen en onderbouwing samen.</h1>
+<p class="lead rv" style="--rd: .16s; max-width: 56ch">Beoordeel een duidelijk afgebakende scope, leg bevindingen herleidbaar vast en maak de uitkomst direct bespreekbaar: zonder software in te voeren.</p>
+<p class="uc2-ill rv" style="--rd: .22s">Illustratief scenario, gebaseerd op situaties die wij bij dit type instelling tegenkomen. Er wordt geen klant genoemd.</p>
+<a class="uc2-down rv" style="--rd: .28s" href="#uc-pension-fund-st">Bekijk het scenario<span aria-hidden="true"> ↓</span></a>
+</div>
+<div class="uc2-hr rv" style="--rd: .2s">
+<ul class="uc2-chain hero">
+<li class="uc2-nd" data-nd="0" style="--nd: 0"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Scope</span></li>
+<li class="uc2-nd" data-nd="1" style="--nd: 1"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Bron</span></li>
+<li class="uc2-nd" data-nd="2" style="--nd: 2"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Document</span></li>
+<li class="uc2-nd" data-nd="3" style="--nd: 3"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Bevinding</span></li>
+<li class="uc2-nd" data-nd="4" style="--nd: 4"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Rapport</span></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="uc-pension-fund-pf" class="sec pad" style="position: relative; background: #FBF6EC">
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">De uitgangssituatie</div>
+<h2 class="h2 rv" style="--rd: .08s; max-width: 24ch">Uitbesteed, en daarmee onduidelijk wie wat afdekt.</h2>
+<div class="uc2-ctx">
+<div class="uc2-cl rv" style="--rd: .1s"><dl class="uc2-facts"><div class="uc2-fact"><dt>Type organisatie</dt><dd>Bedrijfstakpensioenfonds onder toezicht van DNB en de AFM</dd></div><div class="uc2-fact"><dt>Betrokken teams</dt><dd>Bestuur met bestuursbureau; administratie en vermogensbeheer uitbesteed</dd></div><div class="uc2-fact"><dt>Bestaande werkwijze</dt><dd>Kaders en beleid door verschillende adviseurs geschreven, in de loop van de jaren</dd></div></dl><details class="uc2-det"><summary>Het volledige profiel</summary><div class="uc2-detb"><p><b>Instelling</b> Bedrijfstakpensioenfonds onder toezicht van DNB en de AFM</p><p><b>Inrichting</b> Bestuur met bestuursbureau; administratie en vermogensbeheer uitbesteed</p><p><b>Scope</b> Pw, Wtp, IORP II, DORA, Code Pensioenfondsen, DNB Good Practices, AFM-leidraad keuzebegeleiding; waar van toepassing de Wwft</p><p><b>Aanleiding</b> De Wtp-transitie en een verzoek van DNB over uitbesteding en operationele weerbaarheid</p></div></details>
+</div>
+<div class="uc2-cr rv" style="--rd: .18s"><ul class="uc2-broken" aria-hidden="true"><li class="uc2-bk" style="--nd: 0">Kaders van adviseurs</li><li class="uc2-bk" style="--nd: 1">Beleid uit meerdere jaren</li><li class="uc2-bk" style="--nd: 2">Verplichtingen bij de uitvoerder</li></ul>
+<ol class="uc2-pains"><li>Kaders en beleid waren in de loop van de jaren door verschillende adviseurs geschreven. Of zij de huidige wetgeving afdekken, wist niemand.</li><li>Door de uitbesteding lag een deel van de verplichtingen bij de uitvoerder. Wie wat afdekte, was onduidelijk.</li><li>Het bestuur wilde tijdens de transitie geen nieuwe software, maar had wel een onderbouwd antwoord aan DNB nodig.</li></ol></div>
+</div>
+</div>
+</section>
+
+<section id="uc-pension-fund-us" class="sec pad" style="position: relative; background: #FFFFFF">
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">Wat Comply24 hier verbindt</div>
+<ul class="uc2-ancs">
+<li class="uc2-anc rv" style="--rd: .08s"><span class="uc2-ancn" aria-hidden="true">1</span><h3>Scope en bronnen</h3><p>Wat beoordelen we, en waartegen?</p></li>
+<li class="uc2-anc rv" style="--rd: .16s"><span class="uc2-ancn" aria-hidden="true">2</span><h3>Documentreview</h3><p>Wat staat er werkelijk in uw documenten?</p></li>
+<li class="uc2-anc rv" style="--rd: .24s"><span class="uc2-ancn" aria-hidden="true">3</span><h3>Bevinding en rapport</h3><p>Wat is het oordeel, en wat doen we ermee?</p></li>
+</ul>
+<details class="uc2-det"><summary>Welke onderdelen daarvoor worden gebruikt</summary><div class="uc2-detb"><ul class="uc2-uses"><li>Quick scan van de volledige scope</li><li>Volledige review door consultants van Comply24</li><li>Het platform als werkomgeving van de consultants, in een eigen omgeving voor de duur van de opdracht</li><li>Gapregister, bestuursrapport en actieplan</li><li>Export in Excel en Word</li></ul><p class="uc2-not"><b>Wat niet wordt gebruikt</b> Geen abonnement en geen module. Het fonds krijgt het resultaat als export. De omgeving kan later worden aangehouden om wijzigingen te volgen.</p></div></details>
+</div>
+</section>
+
+<section id="uc-pension-fund-st" class="sec pad uc2-story" style="position: relative; background: linear-gradient(180deg, #E9F0F2 0%, #E2EBEE 100%)">
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">Zo verloopt het</div>
+<h2 class="h2 rv" style="--rd: .08s; max-width: 24ch">Van verplichting naar vastgelegd besluit.</h2>
+<div class="uc2-sg" data-uc-story="pension-fund">
+<div class="uc2-sl">
+<div class="uc2-rail" role="tablist" aria-orientation="vertical" aria-label="Hoofdstukken">
+<button class="uc2-rb on" type="button" role="tab" id="uct-pension-fund-0" aria-controls="ucp-pension-fund-0" aria-selected="true" tabindex="0" data-uc="0" data-focus="0"><span class="uc2-rn" aria-hidden="true">1</span><span class="uc2-rt">Intake en scope</span></button>
+<button class="uc2-rb" type="button" role="tab" id="uct-pension-fund-1" aria-controls="ucp-pension-fund-1" aria-selected="false" tabindex="-1" data-uc="1" data-focus="1"><span class="uc2-rn" aria-hidden="true">2</span><span class="uc2-rt">Quick scan</span></button>
+<button class="uc2-rb" type="button" role="tab" id="uct-pension-fund-2" aria-controls="ucp-pension-fund-2" aria-selected="false" tabindex="-1" data-uc="2" data-focus="2"><span class="uc2-rn" aria-hidden="true">3</span><span class="uc2-rt">Volledige review</span></button>
+<button class="uc2-rb" type="button" role="tab" id="uct-pension-fund-3" aria-controls="ucp-pension-fund-3" aria-selected="false" tabindex="-1" data-uc="3" data-focus="4"><span class="uc2-rn" aria-hidden="true">4</span><span class="uc2-rt">Rapport en actieplan</span></button>
+<button class="uc2-rb" type="button" role="tab" id="uct-pension-fund-4" aria-controls="ucp-pension-fund-4" aria-selected="false" tabindex="-1" data-uc="4" data-focus="4"><span class="uc2-rn" aria-hidden="true">5</span><span class="uc2-rt">Overdracht</span></button>
+</div>
+<div class="uc2-panes">
+<div class="uc2-pane on" id="ucp-pension-fund-0" role="tabpanel" aria-labelledby="uct-pension-fund-0" data-uc="0"><h3 class="uc2-pt"><span class="uc2-pn" aria-hidden="true">1</span>Intake en scope</h3><div class="uc2-roles"><div class="uc2-role pf"><b>Platform</b><p>De scope per bepaling: vergunning, activiteiten, het overzicht van uitbestedingen en de wetgeving in scope, met reden.</p></div><div class="uc2-role tm"><b>Consultants</b><p>Een scopesessie met de compliance officer en de risicomanager. Het complianceteam van de uitvoerder schuift aan.</p></div></div></div>
+<div class="uc2-pane" id="ucp-pension-fund-1" role="tabpanel" aria-labelledby="uct-pension-fund-1" data-uc="1"><h3 class="uc2-pt"><span class="uc2-pn" aria-hidden="true">2</span>Quick scan</h3><div class="uc2-roles"><div class="uc2-role pf"><b>Platform</b><p>De kaders en het beleidshuis van het fonds worden ingeladen. Het verplichtingenkader met lineage toont per wet welke verplichtingen een control en een beleidsbepaling hebben, en welke geen van beide.</p></div><div class="uc2-role tm"><b>Consultants</b><p>De consultants presenteren het bestuur op één pagina het beeld van de volledige scope.</p></div></div></div>
+<div class="uc2-pane" id="ucp-pension-fund-2" role="tabpanel" aria-labelledby="uct-pension-fund-2" data-uc="2"><h3 class="uc2-pt"><span class="uc2-pn" aria-hidden="true">3</span>Volledige review</h3><div class="uc2-roles"><div class="uc2-role pf"><b>Platform</b><p>Gap assessment per document. Elk controlkader wordt getoetst aan de verplichtingen (wet tegenover kader). Elk beleidsdocument, elke standaard, werkinstructie en uitbestedingsovereenkomst wordt getoetst aan het kader en de verplichtingen (kader tegenover beleidshuis). Bevindingen met onderbouwing en citaat.</p></div><div class="uc2-role tm"><b>Consultants</b><p>De bevindingen worden in werksessies besproken met de functionarissen van het fonds en het complianceteam van de uitvoerder.</p></div></div></div>
+<div class="uc2-pane" id="ucp-pension-fund-3" role="tabpanel" aria-labelledby="uct-pension-fund-3" data-uc="3"><h3 class="uc2-pt"><span class="uc2-pn" aria-hidden="true">4</span>Rapport en actieplan</h3><div class="uc2-roles"><div class="uc2-role pf"><b>Platform</b><p>Export in Excel en Word, met per bevinding de lineage. Per verplichting staat wie verantwoordelijk is: het fonds, de uitvoerder of beide.</p></div><div class="uc2-role tm"><b>Consultants</b><p>Gapregister per document, geprioriteerd op wettelijk gewicht en risico. Een bestuursrapport. Een actieplan met eigenaren en per actie de verplichtingen die ermee worden afgedekt. De Wtp-punten apart gemarkeerd.</p></div></div></div>
+<div class="uc2-pane" id="ucp-pension-fund-4" role="tabpanel" aria-labelledby="uct-pension-fund-4" data-uc="4"><h3 class="uc2-pt"><span class="uc2-pn" aria-hidden="true">5</span>Overdracht</h3><div class="uc2-roles"><div class="uc2-role pf"><b>Platform</b><p>De omgeving wordt gesloten, of aangehouden om wijzigingen te blijven volgen met de module Regulatory Intelligence.</p></div><div class="uc2-role tm"><b>Consultants</b><p>Alles wordt overgedragen; het resultaat is van het fonds. Het antwoord aan DNB bestaat uit het gapregister en het actieplan.</p></div></div></div>
+</div>
+<div class="uc2-nav2"><button class="uc2-pv" type="button" data-uc-pv>Vorige</button><span class="uc2-cnt" aria-hidden="true"><b>1</b> / 5</span><button class="uc2-nx" type="button" data-uc-nx>Volgende</button></div></div>
+<div class="uc2-sr"><div class="uc2-sticky"><ul class="uc2-chain">
+<li class="uc2-nd" data-nd="0" style="--nd: 0"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Scope</span></li>
+<li class="uc2-nd" data-nd="1" style="--nd: 1"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Bron</span></li>
+<li class="uc2-nd" data-nd="2" style="--nd: 2"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Document</span></li>
+<li class="uc2-nd" data-nd="3" style="--nd: 3"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Bevinding</span></li>
+<li class="uc2-nd" data-nd="4" style="--nd: 4"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Rapport</span></li>
+</ul>
+<p class="uc2-cap">Illustratief: de keten in dit scenario</p></div></div>
+</div>
+</div>
+</section>
+
+<section id="uc-pension-fund-ev" class="sec pad dark" style="position: relative; overflow: hidden; background: radial-gradient(120% 140% at 85% 0%, #14305A 0%, #0B1F3B 46%, #081730 100%)">
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">Wat u ontvangt</div>
+<h2 class="h2 rv" style="--rd: .08s; max-width: 24ch">Bevinding uit de rapportage</h2>
+<p class="lead rv" style="--rd: .14s; max-width: 62ch">Zo ziet een bevinding eruit: met citaat uit uw eigen document, oordeel en prioriteit. Hetzelfde format als het voorbeeldrapport van de QuickScan.</p>
+<div class="uc2-ev rv" style="--rd: .2s">
+<span class="uc2-evtag">Fictief voorbeeld</span>
+<dl class="uc2-ers"><div class="uc2-er"><dt>Verplichting</dt><dd>Uitbesteding: vastlegging van verantwoordelijkheden</dd></div><div class="uc2-er"><dt>Beoordeeld document</dt><dd>Uitbestedingsbeleid, versie 2024</dd></div><div class="uc2-er"><dt>Oordeel</dt><dd>Deels afgedekt</dd></div><div class="uc2-er"><dt>Toelichting</dt><dd>Taken benoemd, maar niet per verplichting toegewezen</dd></div><div class="uc2-er"><dt>Verdeling</dt><dd>Fonds, uitvoerder of gedeeld: per verplichting vastgelegd</dd></div></dl>
+<p class="uc2-evv">Het resultaat is van u, als export; er wordt geen software ingevoerd.</p>
+<a class="btn-ghost lt uc2-rep" href="quickscan.html" style="margin-top: 22px">Bekijk het voorbeeldrapport<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a></div>
+</div>
+</section>
+
+<section id="uc-pension-fund-ch" class="sec pad" style="position: relative; background: #FFFFFF">
+<div class="wrap">
+<div class="ey rv" style="--rd: 0s">Wat verandert er?</div>
+<h2 class="h2 rv" style="--rd: .08s; max-width: 24ch">Van verspreide informatie naar één verdedigbaar antwoord.</h2>
+<div class="uc2-cmps">
+<div class="uc2-cmp rv" style="--rd: .08s"><h3 class="uc2-cmh">Dekking van de wetgeving</h3><div class="uc2-cb"><span class="uc2-cl2">Voorheen</span><p>Onbekend</p></div><div class="uc2-ca"><span class="uc2-cl2">Met Comply24</span><p>Per verplichting: control, beleidsbepaling, beide of geen van beide</p></div></div>
+<div class="uc2-cmp rv" style="--rd: .15s"><h3 class="uc2-cmh">Uitbesteding</h3><div class="uc2-cb"><span class="uc2-cl2">Voorheen</span><p>Verantwoordelijkheid onduidelijk</p></div><div class="uc2-ca"><span class="uc2-cl2">Met Comply24</span><p>Per verplichting vastgelegd: fonds, uitvoerder of gedeeld</p></div></div>
+<div class="uc2-cmp rv" style="--rd: .22s"><h3 class="uc2-cmh">Antwoord aan DNB</h3><div class="uc2-cb"><span class="uc2-cl2">Voorheen</span><p>Memo van een adviseur</p></div><div class="uc2-ca"><span class="uc2-cl2">Met Comply24</span><p>Gapregister met lineage en een actieplan</p></div></div>
+<div class="uc2-cmp rv" style="--rd: .29s"><h3 class="uc2-cmh">Software</h3><div class="uc2-cb"><span class="uc2-cl2">Voorheen</span><p>Niet gewenst</p></div><div class="uc2-ca"><span class="uc2-cl2">Met Comply24</span><p>Niet ingevoerd; resultaat als export; een module blijft later mogelijk</p></div></div>
+</div>
+</div>
+</section>
+
+<section id="uc-pension-fund-sh" class="sec pad" style="position: relative; background: #FBF6EC">
+<div class="wrap">
+<div class="uc2-end">
+<div class="uc2-adopt rv" style="--rd: .05s"><h2 class="uc2-h">Wat vraagt dit van uw organisatie?</h2><ul><li><b>Scopebepaling</b><span>Het aantal kaders en documenten bepaalt de omvang van de opdracht.</span></li><li><b>Aansluiting op bestaande werkwijze</b><span>Er wordt geen software ingevoerd; u ontvangt het resultaat als export.</span></li><li><b>Menselijke validatie</b><span>Consultants beoordelen; het bestuur besluit over de opvolging.</span></li></ul></div>
+<div class="uc2-routes">
+<div class="uc2-route rv" style="--rd: .12s"><span class="uc2-rk">Begin klein</span><h3>Compliance QuickScan</h3><p>Eén wet, drie documenten, tien werkdagen. Een concrete beoordeling zonder platformverplichting: vaste prijs € 4.900.</p><a class="btn-gold" href="quickscan.html">Ontdek de Compliance QuickScan<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a></div>
+<div class="uc2-route rv" style="--rd: .2s"><span class="uc2-rk">Het platform</span><h3>Platformdemo</h3><p>Bekijk hoe dit proces doorlopend in Comply24 werkt, op uw eigen scope.</p><a class="btn-ghost" href="demo.html">Plan een platformdemo<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a></div>
+</div>
+</div>
+<div class="uc2-others"><span class="uc2-oh">Use cases per sector</span><div class="uc2-ocs"><a class="uc2-oc" href="use-case-bank.html"><span class="uc2-ocl">Use case</span><span class="uc2-ocn">Bank</span><span class="uc2-oca" aria-hidden="true">→</span></a>
+<a class="uc2-oc" href="use-case-verzekeraar.html"><span class="uc2-ocl">Use case</span><span class="uc2-ocn">Verzekeraar</span><span class="uc2-oca" aria-hidden="true">→</span></a>
+<a class="uc2-oc" href="use-case-beleggingsonderneming.html"><span class="uc2-ocl">Use case</span><span class="uc2-ocn">Beleggingsonderneming</span><span class="uc2-oca" aria-hidden="true">→</span></a>
+</div></div>
+</div>
+</section>
+</main>
+
+<footer class="dark" style="position: relative; background: #0B1F3B; color: #C3CCDB">
+<div class="wrap" style="padding-top: 72px; padding-bottom: 34px">
+<div class="split" style="gap: clamp(30px, 5cqw, 72px)">
+<div style="flex: 0 0 300px; min-width: 0">
+<img src="assets/images/comply24-logo-wit.png" alt="Comply24" style="display: block; height: 38px; width: auto" width="320" height="90">
+<p style="margin: 20px 0 0; max-width: 320px; font-size: 14.5px; line-height: 1.55; color: #C3CCDB">Eén platform van wet naar bewijs, voor instellingen onder toezicht van DNB, de AFM en de ECB.</p>
+<p style="margin: 14px 0 0; font-size: 14px; line-height: 1.55; color: #A9B4C6">Comply24 B.V. · Gansstraat 170, Utrecht<br>KvK 42175762 · <a class="flink" href="mailto:info@comply24.nl" style="font-size: 14px; text-decoration: underline">info@comply24.nl</a></p>
+</div>
+<div class="fcols" style="flex: 1 1 0; min-width: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 36px 22px">
+<nav aria-label="Platform" style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0 0 4px; font-size: 14.5px; font-weight: 600; color: #FFFFFF">Platform</h3>
+<a class="flink" href="platform.html#modules">Twee modules</a>
+<a class="flink" href="platform.html#lineage">Lineage</a>
+<a class="flink" href="wetswijzigingen.html">Wetswijzigingen</a>
+<a class="flink" href="control-testing.html#testing">Control testing</a>
+</nav>
+<nav aria-label="Use cases" style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0 0 4px; font-size: 14.5px; font-weight: 600; color: #FFFFFF">Use cases</h3>
+<a class="flink" href="use-case-bank.html">Bank</a>
+<a class="flink" href="use-case-verzekeraar.html">Verzekeraar</a>
+<a class="flink" href="use-case-beleggingsonderneming.html">Beleggingsonderneming</a>
+<a class="flink" href="#main">Pensioenfonds</a>
+</nav>
+<nav aria-label="Company" style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0 0 4px; font-size: 14.5px; font-weight: 600; color: #FFFFFF">Bedrijf</h3>
+<a class="flink" href="quickscan.html">Compliance QuickScan</a>
+<a class="flink" href="beveiliging.html">Beveiliging en vertrouwen</a>
+<a class="flink" href="prijzen.html#pricing">Prijzen</a>
+<a class="flink" href="demo.html">Contact</a>
+</nav>
+<nav aria-label="Documentation" style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0 0 4px; font-size: 14.5px; font-weight: 600; color: #FFFFFF">Documentatie</h3>
+<a class="flink" href="beveiliging.html#security-doc">Beveiligingsdocumentatie</a>
+<a class="flink" href="demo.html#review">QuickScan aanvragen</a>
+<a class="flink" href="demo.html">Prijslijst</a>
+</nav>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 30px; margin-top: 64px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.12); font-size: 13px">
+<span class="mono" style="letter-spacing: .04em; color: #E2BE6A">Van wet naar bewijs. Eén platform.</span>
+<span style="display: inline-flex; align-items: center; gap: 14px; color: #A9B4C6">© 2026 Comply24 B.V.<a class="lang" href="en/use-case-pensioenfonds.html" hreflang="en" lang="en" aria-label="In English" style="text-decoration: none; color: #A9B4C6"><b class="l1">NL</b>/<b class="l2">EN</b></a></span>
+</div>
+</div>
+</footer>
+</div>
+<script src="assets/js/main.js" defer></script>
+<script>
+/* Het caseverhaal op de use-case-pagina's: hoofdstukken links, keten rechts.
+   Zonder JS staan alle hoofdstukken gewoon onder elkaar; dit script maakt er
+   een stapper van en laat de bijbehorende knoop in de keten oplichten. */
+(function () {
+  'use strict';
+
+  function story(box) {
+    var tabs = [].slice.call(box.querySelectorAll('.uc2-rb'));
+    var panes = [].slice.call(box.querySelectorAll('.uc2-pane'));
+    var nodes = [].slice.call(box.querySelectorAll('.uc2-sr .uc2-nd'));
+    var stages = [].slice.call(box.querySelectorAll('.uc2-stg'));
+    var prev = box.querySelector('[data-uc-pv]');
+    var next = box.querySelector('[data-uc-nx]');
+    var cnt = box.querySelector('.uc2-cnt b');
+    if (tabs.length < 2 || tabs.length !== panes.length) return;
+    var cur = 0;
+
+    function show(i, focus) {
+      cur = Math.max(0, Math.min(tabs.length - 1, i));
+      tabs.forEach(function (t, n) {
+        var on = n === cur;
+        t.classList.toggle('on', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+      });
+      panes.forEach(function (p, n) { p.classList.toggle('on', n === cur); });
+      var f = parseInt(tabs[cur].getAttribute('data-focus'), 10);
+      nodes.forEach(function (nd, n) { nd.classList.toggle('on', n === f); });
+      stages.forEach(function (st, n) {
+        var on = n === cur;
+        st.classList.toggle('on', on);
+        if (on) st.removeAttribute('hidden'); else st.setAttribute('hidden', '');
+      });
+      if (cnt) cnt.textContent = String(cur + 1);
+      if (prev) prev.disabled = cur === 0;
+      if (next) next.disabled = cur === tabs.length - 1;
+      if (focus) tabs[cur].focus();
+    }
+
+    tabs.forEach(function (t, n) {
+      t.addEventListener('click', function () { show(n); });
+      t.addEventListener('keydown', function (e) {
+        var k = e.key;
+        if (k === 'ArrowDown' || k === 'ArrowRight') { e.preventDefault(); show(cur + 1 >= tabs.length ? 0 : cur + 1, true); }
+        else if (k === 'ArrowUp' || k === 'ArrowLeft') { e.preventDefault(); show(cur - 1 < 0 ? tabs.length - 1 : cur - 1, true); }
+        else if (k === 'Home') { e.preventDefault(); show(0, true); }
+        else if (k === 'End') { e.preventDefault(); show(tabs.length - 1, true); }
+      });
+    });
+    if (prev) prev.addEventListener('click', function () { show(cur - 1); });
+    if (next) next.addEventListener('click', function () { show(cur + 1); });
+
+    box.classList.add('live');
+    show(0);
+  }
+
+  /* de bewijs-showcase: tabs met één paneel tegelijk */
+  function showcase(box) {
+    var tabs = [].slice.call(box.querySelectorAll('.ucs-tb'));
+    var panes = [].slice.call(box.querySelectorAll('.ucs-tp'));
+    if (tabs.length !== panes.length || !tabs.length) return;
+    var cur = tabs.findIndex ? tabs.findIndex(function (t) { return t.classList.contains('on'); }) : 0;
+    if (cur < 0) cur = 0;
+
+    function show(i, focus) {
+      cur = Math.max(0, Math.min(tabs.length - 1, i));
+      tabs.forEach(function (t, n) {
+        var on = n === cur;
+        t.classList.toggle('on', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+      });
+      panes.forEach(function (p, n) { p.classList.toggle('on', n === cur); });
+      if (focus) tabs[cur].focus();
+    }
+
+    tabs.forEach(function (t, n) {
+      t.addEventListener('click', function () { show(n); });
+      t.addEventListener('keydown', function (e) {
+        var k = e.key;
+        if (k === 'ArrowRight' || k === 'ArrowDown') { e.preventDefault(); show(cur + 1 >= tabs.length ? 0 : cur + 1, true); }
+        else if (k === 'ArrowLeft' || k === 'ArrowUp') { e.preventDefault(); show(cur - 1 < 0 ? tabs.length - 1 : cur - 1, true); }
+        else if (k === 'Home') { e.preventDefault(); show(0, true); }
+        else if (k === 'End') { e.preventDefault(); show(tabs.length - 1, true); }
+      });
+    });
+    box.classList.add('live');
+    show(cur);
+  }
+
+  function init() {
+    var boxes = document.querySelectorAll('[data-uc-story]');
+    for (var i = 0; i < boxes.length; i++) story(boxes[i]);
+    var sh = document.querySelectorAll('[data-ev-show]');
+    for (var j = 0; j < sh.length; j++) showcase(sh[j]);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+<noscript><style>.c24 .rv{opacity:1 !important;transform:none !important}</style></noscript>
+</body>
+</html>
