@@ -344,6 +344,7 @@
 .c24 .uc2-ocs.strip{grid-template-columns:1fr 1fr}
 }
 @container page (max-width:640px){
+.c24 .ucs-foot .ucs-tag{white-space:normal;text-align:center;line-height:1.3}
 .c24 .uc2-ocs.strip{grid-template-columns:1fr}
 .c24 .ucs-r{flex-direction:column;gap:3px}
 .c24 .ucs-rl{flex:none}
@@ -356,6 +357,13 @@
 .c24 .ucs-n::before{transform:none;animation:none}
 .c24 .uc2-stg,.c24 .ucs-show.live .ucs-tp.on{animation:none}
 }
+
+/* ── sectorstages (ucsect.py) ── */
+.c24 .ucs-st.mid{background:#FBF1DC;color:#8A6612}
+.c24 .ucs-docs{display:flex;flex-direction:column;gap:8px;margin:14px 0 6px}
+.c24 .ucs-docr{display:flex;align-items:center;gap:9px;padding:10px 12px;border-radius:10px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E9EDF3;font-size:14px;color:#0B1F3B}
+.c24 .ucs-docr .ic{color:#A07E24;flex:0 0 auto}
+.c24 .ucs-docr > span:first-of-type{flex:1 1 auto;min-width:0}
 </style>
 <script type="application/ld+json">
 {
@@ -482,13 +490,16 @@
 <a class="uc2-down rv" style="--rd: .28s" href="#uc-pension-fund-st">Bekijk het scenario<span aria-hidden="true"> ↓</span></a>
 </div>
 <div class="uc2-hr rv" style="--rd: .2s">
-<ul class="uc2-chain hero">
-<li class="uc2-nd" data-nd="0" style="--nd: 0"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Scope</span></li>
-<li class="uc2-nd" data-nd="1" style="--nd: 1"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Bron</span></li>
-<li class="uc2-nd" data-nd="2" style="--nd: 2"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Document</span></li>
-<li class="uc2-nd" data-nd="3" style="--nd: 3"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Bevinding</span></li>
-<li class="uc2-nd" data-nd="4" style="--nd: 4"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Rapport</span></li>
+<div class="ucs ucs-hero">
+<div class="ucs-hd"><span class="ucs-hdt">Uitbesteding · verantwoordelijkheden</span><span class="ucs-tag">Illustratief</span></div><p class="ucs-sub">Wie dekt welke verplichting af: het fonds, de uitvoerder of beide?</p>
+<ul class="ucs-chainc">
+<li class="ucs-n" style="--nd: 0" tabindex="0"><span class="ucs-nk">Bron</span><span class="ucs-nv">Pw · uitbesteding · DNB Good Practice</span><span class="ucs-nd">Per bepaling in scope, met reden</span></li>
+<li class="ucs-n" style="--nd: 1" tabindex="0"><span class="ucs-nk">Document</span><span class="ucs-nv">Uitbestedingsbeleid 2024 · SLA uitvoerder</span><span class="ucs-nd">Twaalf documenten aangeleverd</span></li>
+<li class="ucs-n" style="--nd: 2" tabindex="0"><span class="ucs-nk">Bevinding</span><span class="ucs-nv">Deels afgedekt · taken niet per verplichting toegewezen</span><span class="ucs-nd">Met citaat en onderbouwing</span></li>
+<li class="ucs-n" style="--nd: 3" tabindex="0"><span class="ucs-nk">Rapport</span><span class="ucs-nv">Gapregister · bestuursrapport · actieplan</span><span class="ucs-nd">Export in Excel en Word</span></li>
 </ul>
+<div class="ucs-foot"><span class="ucs-tag warn">Deels afgedekt</span><span class="ucs-tag soft">Het bestuur besluit</span><span class="ucs-src">Bron: Pensioenwet en DNB Good Practice uitbesteding</span></div>
+</div>
 </div>
 </div>
 </section>
@@ -522,7 +533,7 @@
 <div class="wrap">
 <div class="ey rv" style="--rd: 0s">Zo verloopt het</div>
 <h2 class="h2 rv" style="--rd: .08s; max-width: 24ch">Van verplichting naar vastgelegd besluit.</h2>
-<div class="uc2-sg" data-uc-story="pension-fund">
+<div class="uc2-sg v3" data-uc-story="pension-fund">
 <div class="uc2-sl">
 <div class="uc2-rail" role="tablist" aria-orientation="vertical" aria-label="Hoofdstukken">
 <button class="uc2-rb on" type="button" role="tab" id="uct-pension-fund-0" aria-controls="ucp-pension-fund-0" aria-selected="true" tabindex="0" data-uc="0" data-focus="0"><span class="uc2-rn" aria-hidden="true">1</span><span class="uc2-rt">Intake en scope</span></button>
@@ -539,14 +550,29 @@
 <div class="uc2-pane" id="ucp-pension-fund-4" role="tabpanel" aria-labelledby="uct-pension-fund-4" data-uc="4"><h3 class="uc2-pt"><span class="uc2-pn" aria-hidden="true">5</span>Overdracht</h3><div class="uc2-roles"><div class="uc2-role pf"><b>Platform</b><p>De omgeving wordt gesloten, of aangehouden om wijzigingen te blijven volgen met de module Regulatory Intelligence.</p></div><div class="uc2-role tm"><b>Consultants</b><p>Alles wordt overgedragen; het resultaat is van het fonds. Het antwoord aan DNB bestaat uit het gapregister en het actieplan.</p></div></div></div>
 </div>
 <div class="uc2-nav2"><button class="uc2-pv" type="button" data-uc-pv>Vorige</button><span class="uc2-cnt" aria-hidden="true"><b>1</b> / 5</span><button class="uc2-nx" type="button" data-uc-nx>Volgende</button></div></div>
-<div class="uc2-sr"><div class="uc2-sticky"><ul class="uc2-chain">
-<li class="uc2-nd" data-nd="0" style="--nd: 0"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Scope</span></li>
-<li class="uc2-nd" data-nd="1" style="--nd: 1"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Bron</span></li>
-<li class="uc2-nd" data-nd="2" style="--nd: 2"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Document</span></li>
-<li class="uc2-nd" data-nd="3" style="--nd: 3"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Bevinding</span></li>
-<li class="uc2-nd" data-nd="4" style="--nd: 4"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Rapport</span></li>
-</ul>
-<p class="uc2-cap">Illustratief: de keten in dit scenario</p></div></div>
+<div class="uc2-sr"><div class="uc2-sticky v3"><div class="uc2-stgs">
+<div class="uc2-stg on" data-stg="0"><div class="ucs ucs-stage">
+<div class="ucs-hd"><span class="ucs-hdt">Intake en scope</span><span class="ucs-tag">Illustratief</span></div><div class="ucs-r"><span class="ucs-rl">Kaders</span><span class="ucs-rv">Pw · Wtp · IORP II · DORA · Code Pensioenfondsen</span></div><div class="ucs-r"><span class="ucs-rl">Aanleiding</span><span class="ucs-rv">Wtp-transitie · DNB-verzoek uitbesteding</span></div><div class="ucs-r"><span class="ucs-rl">Documenten</span><span class="ucs-rv">12 aangeleverd · beleid, kaders, uitbestedingsovereenkomsten</span></div><div class="ucs-r"><span class="ucs-rl">Uitbesteed</span><span class="ucs-rv">Administratie en vermogensbeheer</span></div><div class="ucs-foot"><span class="ucs-tag ok">Scope vastgesteld met het bestuursbureau</span><span class="ucs-src">Geen software ingevoerd; de consultants werken in een eigen omgeving</span></div>
+</div>
+</div>
+<div class="uc2-stg" data-stg="1" hidden><div class="ucs ucs-stage">
+<div class="ucs-hd"><span class="ucs-hdt">Quick scan · dekking per wet</span><span class="ucs-tag">Illustratief</span></div><p class="ucs-sub">Per verplichting: control, beleidsbepaling, beide of geen van beide</p><div class="ucs-r"><span class="ucs-rl">Pensioenwet</span><span class="ucs-rv">38 van 46 · beide</span></div><div class="ucs-bar" aria-hidden="true"><span style="width: 83%"></span></div><div class="ucs-r warn"><span class="ucs-rl">Uitbesteding</span><span class="ucs-rv">9 van 14 · alleen beleid</span></div><div class="ucs-bar" aria-hidden="true"><span style="width: 64%"></span></div><div class="ucs-r gap"><span class="ucs-rl">DORA</span><span class="ucs-rv">11 van 21 · geen van beide</span></div><div class="ucs-bar" aria-hidden="true"><span style="width: 48%"></span></div><div class="ucs-foot"><span class="ucs-tag soft">Lineage per wet</span><span class="ucs-src">Toont waar de volledige review op moet inzoomen</span></div>
+</div>
+</div>
+<div class="uc2-stg" data-stg="2" hidden><div class="ucs ucs-stage">
+<div class="ucs-hd"><span class="ucs-hdt">Volledige review · bevinding</span><span class="ucs-tag">Illustratief</span></div><div class="ucs-doc"><span class="ucs-dock">Uitbestedingsbeleid 2024 · § 4</span><p class="ucs-quote">De uitvoerder draagt zorg voor een beheerste en integere bedrijfsvoering. <mark>Welke verplichtingen daarmee bij de uitvoerder liggen en welke bij het fonds blijven, is niet vastgelegd.</mark></p></div><div class="ucs-r warn"><span class="ucs-rl">Oordeel</span><span class="ucs-rv">Deels afgedekt</span></div><div class="ucs-r"><span class="ucs-rl">Getoetst aan</span><span class="ucs-rv">Pw uitbesteding · DNB Good Practice · IORP II</span></div><div class="ucs-foot"><span class="ucs-tag ok">Beoordeeld door een consultant</span><span class="ucs-src">Wet tegenover kader, kader tegenover beleid en overeenkomst</span></div>
+</div>
+</div>
+<div class="uc2-stg" data-stg="3" hidden><div class="ucs ucs-stage">
+<div class="ucs-hd"><span class="ucs-hdt">Rapport en actieplan</span><span class="ucs-tag">Illustratief</span></div><div class="ucs-docs"><div class="ucs-docr"><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px"><use href="#i-doc"></use></svg><span>Gapregister per document</span><span class="ucs-tag ok">Excel</span></div><div class="ucs-docr"><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px"><use href="#i-doc"></use></svg><span>Bestuursrapport</span><span class="ucs-tag ok">Word</span></div><div class="ucs-docr"><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px"><use href="#i-doc"></use></svg><span>Actieplan met eigenaren</span><span class="ucs-tag ok">Excel</span></div></div><div class="ucs-r"><span class="ucs-rl">Per verplichting</span><span class="ucs-rv">Verantwoordelijk: fonds, uitvoerder of beide</span></div><div class="ucs-r"><span class="ucs-rl">Wtp-punten</span><span class="ucs-rv">Apart gemarkeerd</span></div><div class="ucs-foot"><span class="ucs-tag soft">Geprioriteerd op wettelijk gewicht en risico</span><span class="ucs-src">Het antwoord aan DNB: gapregister met lineage en een actieplan</span></div>
+</div>
+</div>
+<div class="uc2-stg" data-stg="4" hidden><div class="ucs ucs-stage">
+<div class="ucs-hd"><span class="ucs-hdt">Overdracht</span><span class="ucs-tag">Illustratief</span></div><div class="ucs-flow"><span class="ucs-st new">Review afgerond</span><span class="ucs-arr" aria-hidden="true">→</span><span class="ucs-st new">Export overgedragen</span><span class="ucs-arr" aria-hidden="true">→</span><span class="ucs-st old">Omgeving gesloten</span></div><div class="ucs-r"><span class="ucs-rl">Resultaat</span><span class="ucs-rv">Van u, als export; geen abonnement, geen module</span></div><div class="ucs-r"><span class="ucs-rl">Optioneel</span><span class="ucs-rv">Omgeving aanhouden om wijzigingen te volgen</span></div><div class="ucs-r"><span class="ucs-rl">Vervolg</span><span class="ucs-rv">Actieplan uitvoeren met de eigenaren</span></div><div class="ucs-foot"><span class="ucs-tag ok">Geen software ingevoerd</span><span class="ucs-src">Het bestuur besluit over de opvolging</span></div>
+</div>
+</div>
+</div>
+</div></div>
 </div>
 </div>
 </section>
@@ -556,11 +582,21 @@
 <div class="ey rv" style="--rd: 0s">Wat u ontvangt</div>
 <h2 class="h2 rv" style="--rd: .08s; max-width: 24ch">Bevinding uit de rapportage</h2>
 <p class="lead rv" style="--rd: .14s; max-width: 62ch">Zo ziet een bevinding eruit: met citaat uit uw eigen document, oordeel en prioriteit. Hetzelfde format als het voorbeeldrapport van de QuickScan.</p>
-<div class="uc2-ev rv" style="--rd: .2s">
-<span class="uc2-evtag">Fictief voorbeeld</span>
-<dl class="uc2-ers"><div class="uc2-er"><dt>Verplichting</dt><dd>Uitbesteding: vastlegging van verantwoordelijkheden</dd></div><div class="uc2-er"><dt>Beoordeeld document</dt><dd>Uitbestedingsbeleid, versie 2024</dd></div><div class="uc2-er"><dt>Oordeel</dt><dd>Deels afgedekt</dd></div><div class="uc2-er"><dt>Toelichting</dt><dd>Taken benoemd, maar niet per verplichting toegewezen</dd></div><div class="uc2-er"><dt>Verdeling</dt><dd>Fonds, uitvoerder of gedeeld: per verplichting vastgelegd</dd></div></dl>
-<p class="uc2-evv">Het resultaat is van u, als export; er wordt geen software ingevoerd.</p>
-<a class="btn-ghost lt uc2-rep" href="quickscan.html" style="margin-top: 22px">Bekijk het voorbeeldrapport<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a></div>
+<div class="rv" style="--rd: .2s">
+<div class="ucs-show" data-ev-show>
+<div class="ucs-shl">
+<span class="ucs-tag">Illustratief</span><span class="ucs-shk">Pw · uitbesteding</span><h3 class="ucs-sht">Verdeling van verantwoordelijkheden</h3><span class="ucs-badge warn">DEELS</span><p class="ucs-shp">Het beleid benoemt taken, maar wijst ze niet per verplichting toe aan fonds of uitvoerder.</p><div class="ucs-path" aria-hidden="true"><span>Scope</span><span>Bron</span><span>Document</span><span>Bevinding</span><span>Rapport</span></div><a class="btn-ghost lt uc2-rep" href="quickscan.html" style="margin-top: 22px">Bekijk het voorbeeldrapport<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a></div>
+<div class="ucs-shr">
+<div class="ucs-tabs" role="tablist" aria-label="Onderdeel"><button class="ucs-tb" type="button" role="tab" id="evt-src" aria-controls="evp-src" aria-selected="false" tabindex="-1" data-ev="0">Bron</button><button class="ucs-tb" type="button" role="tab" id="evt-doc" aria-controls="evp-doc" aria-selected="false" tabindex="-1" data-ev="1">Document</button><button class="ucs-tb" type="button" role="tab" id="evt-fnd" aria-controls="evp-fnd" aria-selected="false" tabindex="-1" data-ev="2">Bevinding</button><button class="ucs-tb" type="button" role="tab" id="evt-alc" aria-controls="evp-alc" aria-selected="false" tabindex="-1" data-ev="3">Verdeling</button><button class="ucs-tb on" type="button" role="tab" id="evt-act" aria-controls="evp-act" aria-selected="true" tabindex="0" data-ev="4">Actie</button></div>
+<div class="ucs-tps"><div class="ucs-tp" id="evp-src" role="tabpanel" aria-labelledby="evt-src" data-ev="0"><div class="ucs-r"><span class="ucs-rl">Wet</span><span class="ucs-rv">Pensioenwet · uitbesteding</span></div><div class="ucs-r"><span class="ucs-rl">Toezicht</span><span class="ucs-rv">DNB Good Practice uitbesteding</span></div><div class="ucs-r"><span class="ucs-rl">Verplichting</span><span class="ucs-rv">Het fonds blijft verantwoordelijk voor uitbestede werkzaamheden</span></div></div>
+<div class="ucs-tp" id="evp-doc" role="tabpanel" aria-labelledby="evt-doc" data-ev="1"><div class="ucs-r"><span class="ucs-rl">Beoordeeld</span><span class="ucs-rv">Uitbestedingsbeleid 2024 · SLA uitvoerder</span></div><div class="ucs-doc"><span class="ucs-dock">Uitbestedingsbeleid 2024 · § 4</span><p class="ucs-quote"><mark>Welke verplichtingen bij de uitvoerder liggen en welke bij het fonds blijven, is niet vastgelegd.</mark></p></div></div>
+<div class="ucs-tp" id="evp-fnd" role="tabpanel" aria-labelledby="evt-fnd" data-ev="2"><div class="ucs-r warn"><span class="ucs-rl">Oordeel</span><span class="ucs-rv">Deels afgedekt</span></div><div class="ucs-r"><span class="ucs-rl">Onderbouwing</span><span class="ucs-rv">Taken benoemd, niet per verplichting toegewezen</span></div><div class="ucs-r warn"><span class="ucs-rl">Prioriteit</span><span class="ucs-rv">Hoog · DNB-verzoek</span></div></div>
+<div class="ucs-tp" id="evp-alc" role="tabpanel" aria-labelledby="evt-alc" data-ev="3"><div class="ucs-r"><span class="ucs-rl">Fonds</span><span class="ucs-rv">Beleid, toezicht op de uitvoerder, rapportage aan DNB</span></div><div class="ucs-r"><span class="ucs-rl">Uitvoerder</span><span class="ucs-rv">Administratie, IT, incidentafhandeling</span></div><div class="ucs-r"><span class="ucs-rl">Gedeeld</span><span class="ucs-rv">Continuïteit en exit</span></div></div>
+<div class="ucs-tp on" id="evp-act" role="tabpanel" aria-labelledby="evt-act" data-ev="4"><div class="ucs-r"><span class="ucs-rl">Actie</span><span class="ucs-rv">Verdelingstabel per verplichting opnemen in beleid en SLA</span></div><div class="ucs-r"><span class="ucs-rl">Eigenaar</span><span class="ucs-rv">Bestuursbureau · met de uitvoerder</span></div><div class="ucs-r"><span class="ucs-rl">In het rapport</span><span class="ucs-rv">Gapregister regel 7 · actieplan A-03</span></div></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section>
 
@@ -568,11 +604,12 @@
 <div class="wrap">
 <div class="ey rv" style="--rd: 0s">Wat verandert er?</div>
 <h2 class="h2 rv" style="--rd: .08s; max-width: 24ch">Van verspreide informatie naar één verdedigbaar antwoord.</h2>
-<div class="uc2-cmps">
-<div class="uc2-cmp rv" style="--rd: .08s"><h3 class="uc2-cmh">Dekking van de wetgeving</h3><div class="uc2-cb"><span class="uc2-cl2">Voorheen</span><p>Onbekend</p></div><div class="uc2-ca"><span class="uc2-cl2">Met Comply24</span><p>Per verplichting: control, beleidsbepaling, beide of geen van beide</p></div></div>
-<div class="uc2-cmp rv" style="--rd: .15s"><h3 class="uc2-cmh">Uitbesteding</h3><div class="uc2-cb"><span class="uc2-cl2">Voorheen</span><p>Verantwoordelijkheid onduidelijk</p></div><div class="uc2-ca"><span class="uc2-cl2">Met Comply24</span><p>Per verplichting vastgelegd: fonds, uitvoerder of gedeeld</p></div></div>
-<div class="uc2-cmp rv" style="--rd: .22s"><h3 class="uc2-cmh">Antwoord aan DNB</h3><div class="uc2-cb"><span class="uc2-cl2">Voorheen</span><p>Memo van een adviseur</p></div><div class="uc2-ca"><span class="uc2-cl2">Met Comply24</span><p>Gapregister met lineage en een actieplan</p></div></div>
-<div class="uc2-cmp rv" style="--rd: .29s"><h3 class="uc2-cmh">Software</h3><div class="uc2-cb"><span class="uc2-cl2">Voorheen</span><p>Niet gewenst</p></div><div class="uc2-ca"><span class="uc2-cl2">Met Comply24</span><p>Niet ingevoerd; resultaat als export; een module blijft later mogelijk</p></div></div>
+<div class="ucsp">
+<div class="ucsp-h"><span class="ucsp-hd"></span><span class="ucsp-hb">Voorheen · verspreid</span><span class="ucsp-ha">Met Comply24 · gekoppeld</span></div>
+<div class="ucsp-r" style="--nd: 0"><span class="ucsp-d">Dekking van de wetgeving</span><span class="ucsp-b">Onbekend</span><span class="ucsp-a">Per verplichting: control, beleidsbepaling, beide of geen van beide</span></div>
+<div class="ucsp-r" style="--nd: 1"><span class="ucsp-d">Uitbesteding</span><span class="ucsp-b">Verantwoordelijkheid onduidelijk</span><span class="ucsp-a">Per verplichting vastgelegd: fonds, uitvoerder of gedeeld</span></div>
+<div class="ucsp-r" style="--nd: 2"><span class="ucsp-d">Antwoord aan DNB</span><span class="ucsp-b">Memo van een adviseur</span><span class="ucsp-a">Gapregister met lineage en een actieplan</span></div>
+<div class="ucsp-r" style="--nd: 3"><span class="ucsp-d">Software</span><span class="ucsp-b">Niet gewenst</span><span class="ucsp-a">Niet ingevoerd; resultaat als export; een module blijft later mogelijk</span></div>
 </div>
 </div>
 </section>
@@ -586,9 +623,10 @@
 <div class="uc2-route rv" style="--rd: .2s"><span class="uc2-rk">Het platform</span><h3>Platformdemo</h3><p>Bekijk hoe dit proces doorlopend in Comply24 werkt, op uw eigen scope.</p><a class="btn-ghost" href="demo.html">Plan een platformdemo<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a></div>
 </div>
 </div>
-<div class="uc2-others"><span class="uc2-oh">Use cases per sector</span><div class="uc2-ocs"><a class="uc2-oc" href="use-case-bank.html"><span class="uc2-ocl">Use case</span><span class="uc2-ocn">Bank</span><span class="uc2-oca" aria-hidden="true">→</span></a>
-<a class="uc2-oc" href="use-case-verzekeraar.html"><span class="uc2-ocl">Use case</span><span class="uc2-ocn">Verzekeraar</span><span class="uc2-oca" aria-hidden="true">→</span></a>
-<a class="uc2-oc" href="use-case-beleggingsonderneming.html"><span class="uc2-ocl">Use case</span><span class="uc2-ocn">Beleggingsonderneming</span><span class="uc2-oca" aria-hidden="true">→</span></a>
+<div class="uc2-others"><span class="uc2-oh">Use cases per sector</span><div class="uc2-ocs strip"><a class="uc2-oc" href="use-case-bank.html"><span class="uc2-ocn">Bank</span><span class="uc2-oca" aria-hidden="true">→</span></a>
+<a class="uc2-oc" href="use-case-verzekeraar.html"><span class="uc2-ocn">Verzekeraar</span><span class="uc2-oca" aria-hidden="true">→</span></a>
+<a class="uc2-oc" href="use-case-beleggingsonderneming.html"><span class="uc2-ocn">Beleggingsonderneming</span><span class="uc2-oca" aria-hidden="true">→</span></a>
+<span class="uc2-oc on" aria-current="page"><span class="uc2-ocn">Pensioenfonds</span><span class="uc2-ocl">U bent hier</span></span>
 </div></div>
 </div>
 </section>

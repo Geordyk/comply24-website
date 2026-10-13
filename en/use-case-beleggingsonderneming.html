@@ -344,6 +344,7 @@
 .c24 .uc2-ocs.strip{grid-template-columns:1fr 1fr}
 }
 @container page (max-width:640px){
+.c24 .ucs-foot .ucs-tag{white-space:normal;text-align:center;line-height:1.3}
 .c24 .uc2-ocs.strip{grid-template-columns:1fr}
 .c24 .ucs-r{flex-direction:column;gap:3px}
 .c24 .ucs-rl{flex:none}
@@ -356,6 +357,13 @@
 .c24 .ucs-n::before{transform:none;animation:none}
 .c24 .uc2-stg,.c24 .ucs-show.live .ucs-tp.on{animation:none}
 }
+
+/* ── sectorstages (ucsect.py) ── */
+.c24 .ucs-st.mid{background:#FBF1DC;color:#8A6612}
+.c24 .ucs-docs{display:flex;flex-direction:column;gap:8px;margin:14px 0 6px}
+.c24 .ucs-docr{display:flex;align-items:center;gap:9px;padding:10px 12px;border-radius:10px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E9EDF3;font-size:14px;color:#0B1F3B}
+.c24 .ucs-docr .ic{color:#A07E24;flex:0 0 auto}
+.c24 .ucs-docr > span:first-of-type{flex:1 1 auto;min-width:0}
 </style>
 <script type="application/ld+json">
 {
@@ -482,13 +490,16 @@
 <a class="uc2-down rv" style="--rd: .28s" href="#uc-investment-firm-st">Explore the scenario<span aria-hidden="true"> ↓</span></a>
 </div>
 <div class="uc2-hr rv" style="--rd: .2s">
-<ul class="uc2-chain hero">
-<li class="uc2-nd" data-nd="0" style="--nd: 0"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Provision</span></li>
-<li class="uc2-nd" data-nd="1" style="--nd: 1"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Control</span></li>
-<li class="uc2-nd" data-nd="2" style="--nd: 2"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Policy clause</span></li>
-<li class="uc2-nd" data-nd="3" style="--nd: 3"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Gap</span></li>
-<li class="uc2-nd" data-nd="4" style="--nd: 4"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Action and review</span></li>
+<div class="ucs ucs-hero">
+<div class="ucs-hd"><span class="ucs-hdt">MiFID II · conflicts of interest</span><span class="ucs-tag">Illustrative</span></div><p class="ucs-sub">Organisational requirements: recording and managing conflicts of interest</p>
+<ul class="ucs-chainc">
+<li class="ucs-n" style="--nd: 0" tabindex="0"><span class="ucs-nk">Control</span><span class="ucs-nv">C-23 · conflicts register</span><span class="ucs-nd">From the SCF library · approved</span></li>
+<li class="ucs-n" style="--nd: 1" tabindex="0"><span class="ucs-nk">Policy clause</span><span class="ucs-nv">Conflicts policy § 2</span><span class="ucs-nd">Policy Creator · draft v1</span></li>
+<li class="ucs-n" style="--nd: 2" tabindex="0"><span class="ucs-nk">Gap</span><span class="ucs-nv">Recording duty not documented</span><span class="ucs-nd">Finding with citation and rationale</span></li>
+<li class="ucs-n" style="--nd: 3" tabindex="0"><span class="ucs-nk">Action and review</span><span class="ucs-nv">Gap project G-07 · second-line reviewer</span><span class="ucs-nd">Definition of done and evidence</span></li>
 </ul>
+<div class="ucs-foot"><span class="ucs-tag warn">Partially covered</span><span class="ucs-tag soft">Review by a second person</span><span class="ucs-src">Source: Directive 2014/65/EU, art. 16 and 23</span></div>
+</div>
 </div>
 </div>
 </section>
@@ -522,7 +533,7 @@
 <div class="wrap">
 <div class="ey rv" style="--rd: 0s">How it runs</div>
 <h2 class="h2 rv" style="--rd: .08s; max-width: 24ch">From obligation to recorded decision.</h2>
-<div class="uc2-sg" data-uc-story="investment-firm">
+<div class="uc2-sg v3" data-uc-story="investment-firm">
 <div class="uc2-sl">
 <div class="uc2-rail" role="tablist" aria-orientation="vertical" aria-label="Chapters">
 <button class="uc2-rb on" type="button" role="tab" id="uct-investment-firm-0" aria-controls="ucp-investment-firm-0" aria-selected="true" tabindex="0" data-uc="0" data-focus="0"><span class="uc2-rn" aria-hidden="true">1</span><span class="uc2-rt">Scope and obligations</span></button>
@@ -539,14 +550,29 @@
 <div class="uc2-pane" id="ucp-investment-firm-4" role="tabpanel" aria-labelledby="uct-investment-firm-4" data-uc="4"><h3 class="uc2-pt"><span class="uc2-pn" aria-hidden="true">5</span>Keep it current</h3><div class="uc2-roles"><div class="uc2-role pf"><b>Platform</b><p>News and radar within the scope. Alerts on changed provisions land on the clause and the control. A change runs the same process as a gap.</p></div><div class="uc2-role tm"><b>Professional</b><p>A change is a task, not a project.</p></div></div></div>
 </div>
 <div class="uc2-nav2"><button class="uc2-pv" type="button" data-uc-pv>Previous</button><span class="uc2-cnt" aria-hidden="true"><b>1</b> / 5</span><button class="uc2-nx" type="button" data-uc-nx>Next</button></div></div>
-<div class="uc2-sr"><div class="uc2-sticky"><ul class="uc2-chain">
-<li class="uc2-nd" data-nd="0" style="--nd: 0"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Provision</span></li>
-<li class="uc2-nd" data-nd="1" style="--nd: 1"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Control</span></li>
-<li class="uc2-nd" data-nd="2" style="--nd: 2"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Policy clause</span></li>
-<li class="uc2-nd" data-nd="3" style="--nd: 3"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Gap</span></li>
-<li class="uc2-nd" data-nd="4" style="--nd: 4"><span class="uc2-dot" aria-hidden="true"></span><span class="uc2-ndl">Action and review</span></li>
-</ul>
-<p class="uc2-cap">Illustrative, the chain for this scenario</p></div></div>
+<div class="uc2-sr"><div class="uc2-sticky v3"><div class="uc2-stgs">
+<div class="uc2-stg on" data-stg="0"><div class="ucs ucs-stage">
+<div class="ucs-hd"><span class="ucs-hdt">Scope and obligations</span><span class="ucs-tag">Illustrative</span></div><p class="ucs-sub">Licence, activities and products set the scope</p><div class="ucs-r"><span class="ucs-rl">MiFID II</span><span class="ucs-rv">In scope · 86 obligations</span></div><div class="ucs-r"><span class="ucs-rl">AIFMD · UCITS</span><span class="ucs-rv">In scope · fund management</span></div><div class="ucs-r"><span class="ucs-rl">Wwft · SFDR · MAR</span><span class="ucs-rv">In scope</span></div><div class="ucs-r"><span class="ucs-rl">DORA</span><span class="ucs-rv">In scope · ICT risk</span></div><div class="ucs-foot"><span class="ucs-tag ok">Merged and prioritised</span><span class="ucs-src">Overlapping provisions once; priority with its basis</span></div>
+</div>
+</div>
+<div class="uc2-stg" data-stg="1" hidden><div class="ucs ucs-stage">
+<div class="ucs-hd"><span class="ucs-hdt">Control framework · proposal</span><span class="ucs-tag">Illustrative</span></div><p class="ucs-sub">Sector frameworks and the SCF library merged into one set</p><div class="ucs-r link"><span class="ucs-rl">C-23</span><span class="ucs-rv">Conflicts register · approved</span></div><div class="ucs-r link"><span class="ucs-rl">C-31</span><span class="ucs-rv">Order execution and best execution · approved</span></div><div class="ucs-r warn"><span class="ucs-rl">C-44</span><span class="ucs-rv">Product governance · for review</span></div><div class="ucs-r"><span class="ucs-rl">Conflict</span><span class="ucs-rv">Two sources for C-31 · decision in the decision log</span></div><div class="ucs-foot"><span class="ucs-tag ok">Established in Finalize</span><span class="ucs-src">Compliance Risk Assessor prioritises; the head of compliance approves</span></div>
+</div>
+</div>
+<div class="uc2-stg" data-stg="2" hidden><div class="ucs ucs-stage">
+<div class="ucs-hd"><span class="ucs-hdt">Policy house · build</span><span class="ucs-tag">Illustrative</span></div><p class="ucs-sub">Template Merger and Policy Creator, per domain</p><div class="ucs-docs"><div class="ucs-docr"><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px"><use href="#i-doc"></use></svg><span>Conflicts of interest policy v1</span><span class="ucs-tag warn">Draft</span></div><div class="ucs-docr"><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px"><use href="#i-doc"></use></svg><span>Order execution policy v2</span><span class="ucs-tag ok">Adopted</span></div><div class="ucs-docr"><svg class="ic" aria-hidden="true" style="width: 17px; height: 17px"><use href="#i-doc"></use></svg><span>Product governance work instruction</span><span class="ucs-tag warn">Draft</span></div></div><div class="ucs-r"><span class="ucs-rl">Linked</span><span class="ucs-rv">Every clause to the obligation it covers</span></div><div class="ucs-foot"><span class="ucs-tag soft">Own templates reused</span><span class="ucs-src">External counsel reviews the texts before adoption</span></div>
+</div>
+</div>
+<div class="uc2-stg" data-stg="3" hidden><div class="ucs ucs-stage">
+<div class="ucs-hd"><span class="ucs-hdt">Gap register</span><span class="ucs-tag">Illustrative</span></div><div class="ucs-r gap"><span class="ucs-rl">MiFID II · conflicts of interest</span><span class="ucs-rv">Gap · recording duty not documented</span></div><div class="ucs-r link"><span class="ucs-rl">MiFID II · best execution</span><span class="ucs-rv">Covered · C-31, policy v2</span></div><div class="ucs-r warn"><span class="ucs-rl">Wwft · customer due diligence</span><span class="ucs-rv">Partial · work instruction missing</span></div><div class="ucs-r"><span class="ucs-rl">Gap project G-07</span><span class="ucs-rv">Owner head of compliance · second-line reviewer</span></div><div class="ucs-foot"><span class="ucs-tag ok">Gap closed only after review</span><span class="ucs-src">Finding, rationale and citation per document</span></div>
+</div>
+</div>
+<div class="uc2-stg" data-stg="4" hidden><div class="ucs ucs-stage">
+<div class="ucs-hd"><span class="ucs-hdt">Impact alert · MiFID II</span><span class="ucs-tag">Illustrative</span></div><div class="ucs-art"><span class="ucs-artk">ESMA · Q&A belangenconflicten</span><p class="ucs-artq">Clarification of the recording duty for personal transactions.</p></div><div class="ucs-r"><span class="ucs-rl">Lands on</span><span class="ucs-rv">Conflicts policy § 2 · control C-23</span></div><div class="ucs-r"><span class="ucs-rl">Change</span><span class="ucs-rv">Same process as a gap: owner, plan, evidence, review</span></div><div class="ucs-flow"><span class="ucs-st old">Open</span><span class="ucs-arr" aria-hidden="true">→</span><span class="ucs-st mid">In progress</span><span class="ucs-arr" aria-hidden="true">→</span><span class="ucs-st new">Closed</span></div><div class="ucs-foot"><span class="ucs-tag ok">Lineage per article exportable</span><span class="ucs-src">For an AFM enquiry: an export instead of a search</span></div>
+</div>
+</div>
+</div>
+</div></div>
 </div>
 </div>
 </section>
@@ -556,10 +582,20 @@
 <div class="ey rv" style="--rd: 0s">What you receive</div>
 <h2 class="h2 rv" style="--rd: .08s; max-width: 24ch">Row from the gap register</h2>
 <p class="lead rv" style="--rd: .14s; max-width: 62ch">One row per obligation: what is covered, what is not, and who validates the follow-up.</p>
-<div class="uc2-ev rv" style="--rd: .2s">
-<span class="uc2-evtag">Fictitious example</span>
-<dl class="uc2-ers"><div class="uc2-er"><dt>Provision</dt><dd>MiFID II, organisational requirements, conflicts of interest</dd></div><div class="uc2-er"><dt>Control</dt><dd>No control linked</dd></div><div class="uc2-er"><dt>Policy clause</dt><dd>Conflicts of interest policy § 2, partial</dd></div><div class="uc2-er"><dt>Judgement</dt><dd>Gap, the recording obligation is not documented</dd></div><div class="uc2-er"><dt>Follow-up</dt><dd>Gap project with an owner and a reviewer</dd></div></dl>
-<p class="uc2-evv">The judgement traces back to provision, clause and reviewer.</p>
+<div class="rv" style="--rd: .2s">
+<div class="ucs-show" data-ev-show>
+<div class="ucs-shl">
+<span class="ucs-tag">Illustrative</span><span class="ucs-shk">MiFID II · belangenconflicten</span><h3 class="ucs-sht">Recording duty not documented</h3><span class="ucs-badge warn">GAP</span><p class="ucs-shp">Control C-23 exists; the policy does not describe the recording. The gap project has an owner and a reviewer.</p><div class="ucs-path" aria-hidden="true"><span>Provision</span><span>Control</span><span>Policy clause</span><span>Gap</span><span>Action and review</span></div></div>
+<div class="ucs-shr">
+<div class="ucs-tabs" role="tablist" aria-label="Section"><button class="ucs-tb" type="button" role="tab" id="evt-prv" aria-controls="evp-prv" aria-selected="false" tabindex="-1" data-ev="0">Provision</button><button class="ucs-tb" type="button" role="tab" id="evt-ctl" aria-controls="evp-ctl" aria-selected="false" tabindex="-1" data-ev="1">Control</button><button class="ucs-tb" type="button" role="tab" id="evt-pol" aria-controls="evp-pol" aria-selected="false" tabindex="-1" data-ev="2">Policy clause</button><button class="ucs-tb" type="button" role="tab" id="evt-jud" aria-controls="evp-jud" aria-selected="false" tabindex="-1" data-ev="3">Judgement</button><button class="ucs-tb on" type="button" role="tab" id="evt-act" aria-controls="evp-act" aria-selected="true" tabindex="0" data-ev="4">Follow-up</button></div>
+<div class="ucs-tps"><div class="ucs-tp" id="evp-prv" role="tabpanel" aria-labelledby="evt-prv" data-ev="0"><div class="ucs-r"><span class="ucs-rl">Directive</span><span class="ucs-rv">MiFID II · Directive 2014/65/EU</span></div><div class="ucs-r"><span class="ucs-rl">Obligation</span><span class="ucs-rv">Identify, record and manage conflicts of interest</span></div><div class="ucs-r warn"><span class="ucs-rl">Priority</span><span class="ucs-rv">High</span></div></div>
+<div class="ucs-tp" id="evp-ctl" role="tabpanel" aria-labelledby="evt-ctl" data-ev="1"><div class="ucs-r"><span class="ucs-rl">Control</span><span class="ucs-rv">C-23 · conflicts register</span></div><div class="ucs-r"><span class="ucs-rl">Source</span><span class="ucs-rv">SCF control library</span></div><div class="ucs-r ok"><span class="ucs-rl">Status</span><span class="ucs-rv">Approved in Finalize</span></div></div>
+<div class="ucs-tp" id="evp-pol" role="tabpanel" aria-labelledby="evt-pol" data-ev="2"><div class="ucs-doc"><span class="ucs-dock">Conflicts of interest policy, draft v1 · § 2</span><p class="ucs-quote">Employees report potential conflicts to compliance. <mark>How and where these are recorded is not described.</mark></p></div><div class="ucs-r warn"><span class="ucs-rl">Status</span><span class="ucs-rv">Draft v1 · Policy Creator</span></div><div class="ucs-r link"><span class="ucs-rl">Linked to</span><span class="ucs-rv">Control C-23 · MiFID II art. 23</span></div></div>
+<div class="ucs-tp" id="evp-jud" role="tabpanel" aria-labelledby="evt-jud" data-ev="3"><div class="ucs-r gap"><span class="ucs-rl">Judgement</span><span class="ucs-rv">Gap</span></div><div class="ucs-r"><span class="ucs-rl">Rationale</span><span class="ucs-rv">The recording duty from art. 23 is missing from the policy</span></div><div class="ucs-r"><span class="ucs-rl">Reviewer</span><span class="ucs-rv">Head of compliance · confirmed</span></div></div>
+<div class="ucs-tp on" id="evp-act" role="tabpanel" aria-labelledby="evt-act" data-ev="4"><div class="ucs-r"><span class="ucs-rl">Gap project</span><span class="ucs-rv">G-07 · extend § 2 with recording and retention</span></div><div class="ucs-r"><span class="ucs-rl">Definition of done</span><span class="ucs-rv">Policy adopted · register set up · evidence linked</span></div><div class="ucs-r"><span class="ucs-rl">Reviewer</span><span class="ucs-rv">Second line · not the author</span></div></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -568,11 +604,12 @@
 <div class="wrap">
 <div class="ey rv" style="--rd: 0s">What changes?</div>
 <h2 class="h2 rv" style="--rd: .08s; max-width: 24ch">From fragmented information to a defensible answer.</h2>
-<div class="uc2-cmps">
-<div class="uc2-cmp rv" style="--rd: .08s"><h3 class="uc2-cmh">Control framework</h3><div class="uc2-cb"><span class="uc2-cl2">Before</span><p>Spreadsheet, template copy</p></div><div class="uc2-ca"><span class="uc2-cl2">With Comply24</span><p>Approved controls with obligations, priorities and reasons</p></div></div>
-<div class="uc2-cmp rv" style="--rd: .15s"><h3 class="uc2-cmh">Policy house</h3><div class="uc2-cb"><span class="uc2-cl2">Before</span><p>Written per audit finding</p></div><div class="uc2-ca"><span class="uc2-cl2">With Comply24</span><p>Generated per obligation in house style, clause-linked</p></div></div>
-<div class="uc2-cmp rv" style="--rd: .22s"><h3 class="uc2-cmh">Gaps</h3><div class="uc2-cb"><span class="uc2-cl2">Before</span><p>Unknown</p></div><div class="uc2-ca"><span class="uc2-cl2">With Comply24</span><p>Gap register per document, resolved as gap projects with evidence</p></div></div>
-<div class="uc2-cmp rv" style="--rd: .29s"><h3 class="uc2-cmh">Regulatory change</h3><div class="uc2-cb"><span class="uc2-cl2">Before</span><p>Counsel memo and rewrite</p></div><div class="uc2-ca"><span class="uc2-cl2">With Comply24</span><p>Alert on the clause, change with owner</p></div></div>
+<div class="ucsp">
+<div class="ucsp-h"><span class="ucsp-hd"></span><span class="ucsp-hb">Before · scattered</span><span class="ucsp-ha">With Comply24 · linked</span></div>
+<div class="ucsp-r" style="--nd: 0"><span class="ucsp-d">Control framework</span><span class="ucsp-b">Spreadsheet, template copy</span><span class="ucsp-a">Approved controls with obligations, priorities and reasons</span></div>
+<div class="ucsp-r" style="--nd: 1"><span class="ucsp-d">Policy house</span><span class="ucsp-b">Written per audit finding</span><span class="ucsp-a">Generated per obligation in house style, clause-linked</span></div>
+<div class="ucsp-r" style="--nd: 2"><span class="ucsp-d">Gaps</span><span class="ucsp-b">Unknown</span><span class="ucsp-a">Gap register per document, resolved as gap projects with evidence</span></div>
+<div class="ucsp-r" style="--nd: 3"><span class="ucsp-d">Regulatory change</span><span class="ucsp-b">Counsel memo and rewrite</span><span class="ucsp-a">Alert on the clause, change with owner</span></div>
 </div>
 </div>
 </section>
@@ -586,9 +623,10 @@
 <div class="uc2-route rv" style="--rd: .2s"><span class="uc2-rk">The platform</span><h3>Platform demo</h3><p>See how this process runs continuously in Comply24, on your own scope.</p><a class="btn-ghost" href="demo.html">Book a platform demo<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a></div>
 </div>
 </div>
-<div class="uc2-others"><span class="uc2-oh">Use cases by sector</span><div class="uc2-ocs"><a class="uc2-oc" href="use-case-bank.html"><span class="uc2-ocl">Use case</span><span class="uc2-ocn">Bank</span><span class="uc2-oca" aria-hidden="true">→</span></a>
-<a class="uc2-oc" href="use-case-verzekeraar.html"><span class="uc2-ocl">Use case</span><span class="uc2-ocn">Insurer</span><span class="uc2-oca" aria-hidden="true">→</span></a>
-<a class="uc2-oc" href="use-case-pensioenfonds.html"><span class="uc2-ocl">Use case</span><span class="uc2-ocn">Pension fund</span><span class="uc2-oca" aria-hidden="true">→</span></a>
+<div class="uc2-others"><span class="uc2-oh">Use cases by sector</span><div class="uc2-ocs strip"><a class="uc2-oc" href="use-case-bank.html"><span class="uc2-ocn">Bank</span><span class="uc2-oca" aria-hidden="true">→</span></a>
+<a class="uc2-oc" href="use-case-verzekeraar.html"><span class="uc2-ocn">Insurer</span><span class="uc2-oca" aria-hidden="true">→</span></a>
+<span class="uc2-oc on" aria-current="page"><span class="uc2-ocn">Investment firm</span><span class="uc2-ocl">You are here</span></span>
+<a class="uc2-oc" href="use-case-pensioenfonds.html"><span class="uc2-ocn">Pension fund</span><span class="uc2-oca" aria-hidden="true">→</span></a>
 </div></div>
 </div>
 </section>
