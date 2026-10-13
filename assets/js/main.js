@@ -492,3 +492,19 @@ class Component extends DCLogic {
     it.addEventListener('keydown', function (e) { if (e.key === 'Escape') { close(); a.focus(); } });
   });
 })();
+
+/* ronde A: onderwerp van het contactformulier vooraf kiezen via ?s= */
+(function () {
+  'use strict';
+  var map = { demo: 0, quickscan: 1, review: 2, prijslijst: 3, beveiliging: 4 };
+  var m = /[?&]s=([a-z]+)/.exec(location.search);
+  if (!m || !(m[1] in map)) return;
+  var idx = map[m[1]];
+  function go() {
+    var sels = document.querySelectorAll('select[name^="subject-"]');
+    for (var i = 0; i < sels.length; i++) {
+      if (sels[i].options.length > idx) sels[i].selectedIndex = idx;
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go); else go();
+})();
