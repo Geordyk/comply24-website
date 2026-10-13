@@ -1637,7 +1637,6 @@ html{scroll-behavior:auto}
 .c24 .uc2-hw{flex-direction:column;align-items:stretch}
 .c24 .uc2-hr{margin-top:8px}
 .c24 .uc2-sg{flex-direction:column}
-.c24 .uc2-sr{order:-1}
 .c24 .uc2-sticky{position:static}
 .c24 .uc2-end{flex-direction:column}
 .c24 .uc2-adopt,.c24 .uc2-routes{width:100%}
@@ -2097,3 +2096,42 @@ html{scroll-behavior:auto}
 .c24 #security-blocks .g3 .secblk:nth-child(5){grid-column:span 2}
 @container page (max-width:860px){.c24 #security-blocks .g3 .secblk:nth-child(5){grid-column:auto}}
 @container page (max-width:860px){.c24 .mgrid-teaser{grid-template-columns:minmax(0,1fr)}}
+
+
+/* ── ronde C ─────────────────────────────────────────────────────────────── */
+/* stapnummers op control testing */
+.c24 .ctf{padding-right:52px}
+.c24 .ctf-n{position:absolute;top:16px;right:16px;display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#FBF1DC;font-size:12px;font-weight:700;color:#A07E24}
+/* stappaneel use cases */
+.c24 .uc2-stgn{display:block;margin:0 0 10px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#A07E24}
+/* radar: blips leesbaar */
+.c24 .blip b{font-size:13px}
+.c24 .blip small{font-size:11.5px}
+.c24 .radar-ring{font-size:11.5px}
+/* decoratie uit de leeskolom */
+.c24 .cf-bg{opacity:.55}
+/* knoppen mogen op mobiel wrappen */
+.c24 .rolep-cta{white-space:normal}
+/* voor/na op mobiel: ook de na-regel krijgt een label */
+@container page (max-width:860px){
+.c24 .ucsp-a::after{content:"Met Comply24 — ";font-weight:700;color:#A07E24}
+.c24 .l-en .ucsp-a::after{content:"With Comply24 — "}
+.c24 .ucsp-a{display:flex;flex-wrap:wrap;gap:0 6px}
+.c24 .ucsp-a::after{order:-1}
+}
+/* hero-lineage: sublabels op mobiel groter in SVG-eenheden */
+@container page (max-width:640px){
+.c24 .cn text.sub{font-size:15px}
+.c24 .cn text.g{font-size:17px}
+.c24 .inst span{font-family:inherit;font-size:13px}
+.c24 .hw-lr{flex-wrap:wrap;gap:6px 12px}
+.c24 .hw-lrn{flex:1 1 calc(100% - 40px)}
+.c24 .hw-lr .ucs-tag{margin-left:38px}
+}
+/* hoe het werkt: op één kolom staat Vorige/Volgende onder het paneel */
+@container page (max-width:1099px){
+.c24 .hw-l{display:contents}
+.c24 .hw-rail{order:1;width:100%}
+.c24 .hw-r{order:2}
+.c24 .hw-nav{order:3;margin-top:0}
+}
