@@ -1839,7 +1839,7 @@ html{scroll-behavior:auto}
 .c24 .riswap > div:last-child{order:1;display:flex;flex-direction:column}
 .c24 .riswap .pts{display:flex;flex-direction:column;justify-content:space-between;gap:clamp(26px,3cqw,46px)}
 .c24 .riswap .pts li{margin:0}
-.c24 .riswap > div:last-child > div:last-child{margin-top:auto !important;padding-top:30px}
+.c24 .riswap > div:last-child > div:last-child{margin-top:28px !important}
 .c24 .riswap > div:first-child > div:last-child{margin-top:auto}
 
 @container page (max-width:1000px){
@@ -2085,3 +2085,15 @@ html{scroll-behavior:auto}
 .c24 .fcols{grid-template-columns:minmax(0,1fr) !important;gap:28px 0 !important}
 .c24 .fcols .flink{overflow-wrap:normal}
 }
+
+
+/* ── ronde B ─────────────────────────────────────────────────────────────── */
+.c24 .mgrid-teaser{grid-template-columns:repeat(2,minmax(0,1fr))}
+.c24 .mgrid-teaser .card.mod{display:flex;flex-direction:column}
+.c24 .mgrid-teaser .mod-cta{margin-top:auto}
+.c24 .modnote{margin:28px 0 0;max-width:72ch;font-size:15.5px;line-height:1.6;color:#55617A}
+.c24 .modnote a{color:#0B1F3B;font-weight:600;text-decoration:underline;text-decoration-color:#C8A24A;text-underline-offset:3px}
+.c24 #testing .lead{margin-top:0}
+.c24 #security-blocks .g3 .secblk:nth-child(5){grid-column:span 2}
+@container page (max-width:860px){.c24 #security-blocks .g3 .secblk:nth-child(5){grid-column:auto}}
+@container page (max-width:860px){.c24 .mgrid-teaser{grid-template-columns:minmax(0,1fr)}}
