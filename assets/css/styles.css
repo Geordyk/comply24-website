@@ -2219,6 +2219,22 @@ html{scroll-behavior:auto}
 .c24 .pv-blk a{text-decoration:underline;text-decoration-color:#C8A24A;text-underline-offset:3px;color:#0B1F3B}
 
 
+.c24 .rcaps-bgm{background:#FFFFFF}
+.c24 .rcaps-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:.6}
+.c24 .rcaps-wash{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.88) 0%,rgba(255,255,255,.55) 45%,rgba(255,255,255,.8) 100%)}
+.c24 .rcaps-bgm .rcaps-w{flex-direction:column;gap:clamp(24px,2.6cqw,40px)}
+.c24 .rcaps-bgm .rcaps-l{flex:1 1 auto;width:100%}
+.c24 .rcaps-bgm .rcaps-l .h2{max-width:none}
+.c24 .rcaps-bgm .rcaps-l .lead{max-width:62ch}
+.c24 .rcaps-bgm .rcaps-g{width:100%;grid-template-columns:repeat(4,minmax(0,1fr))}
+.c24 .rcaps-5 .rcaps-g{grid-template-columns:repeat(5,minmax(0,1fr))}
+.c24 .rcaps-5 .rcap{padding:clamp(14px,1.4cqw,20px)}
+.c24 .rcaps-5 .rcap-t{font-size:15px}.c24 .rcaps-5 .rcap-d{font-size:13.5px}
+@container page (max-width:1250px){.c24 .rcaps-5 .rcaps-g{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.c24 .rcaps-bgm .rcap{background:rgba(255,255,255,.94);backdrop-filter:blur(4px)}
+@container page (max-width:1099px){.c24 .rcaps-bgm .rcaps-g{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container page (max-width:640px){.c24 .rcaps-bgm .rcaps-g{grid-template-columns:1fr}}
+
 /* ── drie modules ──────────────────────────────────────────────────────── */
 .c24 .ri-screen{border-radius:16px;background:#FFFFFF;box-shadow:0 30px 70px rgba(0,0,0,.35)}
 .c24 .mgrid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
