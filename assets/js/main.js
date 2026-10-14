@@ -496,7 +496,7 @@ class Component extends DCLogic {
 /* ronde A: onderwerp van het contactformulier vooraf kiezen via ?s= */
 (function () {
   'use strict';
-  var map = { demo: 0, quickscan: 1, review: 2, prijslijst: 3, beveiliging: 4 };
+  var map = { demo: 0, healthcheck: 1, quickscan: 1, review: 1, prijslijst: 2, beveiliging: 3 };
   var m = /[?&]s=([a-z]+)/.exec(location.search);
   if (!m || !(m[1] in map)) return;
   var idx = map[m[1]];

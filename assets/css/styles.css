@@ -2295,3 +2295,40 @@ html{scroll-behavior:auto}
 @container page (max-width:640px){.c24 .mnc-ar{display:none}.c24 .modnote-card{gap:14px;padding:16px 18px}}
 @container page (max-width:1000px){.c24 .fnd-g{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @container page (max-width:640px){.c24 .fnd-g{grid-template-columns:minmax(0,1fr)}}
+
+/* ── v1.9: Compliance Health Check ────────────────────────────────────── */
+.c24 .hcs{padding:22px 24px 20px;border-radius:18px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.c24 .hcs-h{display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#E2BE6A}
+.c24 .hcs-dot{width:8px;height:8px;border-radius:50%;background:#C8A24A;box-shadow:0 0 0 4px rgba(200,162,74,.25)}
+.c24 .hcs-l{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:0}
+.c24 .hcs-r{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid rgba(255,255,255,.1)}
+.c24 .hcs-s{font-weight:700;color:#FFFFFF}
+.c24 .hcs-e{text-align:right;font-size:14px;color:#C3CCDB}
+.c24 .hcs-f{margin:14px 0 0;font-size:13px;color:#8C9BB5}
+.c24 .hcw{padding:28px 26px 26px}
+.c24 .hcw-ic{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:#FBF1DC}
+.c24 .hcw h3{margin:18px 0 8px;font-size:19px;letter-spacing:-.02em;color:#0B1F3B}
+.c24 .hcw p{margin:0;font-size:15px;line-height:1.55;color:#55617A}
+.c24 .hcu-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:36px}
+.c24 .hcu{display:flex;flex-direction:column;padding:28px 28px 26px}
+.c24 .hcu-h{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px}
+.c24 .hcu-s{font-size:22px;font-weight:800;letter-spacing:-.03em;color:#0B1F3B}
+.c24 .hcu-e{padding:5px 11px;border-radius:999px;background:#0B1F3B;font-family:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;letter-spacing:.04em;color:#E2BE6A}
+.c24 .hcu-w{margin:16px 0 0;font-size:15.5px;line-height:1.55;color:#3B4A63}
+.c24 .hcu-m{margin:18px 0 0;padding:16px 18px;border-radius:12px;background:#F6F8FB;box-shadow:inset 0 0 0 1px #E8EAEE}
+.c24 .hcu-m b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#A07E24}
+.c24 .hcu-m p{margin:6px 0 0;font-size:14.5px;line-height:1.55;color:#3B4A63}
+.c24 .hcu-b{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin-top:auto;padding-top:22px}
+.c24 .hcx{margin-top:22px;padding:22px 26px;border-radius:16px;background:#0B1F3B;color:#C3CCDB;display:grid;grid-template-columns:auto 1fr;gap:6px 26px;align-items:baseline}
+.c24 .hcx-k{font-family:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#E2BE6A}
+.c24 .hcx b{font-size:17px;color:#FFFFFF}
+.c24 .hcx p{grid-column:2;margin:0;font-size:14.5px;line-height:1.55}
+.c24 .hcc{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,4cqw,64px);align-items:center}
+.c24 .hcc-r{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.c24 .hcc-r li{padding:18px 22px;border-radius:14px;background:#F6F8FB;box-shadow:inset 0 0 0 1px #E8EAEE;font-size:14.5px;line-height:1.5;color:#55617A}
+.c24 .hcc-r b{display:block;margin-bottom:2px;font-size:15.5px;color:#0B1F3B}
+.c24 .hcp{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(28px,4cqw,64px);align-items:center}
+.c24 .hcp-b{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:28px;border-radius:18px;background:#FFFFFF;box-shadow:0 0 0 1px #EFDDB0,0 30px 70px rgba(143,112,38,.14)}
+.c24 .hcp-b p{margin:0;font-size:13.5px;color:#55617A}
+@container page (max-width:1000px){.c24 .hcu-g{grid-template-columns:minmax(0,1fr)}.c24 .hcc,.c24 .hcp{grid-template-columns:minmax(0,1fr)}.c24 .hcx{grid-template-columns:minmax(0,1fr)}.c24 .hcx p{grid-column:1}}
+@container page (max-width:640px){.c24 .hcs-r{flex-direction:column;gap:2px}.c24 .hcs-e{text-align:left}.c24 .hcu{padding:22px 20px}}
