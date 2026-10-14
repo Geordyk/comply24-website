@@ -2293,6 +2293,33 @@ html{scroll-behavior:auto}
 .c24 .mnc-ar{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-left:1px solid #EEF1F6;padding-left:14px;color:#A07E24}
 .c24 .mnc-ar .ic{width:22px;height:22px}
 @container page (max-width:640px){.c24 .mnc-ar{display:none}.c24 .modnote-card{gap:14px;padding:16px 18px}}
+
+/* productenpagina: sectie met achtergrondbeeld */
+.c24 .mod-pf{overflow:hidden;background:#F3F7FC !important}
+.c24 .pf-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.c24 .pf-wash{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,.15) 40%,rgba(255,255,255,.55))}
+.c24 .pf-head{text-align:center;max-width:820px;margin:0 auto}
+.c24 .pf-head .ey{justify-content:center}
+.c24 .pf-head .ey::after{content:"";width:34px;height:1px;background:#C8A24A;margin-left:12px}
+.c24 .pf-head .h2{margin-left:auto;margin-right:auto}
+.c24 .pf-head .lead{margin:16px auto 0;max-width:620px}
+.c24 .mod-pf .mchain{margin-top:36px}
+.c24 .mod-pf .card.mod{background:rgba(255,255,255,.94);box-shadow:0 0 0 1px rgba(255,255,255,.9),0 18px 44px rgba(11,31,59,.10)}
+.c24 .mod-pf .mgrid .mod:hover{box-shadow:0 0 0 1px #DDBE74,0 28px 60px rgba(11,31,59,.14)}
+.c24 .mod-pf .mcaps li::before{border-color:#C8A24A}
+.c24 .pf-svhead{grid-column:1 / -1;margin-top:18px}
+.c24 .svc{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr);gap:26px 36px;align-items:start;padding:30px 32px 28px;background:rgba(255,255,255,.94);border:1.5px dashed #9FB3C8;box-shadow:0 18px 44px rgba(11,31,59,.08)}
+.c24 .svc-l{display:flex;gap:18px;align-items:flex-start}
+.c24 .svc-ic{flex:0 0 56px;display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:14px;background:#EAF2F9;color:#2F7FC1}
+.c24 .svc-ic svg{width:28px;height:28px}
+.c24 .svc .mod-nm{margin-top:4px;font-size:24px}
+.c24 .svc-sub{margin:6px 0 0;font-size:15.5px;font-weight:600;color:#3B4A63}
+.c24 .svc .mod-ds{margin-top:10px;font-size:14px}
+.c24 .svc .mcaps{margin:4px 0 0;padding:0;border-top:0;gap:12px}
+.c24 .svc .mcaps li{font-size:14px}
+.c24 .svc-r{display:flex;flex-direction:column;gap:22px;align-items:flex-start}
+.c24 .svc-r .btn{align-self:flex-end;margin-top:auto}
+@container page (max-width:1000px){.c24 .svc{grid-template-columns:minmax(0,1fr)}.c24 .svc-r .btn{align-self:flex-start}}
 @container page (max-width:1000px){.c24 .fnd-g{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @container page (max-width:640px){.c24 .fnd-g{grid-template-columns:minmax(0,1fr)}}
 
