@@ -520,19 +520,26 @@ class Component extends DCLogic {
   var svrow = box.querySelector('[data-pc-svrow]'), per = box.querySelector('[data-pc-per]'), unit = box.querySelector('[data-pc-unit]');
   var res = box.querySelector('[data-pc-res]'), cust = box.querySelector('[data-pc-cust]'), lines = box.querySelector('[data-pc-lines]');
   var bills = [].slice.call(box.querySelectorAll('[data-bill]'));
+  var prods = [].slice.call(box.querySelectorAll('[data-prod]'));
+  var pnote = box.querySelector('[data-pc-pnote]');
   var bill = 'm';
   var fmt = function (v) { return '€ ' + Math.round(v).toLocaleString(en ? 'en-GB' : 'nl-NL'); };
   var T = en
     ? { user: 'user', users: 'users', pm: 'Per month', py: 'Per year', tm: 'total per month', ty: 'total per year', m: '/ month', y: '/ year',
-        a: 'at', disc: '−10%', note: 'More than 20 users? We draw up a tailored agreement for larger teams.' }
+        a: 'at', disc: '−10%', note: 'More than 20 users? We draw up a tailored agreement for larger teams.',
+        one: 'One product: € 150 per user per month.', bundle: 'Bundle: all three products for € 300 per user per month.', none: 'Choose at least one product.' }
     : { user: 'gebruiker', users: 'gebruikers', pm: 'Per maand', py: 'Per jaar', tm: 'totaal per maand', ty: 'totaal per jaar', m: '/ mnd', y: '/ jaar',
-        a: 'à', disc: '−10%', note: 'Meer dan 20 gebruikers? Voor grotere teams stellen wij een maatwerkovereenkomst op.' };
+        a: 'à', disc: '−10%', note: 'Meer dan 20 gebruikers? Voor grotere teams stellen wij een maatwerkovereenkomst op.',
+        one: 'Eén product: € 150 per gebruiker per maand.', bundle: 'Bundel: alle drie de producten voor € 300 per gebruiker per maand.', none: 'Kies minstens één product.' };
   function calc() {
     var n = parseInt(sl.value, 10);
     sl.style.setProperty('--p', ((n - 1) / 24 * 100) + '%');
     nEl.textContent = n;
     nl.textContent = n === 1 ? T.user : T.users;
-    var base = bill === 'm' ? 300 : 3000, disc = bill === 'm' ? 270 : 2700, suf = bill === 'm' ? T.m : T.y;
+    var k = prods.filter(function (b) { return b.classList.contains('on'); }).length;
+    var single = k === 1;
+    pnote.textContent = k === 0 ? T.none : (single ? T.one : T.bundle);
+    var base = (bill === 'm' ? 300 : 3000) * (single ? 0.5 : 1), disc = (bill === 'm' ? 270 : 2700) * (single ? 0.5 : 1), suf = bill === 'm' ? T.m : T.y;
     per.textContent = bill === 'm' ? T.pm : T.py;
     unit.textContent = bill === 'm' ? T.tm : T.ty;
     lines.innerHTML = '';
@@ -552,6 +559,14 @@ class Component extends DCLogic {
       + (b ? '<li class="disc"><span>' + b + ' × ' + (b === 1 ? T.user : T.users) + ' ' + T.a + ' ' + fmt(disc) + ' ' + suf + ' ' + T.disc + '</span><b>' + fmt(b * disc) + '</b></li>' : '');
   }
   sl.addEventListener('input', calc);
+  prods.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var on = !btn.classList.contains('on');
+      if (!on && prods.filter(function (b) { return b.classList.contains('on'); }).length === 1) return;
+      btn.classList.toggle('on', on); btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      calc();
+    });
+  });
   bills.forEach(function (btn) {
     btn.addEventListener('click', function () {
       bill = btn.getAttribute('data-bill');

@@ -2241,3 +2241,27 @@ html{scroll-behavior:auto}
 .c24 .mgrid-3 .mod.sv{grid-column:1 / -1}
 @container page (max-width:1000px){.c24 .mgrid.mgrid-teaser{grid-template-columns:minmax(0,1fr)}}
 @container page (max-width:1000px){.c24 .mgrid-3{grid-template-columns:minmax(0,1fr)}}
+
+/* ── v1.8: drie producten ─────────────────────────────────────────────── */
+.c24 .chip b{margin-right:6px;font-weight:700;color:#0B1F3B}
+.c24 .chip.chip-hs b{color:#2F6B8F}
+.c24 .chip.chip-ct b{color:#86691F}
+.c24 .fnd-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 24px;margin:36px 0 0;padding:0;list-style:none}
+.c24 .fnd-i{display:flex;gap:14px;align-items:flex-start;padding:22px 22px 20px;border-radius:14px;background:#FFFFFF;box-shadow:0 0 0 1px #E8EAEE}
+.c24 .fnd-ic{flex:0 0 40px;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:#FBF1DC;color:#A07E24}
+.c24 .fnd-t{margin:4px 0 4px;font-size:16px;font-weight:700;line-height:1.3;color:#0B1F3B}
+.c24 .fnd-d{margin:0;font-size:14px;line-height:1.5;color:#55617A}
+.c24 .pr-pfig{margin:14px 0 0;font-size:26px;font-weight:800;letter-spacing:-.03em;color:#0B1F3B}
+.c24 .pr-pfig small{display:block;margin-top:2px;font-size:12.5px;font-weight:500;letter-spacing:0;color:#8B96A8}
+.c24 .pr-bundle{margin:22px 0 0;padding:18px 22px;border-radius:14px;background:#0B1F3B;color:#FFFFFF;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px}
+.c24 .pr-bundle b{font-size:22px;letter-spacing:-.02em;color:#E2BE6A}
+.c24 .pc-prod{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.c24 .pc-pb{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border:0;border-radius:999px;background:#F1F4F8;font:inherit;font-size:14px;font-weight:600;color:#55617A;cursor:pointer;box-shadow:inset 0 0 0 1px #E3E8F0;transition:background .2s ease,color .2s ease}
+.c24 .pc-pb::before{content:"";width:9px;height:9px;border-radius:50%;background:#C9D2DF}
+.c24 .pc-pb.on{background:#0B1F3B;color:#FFFFFF;box-shadow:none}
+.c24 .pc-pb.on::before{background:#C8A24A}
+.c24 .pc-pb:focus-visible{outline:2px solid #C8A24A;outline-offset:2px}
+.c24 .pc-pk{display:block;margin-top:26px;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8B96A8}
+.c24 .pc-pnote{margin:10px 0 0;font-size:13px;color:#55617A}
+@container page (max-width:1000px){.c24 .fnd-g{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container page (max-width:640px){.c24 .fnd-g{grid-template-columns:minmax(0,1fr)}}
