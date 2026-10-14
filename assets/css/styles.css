@@ -2216,3 +2216,26 @@ html{scroll-behavior:auto}
 .c24 .pv-blk h2{margin:0 0 10px}
 .c24 .pv-blk p + p{margin-top:10px}
 .c24 .pv-blk a{text-decoration:underline;text-decoration-color:#C8A24A;text-underline-offset:3px;color:#0B1F3B}
+
+
+/* ── drie modules ──────────────────────────────────────────────────────── */
+.c24 .ri-screen{border-radius:16px;background:#FFFFFF;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.c24 .mgrid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.c24 .card.mod.hs::before{background:#2F6B8F}
+.c24 .mchain-grp.hs .mchain-lb{color:#7FB3D5}
+.c24 .mchain-grp.hs .ml{background:#2F6B8F;color:#FFFFFF}
+.c24 .mchain-grp.hs .ml:first-child{padding-left:14px;border-radius:10px 0 0 10px;clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%)}
+.c24 .mchain-grp.ri .ml:first-child{padding-left:22px;border-radius:0;clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%,13px 50%)}
+.c24 .mchain-grp.ri .ml:last-child{clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%,13px 50%)}
+.c24 .hw-rb[data-mod="hs"].on .hw-rn{background:#2F6B8F}
+.c24 .md.hs.on{background:#2F6B8F;color:#FFFFFF}
+.c24 .mod.ri .mcaps{grid-template-columns:minmax(0,1fr)}
+.c24 .mgrid-3 .mod{padding:30px 26px 26px}
+.c24 .pmods{grid-template-columns:repeat(3,minmax(0,1fr))}
+.c24 .pmods .mod.hs::before{background:#2F6B8F}
+@container page (max-width:1000px){.c24 .pmods{grid-template-columns:minmax(0,1fr)}}
+.c24 .mgrid-3 .mod-nm{font-size:23px}
+.c24 .mgrid.mgrid-teaser{grid-template-columns:repeat(3,minmax(0,1fr))}
+.c24 .mgrid-3 .mod.sv{grid-column:1 / -1}
+@container page (max-width:1000px){.c24 .mgrid.mgrid-teaser{grid-template-columns:minmax(0,1fr)}}
+@container page (max-width:1000px){.c24 .mgrid-3{grid-template-columns:minmax(0,1fr)}}

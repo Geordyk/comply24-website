@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Regulatory Intelligence: tracking regulatory change — Comply24</title>
-<meta name="description" content="Regulation translated into your obligations, with a radar that tracks changes and shows per provision what is affected.">
+<title>Regulatory Intelligence: from obligation to closed change — Comply24</title>
+<meta name="description" content="Regulation translated into your obligations, linked to frameworks, policies and controls; a change becomes work that closes only with evidence.">
 <link rel="canonical" href="https://comply24.nl/en/regulatory-intelligence.html">
 <link rel="alternate" hreflang="nl" href="https://comply24.nl/regulatory-intelligence.html">
 <link rel="alternate" hreflang="en" href="https://comply24.nl/en/regulatory-intelligence.html">
@@ -14,10 +14,10 @@
 <meta property="og:site_name" content="Comply24">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Regulatory Intelligence: tracking regulatory change — Comply24">
+<meta name="twitter:title" content="Regulatory Intelligence: from obligation to closed change — Comply24">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Regulatory Intelligence: tracking regulatory change — Comply24">
-<meta property="og:description" content="Regulation translated into your obligations, with a radar that tracks changes and shows per provision what is affected.">
+<meta property="og:title" content="Regulatory Intelligence: from obligation to closed change — Comply24">
+<meta property="og:description" content="Regulation translated into your obligations, linked to frameworks, policies and controls; a change becomes work that closes only with evidence.">
 <meta property="og:image" content="https://comply24.nl/assets/images/comply24-og-en.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/styles.css?v=202610132144">
+<link rel="stylesheet" href="../assets/css/styles.css?v=202610141545">
 <style>
 /* ── Regulatory Intelligence: tekst links, radar rechts, even lang ────── */
 .c24 .riswap{align-items:stretch}
@@ -74,6 +74,159 @@
 @media (prefers-reduced-motion: reduce){
 .c24 .rcap:hover{transform:none !important}
 }
+
+/* ── productstage op de use-case-pagina's ──────────────────────────────── */
+
+.c24 .ucs{padding:clamp(20px,2.2cqw,26px);border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(11,31,59,.07),0 18px 44px rgba(11,31,59,.10)}
+.c24 .ucs-hd{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid #E9EDF3}
+.c24 .ucs-hdt{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:13px;font-weight:600;letter-spacing:.02em;color:#0B1F3B}
+.c24 .ucs-sub{margin:12px 0 0;font-size:14.5px;line-height:1.5;color:#55617A}
+.c24 .ucs-tag{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;background:#F1F4F8;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#6B7689;white-space:nowrap}
+.c24 .ucs-tag.ok{background:#EAF3EC;color:#2F6B45}
+.c24 .ucs-tag.warn{background:#FBF1DC;color:#8A6612}
+.c24 .ucs-tag.soft{background:#EEF2F8;color:#45546F}
+
+/* regels label/waarde */
+.c24 .ucs-r{display:flex;gap:14px;padding:10px 0;border-top:1px solid #F0F3F7}
+.c24 .ucs-r:first-of-type{border-top:none}
+.c24 .ucs-rl{flex:0 0 34%;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#8B96A8;line-height:1.5}
+.c24 .ucs-rv{flex:1 1 auto;min-width:0;font-size:14.5px;line-height:1.5;color:#0B1F3B}
+.c24 .ucs-r.link .ucs-rv{padding-left:16px;position:relative}
+.c24 .ucs-r.link .ucs-rv::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:#C8A24A}
+.c24 .ucs-r.gap{background:#FDF4F2;margin:0 -10px;padding-left:10px;padding-right:10px;border-radius:8px}
+.c24 .ucs-r.gap .ucs-rv{padding-left:16px;position:relative;color:#9B3B2A;font-weight:600}
+.c24 .ucs-r.gap .ucs-rv::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:#C8503A}
+.c24 .ucs-r.warn .ucs-rv{color:#8A6612;font-weight:600}
+
+.c24 .ucs-foot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:14px;padding-top:13px;border-top:1px solid #E9EDF3}
+.c24 .ucs-src{font-size:12.5px;line-height:1.45;color:#8B96A8}
+
+/* hero: keten als kaartjes met een gouden lijn */
+.c24 .ucs-chainc{margin:16px 0 0;padding:0;list-style:none}
+.c24 .ucs-n{position:relative;padding:12px 0 12px 30px}
+.c24 .ucs-n::before{content:"";position:absolute;left:5px;top:22px;bottom:-12px;width:1px;background:rgba(200,162,74,.4);transform:scaleY(0);transform-origin:top;animation:ucsline .45s ease forwards;animation-delay:calc(.5s + var(--nd) * .28s)}
+.c24 .ucs-n:last-child::before{display:none}
+.c24 .ucs-n::after{content:"";position:absolute;left:0;top:17px;width:11px;height:11px;border-radius:50%;background:#FFFFFF;box-shadow:inset 0 0 0 1.5px #C8A24A}
+.c24 .ucs-nk{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#A07E24}
+.c24 .ucs-nv{display:block;margin-top:3px;font-size:15px;font-weight:600;line-height:1.4;color:#0B1F3B}
+.c24 .ucs-nd{display:block;max-height:0;overflow:hidden;font-size:13px;line-height:1.5;color:#55617A;opacity:0;transition:max-height .22s ease,opacity .22s ease,margin-top .22s ease}
+.c24 .ucs-n:hover .ucs-nd,.c24 .ucs-n:focus-visible .ucs-nd{max-height:48px;margin-top:4px;opacity:1}
+.c24 .ucs-n:focus-visible{outline:2px solid #C8A24A;outline-offset:2px;border-radius:10px}
+@keyframes ucsline{to{transform:scaleY(1)}}
+.c24 .ucs-hero .ucs-n{opacity:0;animation:ucsin .42s ease forwards;animation-delay:calc(.35s + var(--nd) * .28s)}
+@keyframes ucsin{to{opacity:1}}
+
+/* story: 40/60 met de productstage als hoofdrol */
+.c24 .uc2-sg.v3 .uc2-sl{flex:.82 1 0}
+.c24 .uc2-sg.v3 .uc2-sr{flex:1.18 1 0}
+.c24 .uc2-sg.v3 .uc2-roles{grid-template-columns:1fr;gap:14px}
+.c24 .uc2-sg.v3 .uc2-pane{padding:clamp(18px,2cqw,24px)}
+
+/* story: vaste hoogte zodat er niets verspringt */
+.c24 .uc2-stgs{position:relative;min-height:430px}
+.c24 .uc2-stg{animation:ucsfade .22s ease}
+@keyframes ucsfade{from{opacity:0}to{opacity:1}}
+.c24 .uc2-sticky.v3{padding:0;background:none;box-shadow:none}
+.c24 .ucs-stage .ucs-r:first-of-type{border-top:1px solid #F0F3F7}
+.c24 .ucs-art{margin:14px 0 4px;padding:16px 18px;border-radius:12px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E9EDF3}
+.c24 .ucs-artk{display:block;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;font-weight:600;color:#A07E24}
+.c24 .ucs-artq{margin:8px 0 0;font-size:15px;line-height:1.55;color:#0B1F3B}
+.c24 .ucs-bar{height:7px;margin:12px 0 2px;border-radius:999px;background:#EEF1F6;overflow:hidden}
+.c24 .ucs-bar span{display:block;height:100%;border-radius:999px;background:#C8A24A}
+.c24 .ucs-doc{margin:14px 0 4px;padding:16px 18px;border-radius:12px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E9EDF3}
+.c24 .ucs-dock{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8B96A8}
+.c24 .ucs-quote{margin:9px 0 0;font-size:15px;line-height:1.6;color:#55617A}
+.c24 .ucs-quote mark{background:#FBF1DC;color:#0B1F3B;padding:1px 3px;border-radius:3px}
+.c24 .ucs-flow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:14px 0 6px}
+.c24 .ucs-st{padding:7px 13px;border-radius:999px;font-size:13.5px;font-weight:600}
+.c24 .ucs-st.old{background:#F1F4F8;color:#8B96A8;text-decoration:line-through}
+.c24 .ucs-st.new{background:#EAF3EC;color:#2F6B45}
+.c24 .ucs-arr{color:#C8A24A}
+
+/* bewijs-showcase */
+.c24 .ucs-show{display:flex;gap:clamp(20px,2.6cqw,36px);margin-top:clamp(24px,3cqw,34px)}
+.c24 .ucs-shl{flex:0 0 36%;min-width:0}
+.c24 .ucs-shr{flex:1 1 0;min-width:0;padding:clamp(18px,2.2cqw,26px);border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(255,255,255,.14)}
+.c24 .ucs-shk{display:block;margin-top:14px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:13px;font-weight:600;color:#E2BE6A}
+.c24 .ucs-sht{margin:8px 0 0;font-size:24px;font-weight:800;letter-spacing:-.025em;line-height:1.2;color:#FFFFFF}
+.c24 .ucs-badge{display:inline-block;margin-top:14px;padding:5px 12px;border-radius:7px;font-size:12px;font-weight:800;letter-spacing:.1em}
+.c24 .ucs-badge.warn{background:#E2BE6A;color:#3B2D08}
+.c24 .ucs-shp{margin:14px 0 0;font-size:15.5px;line-height:1.6;color:#C3CCDB}
+.c24 .ucs-path{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14)}
+.c24 .ucs-path span{font-size:12.5px;font-weight:600;color:#9FAEC6}
+.c24 .ucs-path span + span::before{content:"→";margin-right:6px;color:#C8A24A}
+.c24 .ucs-tabs{display:flex;flex-wrap:wrap;gap:4px;padding:4px;border-radius:999px;background:#F1F4F8}
+.c24 .ucs-tb{height:36px;padding:0 15px;border:0;border-radius:999px;background:none;font-size:14px;font-weight:600;color:#55617A;cursor:pointer;transition:background .18s ease,color .18s ease}
+.c24 .ucs-tb:hover{color:#0B1F3B}
+.c24 .ucs-tb.on{background:#0B1F3B;color:#FFFFFF}
+.c24 .ucs-tb:focus-visible{outline:2px solid #C8A24A;outline-offset:2px}
+.c24 .ucs-tps{position:relative;min-height:250px;margin-top:18px}
+.c24 .ucs-show.live .ucs-tp{display:none}
+.c24 .ucs-show.live .ucs-tp.on{display:block;animation:ucsfade .2s ease}
+.c24 .ucs-tp + .ucs-tp{margin-top:18px;padding-top:18px;border-top:1px solid #E9EDF3}
+
+/* vóór en na als splitview */
+.c24 .ucsp{margin-top:clamp(26px,3cqw,36px);border-radius:16px;overflow:hidden;box-shadow:0 0 0 1px #E5E7EB}
+.c24 .ucsp-h,.c24 .ucsp-r{display:grid;grid-template-columns:minmax(150px,1fr) 1.5fr 1.5fr}
+.c24 .ucsp-h{background:#F7F8FA;border-bottom:1px solid #E5E7EB}
+.c24 .ucsp-hb,.c24 .ucsp-ha{padding:14px 20px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.c24 .ucsp-hb{color:#8B96A8}
+.c24 .ucsp-ha{background:#0B1F3B;color:#E2BE6A}
+.c24 .ucsp-r{border-top:1px solid #EEF1F6}
+.c24 .ucsp-r:first-of-type{border-top:none}
+.c24 .ucsp-d{padding:18px 20px;font-size:15.5px;font-weight:700;color:#0B1F3B;background:#FCFDFE}
+.c24 .ucsp-b{padding:18px 20px;font-size:15px;line-height:1.55;color:#8B96A8}
+.c24 .ucsp-a{position:relative;padding:18px 20px;font-size:15px;line-height:1.55;font-weight:600;color:#0B1F3B;background:#FBF6EC}
+.c24 .ucsp-a::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#C8A24A}
+
+/* sectorstrip met de huidige case actief */
+.c24 .uc2-ocs.strip{grid-template-columns:repeat(4,1fr);gap:10px}
+.c24 .uc2-ocs.strip .uc2-oc{flex-direction:column;align-items:flex-start;gap:4px;padding:15px 17px}
+.c24 .uc2-ocs.strip .uc2-oc.on{background:#0B1F3B;box-shadow:none}
+.c24 .uc2-ocs.strip .uc2-oc.on .uc2-ocn{color:#FFFFFF}
+.c24 .uc2-ocs.strip .uc2-oc.on .uc2-ocl{color:#E2BE6A}
+.c24 .uc2-ocs.strip .uc2-oca{align-self:flex-end;margin-top:-18px}
+
+/* ── smaller ─────────────────────────────────────────────────────────── */
+@container page (max-width:1000px){
+.c24 .ucs-show{flex-direction:column}
+.c24 .ucs-shl{flex:none}
+.c24 .uc2-stgs{min-height:0}
+}
+@container page (max-width:760px){
+.c24 .ucsp-h{display:none}
+.c24 .ucsp-r{grid-template-columns:1fr;gap:0}
+.c24 .ucsp-d{padding-bottom:4px;background:#FFFFFF}
+.c24 .ucsp-b{padding-top:6px;padding-bottom:6px;background:#FFFFFF}
+.c24 .ucsp-b::before{content:"Voorheen — ";font-weight:700;color:#8B96A8}
+.c24 .l-en .ucsp-b::before{content:"Before — "}
+.c24 .ucsp-a::before{width:100%;height:3px;bottom:auto}
+.c24 .ucsp-a{padding-top:14px}
+}
+@container page (max-width:860px){
+.c24 .uc2-ocs.strip{grid-template-columns:1fr 1fr}
+}
+@container page (max-width:640px){
+.c24 .ucs-foot .ucs-tag{white-space:normal;text-align:center;line-height:1.3}
+.c24 .uc2-ocs.strip{grid-template-columns:1fr}
+.c24 .ucs-r{flex-direction:column;gap:3px}
+.c24 .ucs-rl{flex:none}
+.c24 .ucs-tabs{border-radius:14px}
+.c24 .ucs-tb{flex:1 1 auto}
+.c24 .ucs-n .ucs-nd{max-height:none;opacity:1;margin-top:4px}
+}
+@media (prefers-reduced-motion: reduce){
+.c24 .ucs-hero .ucs-n{opacity:1;animation:none}
+.c24 .ucs-n::before{transform:none;animation:none}
+.c24 .uc2-stg,.c24 .ucs-show.live .ucs-tp.on{animation:none}
+}
+
+/* ── sectorstages (ucsect.py) ── */
+.c24 .ucs-st.mid{background:#FBF1DC;color:#8A6612}
+.c24 .ucs-docs{display:flex;flex-direction:column;gap:8px;margin:14px 0 6px}
+.c24 .ucs-docr{display:flex;align-items:center;gap:9px;padding:10px 12px;border-radius:10px;background:#F7F8FA;box-shadow:inset 0 0 0 1px #E9EDF3;font-size:14px;color:#0B1F3B}
+.c24 .ucs-docr .ic{color:#A07E24;flex:0 0 auto}
+.c24 .ucs-docr > span:first-of-type{flex:1 1 auto;min-width:0}
 </style>
 <script type="application/ld+json">
 {
@@ -128,7 +281,7 @@
       "applicationSubCategory": "Governance, Risk and Compliance",
       "operatingSystem": "Web",
       "inLanguage": "en",
-      "description": "Regulation translated into your obligations, with a radar that tracks changes and shows per provision what is affected.",
+      "description": "Regulation translated into your obligations, linked to frameworks, policies and controls; a change becomes work that closes only with evidence.",
       "publisher": {
         "@id": "https://comply24.nl/#organization"
       }
@@ -168,7 +321,8 @@
 <a class="nav-logo" href="index.html" aria-label="Comply24"><img src="../assets/images/comply24-logo-navy.png" alt="Comply24" style="display: block; height: 30px; width: auto" width="320" height="90"></a>
 <nav class="nav-links" aria-label="Main menu">
 <div class="navitem has-dd"><a class="navlink on" href="platform.html" aria-haspopup="true" aria-expanded="false">Platform<svg class="ic dd-c" aria-hidden="true" style="width: 15px; height: 15px; stroke-width: 2.2"><use href="#i-chev"></use></svg></a><div class="dd"><ul>
-<li><a href="platform.html"><span class="dd-t">Platform overview</span><span class="dd-d">Two modules, one chain</span></a></li>
+<li><a href="platform.html"><span class="dd-t">Platform overview</span><span class="dd-d">Three modules, one chain</span></a></li>
+<li><a href="horizon-scanning.html"><span class="dd-t">Horizon Scanning</span><span class="dd-d">Know what changes before it reaches you</span></a></li>
 <li><a href="regulatory-intelligence.html" aria-current="page"><span class="dd-t">Regulatory Intelligence</span><span class="dd-d">Regulation translated into your obligations</span></a></li>
 <li><a href="control-testing.html"><span class="dd-t">Control Testing</span><span class="dd-d">From control to tested evidence</span></a></li>
 <li><a href="wetswijzigingen.html"><span class="dd-t">Regulatory change</span><span class="dd-d">The change process, step by step</span></a></li>
@@ -185,7 +339,7 @@
 <div class="nav-panel" id="nav-panel">
 <div class="wrap" style="padding-top: 18px; padding-bottom: 26px">
 <ul class="np-list">
-<li><a class="np-a" href="platform.html">Platform</a><ul class="np-sub"><li><a href="platform.html">Platform overview</a></li><li><a href="regulatory-intelligence.html">Regulatory Intelligence</a></li><li><a href="control-testing.html">Control Testing</a></li><li><a href="wetswijzigingen.html">Regulatory change</a></li></ul></li>
+<li><a class="np-a" href="platform.html">Platform</a><ul class="np-sub"><li><a href="platform.html">Platform overview</a></li><li><a href="horizon-scanning.html">Horizon Scanning</a></li><li><a href="regulatory-intelligence.html">Regulatory Intelligence</a></li><li><a href="control-testing.html">Control Testing</a></li><li><a href="wetswijzigingen.html">Regulatory change</a></li></ul></li>
 <li><a class="np-a" href="hoe-het-werkt.html">How it works</a></li>
 <li><a class="np-a" href="voor-wie.html">Who it is for</a></li>
 <li><a class="np-a" href="quickscan.html">QuickScan</a></li>
@@ -202,48 +356,29 @@
 
 <main id="main">
 
-<section id="ri-hd" class="sec dark haspic" style="position: relative; overflow: hidden; background: radial-gradient(120% 140% at 85% 0%, #14305A 0%, #0B1F3B 46%, #081730 100%)">
-<img class="phbg" src="../assets/images/comply24-ri-ecb.jpg" alt="" aria-hidden="true" width="1300" height="867" loading="lazy" decoding="async">
-<span class="phwash" aria-hidden="true"></span>
+<section id="ri-hd" class="sec dark" style="position: relative; overflow: hidden; background: radial-gradient(120% 140% at 85% 0%, #14305A 0%, #0B1F3B 46%, #081730 100%)">
 <svg class="plx" aria-hidden="true" viewBox="0 0 900 900" style="--pf: -.08; position: absolute; right: -300px; top: -420px; width: 900px; height: 900px; overflow: visible"><circle cx="450" cy="450" r="430" fill="none" stroke="#C8A24A" stroke-width="1.200" stroke-dasharray="3 7" opacity=".5"></circle><circle cx="450" cy="450" r="350" fill="none" stroke="#FFFFFF" stroke-width="1" opacity=".09"></circle><circle cx="146" cy="754" r="6" fill="#E2BE6A"></circle></svg>
 <div class="wrap" style="padding-top: clamp(44px, 4cqw, 64px); padding-bottom: clamp(52px, 5cqw, 80px)">
-<div class="ey rv" style="--rd: 0s">Module 1 · Regulatory Intelligence</div>
+<div class="ey rv" style="--rd: 0s">Module 2 · Regulatory Intelligence</div>
 <h1 class="rv" style="--rd: .08s; margin: 20px 0 0; max-width: 1000px; font-size: clamp(30px, 3.3cqw, 48px); line-height: 1.08; letter-spacing: -.04em; font-weight: 800; color: #FFFFFF; text-wrap: balance">Regulation translated into <span class="gold">your obligations.</span></h1>
-<p class="lead rv" style="--rd: .16s; max-width: 820px">Which regulation applies to you, what it asks of you and what changes. Regulatory Intelligence records that as data: per article and paragraph, linked to your frameworks, policies and risks.</p>
+<p class="lead rv" style="--rd: .16s; max-width: 820px">What the law asks of you, per article and paragraph, linked to your frameworks, policies, risks and controls. A change from Horizon Scanning becomes work here, with an owner, a deadline and evidence.</p>
 </div>
 </section>
 <section id="uptodate" class="sec pad dark" aria-label="Always up to date" style="position: relative; overflow: hidden; background: radial-gradient(120% 140% at 12% 0%, #14305A 0%, #0B1F3B 46%, #081730 100%)">
 <div class="wrap split riswap">
 
 <div class="rv" style="--rd: .1s; flex: 0 0 clamp(300px, 35cqw, 470px); min-width: 0">
-<div class="tilt" data-on-mousemove="tilt" data-on-mouseleave="tiltOff" style="padding: 0 0 30px">
-<div class="tilt-in">
-<p class="illus lt">Example. The radar shows the instruments in your scope.</p>
-<div class="radar" role="img" aria-label="Regulatory radar">
-<div class="sweep"></div><div class="ax"></div><div class="ay"></div>
-<div class="blip" style="left: 62%; top: 30%"><b>DORA RTS<small>applies from</small></b></div>
-<div class="blip" style="left: 28%; top: 58%; animation-delay: 1.500s"><b>AMLR<small>adopted</small></b></div>
-<div class="blip" style="left: 70%; top: 68%; animation-delay: 3s"><b>CRR III<small>phased in</small></b></div>
-<div class="blip" style="left: 42%; top: 20%; animation-delay: 4.500s"><b>Wtp<small>transition</small></b></div>
-<div class="radar-ring">proposal · adopted · in force · applies from</div>
-</div>
-</div>
-</div>
-<div style="display: grid; gap: 12px; margin-top: 26px">
-<div class="al"><b>Impact alert · DORA Art. 17</b><span>Obligations, a control and a policy clause affected. <em>Owner to validate</em></span></div>
-<div class="al"><b>AI proposal · affected objects</b><span>Two-sentence reason attached. <em>Confirm, correct or reject</em></span></div>
-<div class="al"><b>Change closed · evidence attached</b><span>Audit backlog updated for the obligation. <em>Logged with name and time</em></span></div>
-</div>
+<div class="ucs ri-screen rv" style="--rd: .12s"><div class="ucs-hd"><span class="ucs-hdt">Impact alert · DORA art. 24</span><span class="ucs-tag">Illustrative</span></div><div class="ucs-flow"><span class="ucs-st old">Open</span><span class="ucs-arr" aria-hidden="true">→</span><span class="ucs-st mid">In progress</span><span class="ucs-arr" aria-hidden="true">→</span><span class="ucs-st new">Closed with evidence</span></div><div class="ucs-r"><span class="ucs-rl">Affected</span><span class="ucs-rv">2 obligations · 1 control · 1 policy clause · 1 test design</span></div><div class="ucs-r"><span class="ucs-rl">AI proposal</span><span class="ucs-rv">The testing frequency in art. 24 changes; the test design of CT-021 refers to the old interval.</span></div><div class="ucs-r"><span class="ucs-rl">Owner · approver</span><span class="ucs-rv">Control owner · second line</span></div><div class="ucs-r"><span class="ucs-rl">Lead time</span><span class="ucs-rv">Set on assignment, not editable afterwards</span></div><div class="ucs-foot"><span class="ucs-tag warn">Closes only with evidence</span><span class="ucs-src">AI proposes, the owner decides; every step in the log</span></div></div>
 </div>
 
 <div style="flex: 1 1 0; min-width: 0">
-<div class="ey rv" style="--rd: 0s">Tracking change</div>
-<h2 class="h2 rv" style="--rd: .08s">The law moves. <span class="gold blk">Your chain moves with it.</span></h2>
+<div class="ey rv" style="--rd: 0s">From signal to closed change</div>
+<h2 class="h2 rv" style="--rd: .08s">A change arrives. <span class="gold blk">Your chain closes it.</span></h2>
 <ul class="pts">
-<li class="rv" style="--rd: .16s"><b>Regulatory radar</b>Every instrument in your scope with its stage and key dates: proposal, adopted, in force, applies from. Future versions count from the day they apply.</li>
-<li class="rv" style="--rd: .26s"><b>Weekly news within your scope</b>Curated and sourced. No noise from instruments that do not apply to you.</li>
-<li class="rv" style="--rd: .36s"><b>Impact alerts on exactly the affected objects</b>A changed provision raises an alert on each obligation, control, policy clause, risk and test design it touches. AI proposes what is affected and why, in two sentences; your owner decides.</li>
-<li class="rv" style="--rd: .46s"><b>One change process</b>Owner, optional approver, plan, actions, evidence, review. An approved deviation is re-approved when the law behind it changes. Everything in the log, exportable.</li>
+<li class="rv" style="--rd: .16s"><b>Impact alerts on exactly the affected objects</b>A changed provision raises an alert on each obligation, control, policy clause, risk and test design it touches. AI proposes what is affected and why, in two sentences; your owner decides.</li>
+<li class="rv" style="--rd: .26s"><b>One change process</b>Owner, optional approver, plan, actions, evidence, review. An approved deviation is re-approved when the law behind it changes. Everything in the log, exportable.</li>
+<li class="rv" style="--rd: .36s"><b>Gap assessment and gap decisions</b>Every policy document assessed against the obligations: covered, partial or gap, with citation and rationale. A gap becomes a change with an owner; a deliberate deviation is recorded as a decision.</li>
+<li class="rv" style="--rd: .46s"><b>Signal from Horizon Scanning</b>The radar and the weekly news live in module 1. Regulatory Intelligence picks up what applies to you and turns it into work with an owner.</li>
 </ul>
 <div class="rv" style="--rd: .4s; margin-top: 36px"><a class="more lt" href="wetswijzigingen.html">The whole change process, step by step<svg class="ic" aria-hidden="true" style="width: 18px; height: 18px; stroke-width: 2"><use href="#i-arrow"></use></svg></a></div>
 </div>
@@ -251,25 +386,25 @@
 </div>
 </section>
 
-<section id="ri-caps" class="sec pad rcaps" style="position: relative; background: #FFFFFF; border-top: 1px solid #E5E7EB">
+<section id="ri-caps" class="sec pad rcaps" style="position: relative; overflow: hidden; background: #FFFFFF; border-top: 1px solid #E5E7EB">
 <div class="wrap rcaps-w">
 <div class="rcaps-l">
 <div class="ey rv" style="--rd: 0s">What this makes possible</div>
-<h2 class="h2 rv" style="--rd: .06s">From scope to <span class="goldtxt">linked policy.</span></h2>
-<p class="lead rv" style="--rd: .12s">Everything Regulatory Intelligence records sits as data in your own environment, with source, citation and version. That is the basis for your policies, controls and testing.</p>
+<h2 class="h2 rv" style="--rd: .06s">From obligation to <span class="goldtxt">closed change.</span></h2>
+<p class="lead rv" style="--rd: .12s">Everything Regulatory Intelligence records sits as data in your own environment, with source, citation and version. Every change that comes in runs along the same chain until it is closed.</p>
 <figure class="rcaps-fig rv" style="--rd: .2s"><img src="../assets/images/comply24-keten.jpg" alt="From article to obligation, policy and control, through to test and evidence" width="1600" height="617" loading="lazy" decoding="async"></figure>
 </div>
 <ul class="rcaps-g">
-<li class="rcap rv" style="--rd: .06s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-stack"></use></svg></span><h3 class="rcap-t">All Dutch and EU-wide regulation in your scope</h3><p class="rcap-d">Recorded per provision, with version control.</p></li>
-<li class="rcap rv" style="--rd: .11s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-radar"></use></svg></span><h3 class="rcap-t">Scope Builder</h3><p class="rcap-d">Define your scope by entity, activities and priority, and formally establish it.</p></li>
-<li class="rcap rv" style="--rd: .12s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-doc"></use></svg></span><h3 class="rcap-t">Obligations with an explanation</h3><p class="rcap-d">Rationale, context and the link back to the original source.</p></li>
-<li class="rcap rv" style="--rd: .17s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-link"></use></svg></span><h3 class="rcap-t">Linked to your policy documents</h3><p class="rcap-d">A change lands on the policy clause it affects.</p></li>
-<li class="rcap rv" style="--rd: .18s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-box"></use></svg></span><h3 class="rcap-t">Policy house with templates</h3><p class="rcap-d">Template Merger and Policy Creator for a consistent structure.</p></li>
-<li class="rcap rv" style="--rd: .23s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-shieldok"></use></svg></span><h3 class="rcap-t">Controls linked to obligations</h3><p class="rcap-d">Built from the SCF control library and sector frameworks.</p></li>
-<li class="rcap rv" style="--rd: .24s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-law"></use></svg></span><h3 class="rcap-t">Citation and context per obligation</h3><p class="rcap-d">The exact citation and the scoring basis are written out.</p></li>
-<li class="rcap rv" style="--rd: .29s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-replay"></use></svg></span><h3 class="rcap-t">Full history and versions</h3><p class="rcap-d">Changes to regulation, policies and controls stay traceable.</p></li>
-<li class="rcap rv" style="--rd: .30s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-folder"></use></svg></span><h3 class="rcap-t">Gap assessment per document</h3><p class="rcap-d">Gaps are closed through the change process, with an owner and evidence.</p></li>
-<li class="rcap rv" style="--rd: .35s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-table"></use></svg></span><h3 class="rcap-t">Dashboard and reporting</h3><p class="rcap-d">Coverage, deltas, change management and the audit backlog.</p></li>
+<li class="rcap rv" style="--rd: .06s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-doc"></use></svg></span><h3 class="rcap-t">Obligations with an explanation</h3><p class="rcap-d">Rationale, context and the link back to the original source.</p></li>
+<li class="rcap rv" style="--rd: .11s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-link"></use></svg></span><h3 class="rcap-t">Linked to your policy documents</h3><p class="rcap-d">A change lands on the policy clause it affects.</p></li>
+<li class="rcap rv" style="--rd: .12s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-shieldok"></use></svg></span><h3 class="rcap-t">Controls linked to obligations</h3><p class="rcap-d">Built from the SCF control library and sector frameworks.</p></li>
+<li class="rcap rv" style="--rd: .17s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-law"></use></svg></span><h3 class="rcap-t">Citation and context per obligation</h3><p class="rcap-d">The exact citation and the scoring basis are written out.</p></li>
+<li class="rcap rv" style="--rd: .18s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-replay"></use></svg></span><h3 class="rcap-t">Full history and versions</h3><p class="rcap-d">Changes to regulation, policies and controls stay traceable.</p></li>
+<li class="rcap rv" style="--rd: .23s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-folder"></use></svg></span><h3 class="rcap-t">Gap assessment per document</h3><p class="rcap-d">Gaps are closed through the change process, with an owner and evidence.</p></li>
+<li class="rcap rv" style="--rd: .24s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-table"></use></svg></span><h3 class="rcap-t">Dashboard and reporting</h3><p class="rcap-d">Coverage, deltas, change management and the audit backlog.</p></li>
+<li class="rcap rv" style="--rd: .29s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-alert"></use></svg></span><h3 class="rcap-t">Impact alerts with an AI proposal</h3><p class="rcap-d">A change hits exactly the obligations, controls and clauses involved. The owner decides.</p></li>
+<li class="rcap rv" style="--rd: .30s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-check"></use></svg></span><h3 class="rcap-t">Change process with owner and SLA</h3><p class="rcap-d">Approver, deadline and evidence; a change only closes with evidence.</p></li>
+<li class="rcap rv" style="--rd: .35s"><span class="rcap-ic" aria-hidden="true"><svg class="ic" style="width: 22px; height: 22px"><use href="#i-shield"></use></svg></span><h3 class="rcap-t">Risk register linked to controls</h3><p class="rcap-d">Own risks, your risk platform or CSV.</p></li>
 </ul>
 </div>
 </section>
@@ -301,10 +436,12 @@
 <div class="fcols" style="flex: 1 1 0; min-width: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 36px 22px">
 <nav aria-label="Platform" style="display: flex; flex-direction: column; gap: 14px">
 <h3 style="margin: 0 0 4px; font-size: 14.5px; font-weight: 600; color: #FFFFFF">Platform</h3>
-<a class="flink" href="platform.html#modules">Two modules</a>
+<a class="flink" href="platform.html#modules">Three modules</a>
+<a class="flink" href="horizon-scanning.html">Horizon Scanning</a>
+<a class="flink" href="#main">Regulatory Intelligence</a>
+<a class="flink" href="control-testing.html">Control Testing</a>
 <a class="flink" href="platform.html#lineage">Lineage</a>
 <a class="flink" href="wetswijzigingen.html">Regulatory change</a>
-<a class="flink" href="control-testing.html#testing">Control testing</a>
 </nav>
 <nav aria-label="Use cases" style="display: flex; flex-direction: column; gap: 14px">
 <h3 style="margin: 0 0 4px; font-size: 14.5px; font-weight: 600; color: #FFFFFF">Use cases</h3>
@@ -336,7 +473,7 @@
 </div>
 </footer>
 </div>
-<script src="../assets/js/main.js?v=202610132144" defer></script>
+<script src="../assets/js/main.js?v=202610141545" defer></script>
 <noscript><style>.c24 .rv{opacity:1 !important;transform:none !important}</style></noscript>
 </body>
 </html>
