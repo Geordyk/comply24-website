@@ -2229,7 +2229,7 @@ html{scroll-behavior:auto}
 .c24 .mchain-grp.ri .ml:first-child{padding-left:22px;border-radius:0;clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%,13px 50%)}
 .c24 .mchain-grp.ri .ml:last-child{clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%,13px 50%)}
 .c24 .hw-rb[data-mod="hs"].on .hw-rn{background:#2F6B8F}
-.c24 .sec.haspic#hs-hd > .wrap{padding-left:24px}
+.c24 .sec.haspic#hs-hd > .wrap,.c24 .sec.haspic#hc-hd > .wrap{padding-left:24px}
 .c24 .md.hs.on{background:#2F6B8F;color:#FFFFFF}
 .c24 .mod.ri .mcaps{grid-template-columns:minmax(0,1fr)}
 .c24 .mgrid-3 .mod{padding:30px 26px 26px}
