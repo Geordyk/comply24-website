@@ -6,3 +6,8 @@ Statische site, gegenereerd uit de bouwpipeline (`mk4.py`). Dit is de **testvers
 - Nederlands op de hoofdadressen, Engels onder `/en/`.
 - Elke release is één commit; de versie staat in het commitbericht.
 - De productieversie (met indexering) wordt apart als zip opgeleverd aan de webbeheerder.
+
+## Werkwijze
+- `main` = productie (complaiy.eu). Niet direct op werken.
+- `staging` = de ene versie waarop we itereren; vaste preview-URL via Vercel.
+- Livegang: staging → main in één keer, na akkoord.
